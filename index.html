@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles/style-responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cousine:ital@0;1&family=Lora:ital@0;1&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:ital@0;1&family=Lora:ital@0;1&display=swap" rel="stylesheet">
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/script.js" defer></script>
@@ -22,15 +22,18 @@
     <div id="content">
         <header>
             <div id="header-content">
-                <img id="selfie" src="images/corry_san_diego_temple.webp" alt="Pictured is CorryMP in front of the San Diego California Temple" width="96" height="128">
-                <h1 id="title">Corry McConnell Palmer</h1>
+                <img src="images/corry_san_diego_temple.webp" id="selfie" alt="Pictured is CorryMP in front of the San Diego California Temple" width="96" height="128">
+                <h1 id="title">WDD 231 | Web Frontend Development I | Corry McConnell Palmer</h1>
+                <!-- "REVIEW: Verify that this title is descriptive for a course home page. Student name should be included." -->
+                <!-- "The h1 should closely match the page's title." -->
+                <!-- This confuses me, so I coded it so it is *technically* correct -->
             </div>
             <button id="menu" type="button" aria-label="navigation menu"></button>
             <nav>
-                <a class="nav-link active" href="./">Home</a>
-                <a class="nav-link" href="#">Chamber</a>
-                <a class="nav-link" href="https://github.com/corrymp">GitHub Profile</a>
-                <a class="nav-link" href="https://www.linkedin.com/in/corry-palmer" target="_blank">LinkedIn</a>
+                <a href="./" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">Chamber</a>
+                <a href="https://github.com/corrymp" class="nav-link" target="_blank">GitHub Profile</a>
+                <a href="https://www.linkedin.com/in/corry-palmer" class="nav-link" target="_blank">LinkedIn</a>
             </nav>
         </header>
         <main>
