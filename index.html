@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 | Web Frontend Development I | Corry McConnell Palmer</title>
+    <meta name="author" content="Corry McConnell Palmer">
+    <meta name="description" content="This is the homepage for Corry McConnell Palmer's classwork in 'WDD231 - Web Frontend Development I'.">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cousine:ital@0;1&family=Lora:ital@0;1&display=swap">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <div id="header-content">
+                <img id="selfie" src="images/corry_san_diego_temple.webp" alt="Pictured is CorryMP in front of the San Diego California Temple" width="96" height="128">
+                <h1 id="title">Corry McConnell Palmer</h1>
+            </div>
+            <button id="menu" type="button" aria-label="navigation menu"></button>
+            <nav>
+                <a class="nav-link active" href="./">Home</a>
+                <a class="nav-link" href="#">Chamber</a>
+                <a class="nav-link" href="https://github.com/corrymp">GitHub Profile</a>
+                <a class="nav-link" href="https://www.linkedin.com/in/corry-palmer" target="_blank">LinkedIn</a>
+            </nav>
+        </header>
+        <main>
+            <section id="course-work">
+                <h2>Course Work</h2>
+                <ul>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                </ul>
+            </section>
+            <section id="location">
+                <h2>San Diego County, California</h2>
+                <figure id="location-map">
+                    <a href="https://www.google.com/maps/place/San+Diego+County,+CA/@33.0153772,-117.4697752,10z/">
+                        <picture>
+                            <source srcset="images/san_diego_county.webp" media="(min-width:810px)" width="444" height="340">
+                            <source srcset="images/san_diego_county_small.webp" media="(min-width:570px)" width="444" height="340">
+                            <source srcset="images/san_diego_county.webp" media="(min-width:310px)" width="444" height="340">
+                            <img src="images/san_diego_county_small.webp" alt="Map of San Diego county" width="256" height="196">
+                        </picture>
+                    </a>
+                    <figcaption>San Diego County, CA - <span>Sourced from Google</span></figcaption>
+                </figure>
+            </section>
+            <section id="certificate">
+                <h2>Web and Computer Programming Certificate <span>(<span id="credits">##/##</span> required credits)</span></h2>
+                <div>
+                    <menu id="cert-filters">
+                        <li><button class="filter-button selected" id="sort-all">All</button></li>
+                        <li><button class="filter-button" id="sort-cse">CSE</button></li>
+                        <li><button class="filter-button" id="sort-wdd">WDD</button></li>
+                    </menu>
+                    <div id="courses"></div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p id="footer-text"><span>&copy;<span id="currentyear"></span></span><span id="name">Corry McConnell Palmer</span><span>California</span></p>
+            <p id="lastModified"></p>
+        </footer>
+    </div>
+</body>
+
+</html>

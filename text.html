@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 231 | Page Audit: Course Home</title>
+  <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+/* March 2023 */
+:root {
+  --alink: #0000ee;
+  --avisited: #551a8b;
+
+  --lightgray: rgb(240, 240, 240);
+  --gray: rgb(150, 150, 150);
+  --darkgray: rgb(50, 50, 50);
+  --byuiblue: rgb(0, 110, 182);
+  --navy: rgb(0, 0, 128);
+  --red: rgb(182, 0, 19);
+  --purple: rgba(103, 48, 155, .2);
+  --ccl: rgba(125, 90, 160, 0.45);
+  --disciples: rgba(158,116,171,.4);
+  --mustard: rgb(182, 163, 0);
+  --callout: rgb(230, 243, 254);
+  --error: rgb(255, 215, 225);
+  --warning: rgb(255, 255, 225);
+  --details: rgba(238, 254, 238, 1);
+
+  --padd: 0.5rem;
+  --bord: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font: 400 16px / 1.5 Montserrat, Helvetica, sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: .5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+h1 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-left: 1rem;
+  font-weight: normal;
+}
+
+#coursetitle {
+  display: none;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin: 1.2rem 0.25rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin: 1.5rem 0.5rem 0.5rem;
+   border-top: 1px solid #ddd;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin: 0.75rem;
+  color: #555;
+}
+
+h5 {
+  font-size: 1rem;
+  color: var(--navy);
+  margin: 0.75rem 1.2rem;
+}
+
+a {
+  color: var(--navy);
+}
+
+a:link {
+  color: var(--alink);
+}
+
+a:active {
+  color: var(--red);
+}
+
+a:visited,
+a:focus {
+  color: var(--avisited);
+}
+
+p {
+  margin: 1rem;
+}
+
+h4+p {
+  margin-left: 1.25rem;
+}
+
+h5~p {
+  margin-left: 1.5rem;
+}
+
+ol ol,
+ul ul {
+  margin-top: 1rem;
+  /* override default */
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+li ul li:nth-child(1) {
+  margin-top: 0.5rem;
+}
+
+li ul li,
+li ol li {
+  margin-bottom: 0.5rem;
+}
+
+li p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  background-color: var(--byuiblue);
+  padding: 0.5rem;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  background-color: #000;
+  padding: 12px 11px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+main {
+  margin: 1.5rem 1rem;
+}
+
+nav {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  flex-wrap: wrap;
+}
+
+nav span {
+  font-size: .8rem;
+  font-weight: 700;
+  background-color: var(--lightgray);
+  margin: 0 .25rem .25rem;
+  text-align: center;
+}
+
+nav span a:link,
+nav span a:visited,
+nav span a:active,
+nav span a:focus {
+  color: #000;
+  text-decoration: none;
+  display: block;
+  padding: .5rem 1rem;
+  order: var(--bord);
+}
+
+nav span a:hover {
+  background-color: var(--byuiblue);
+  color: #fff;
+}
+
+
+footer {
+  border-top: var(--bord);
+  font-size: smaller;
+  background-color: var(--lightgray);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0 0 0 0.5rem;
+}
+
+details {
+  margin: 1rem 2rem;
+  border: var(--bord);
+  padding: 0.5rem;
+  color: #000;
+  background-color: var(--details);
+}
+
+details p {
+  margin: 0.5rem 0 0 0.5rem;
+}
+
+.clo {
+  margin: 1rem .25rem;
+}
+
+pre {
+  line-height: 1.2;
+  margin: 0.5rem;
+}
+
+/* pre code {
+  /* border: var(--bord); */
+/* border-left: 3px solid var(--byuiblue); */
+/* padding: 0.75rem !important; */
+/* font-weight: 700 !important;
+} */
+
+/* details pre code {
+  border-left: 3px solid rgb(50, 100, 50);
+} */
+
+code {
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-weight: 700;
+  color: rgb(1, 100, 1);
+}
+
+.html,
+.css,
+.javascript,
+.cli,
+.json {
+  font-weight: 400;
+  padding: .75rem;
+}
+
+.character {
+  color: rgb(1, 100, 1);
+  font-size: smaller;
+}
+
+kbd {
+  color: red;
+}
+
+mark {
+  padding: 0.5rem;
+  font-style: italic;
+}
+
+mark::before {
+  content: '⚒️';
+}
+
+figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+figcaption {
+  font-size: smaller;
+  margin: 0 0 1rem 0;
+}
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: calc(var(--aspect-ratio, 0.5625) * 90%);
+  margin: 0.5em auto;
+  width: 90%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1rem auto;
+  width: 80%;
+  border: var(--bord);
+  background-color: var(--lightgray);
+}
+
+table caption {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+th {
+  background-color: var(--darkgray);
+  color: #fff;
+}
+
+th,
+td {
+  border: var(--bord);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.active {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.active a:link,
+.active a:visited,
+.active a:active,
+.active a:focus {
+  color: #fff;
+}
+
+td.detailed-text-cell {
+  text-align: left;
+  font-size: 90%;
+}
+
+td.detailed-text-cell ul,
+td.detailed-text-cell ol {
+  padding-left: 1rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+td.detailed-text-cell li {
+  margin-bottom: 0.1rem;
+}
+
+.team::after {
+  content: " \1F465"
+}
+
+.callout {
+  margin: 1rem;
+  border: var(--bord);
+  padding: 0.5rem;
+  color: #000;
+}
+
+.reference {
+  background-color: var(--lightgray);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.info {
+  background-color: var(--callout);
+}
+
+.error {
+  background-color: var(--error);
+}
+
+.warning {
+  background-color: var(--warning);
+}
+
+.ai {
+  background-color: var(--purple);
+}
+
+.ccl {
+  background-color: var(--ccl);
+}
+
+.disciples {
+  position: relative;
+  background-color: var(--disciples);
+  background-image: url(../images/disciples.png);
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 10px);
+    background-position-y: calc(100% - 10px);
+  background-size: 35px;
+}
+
+.mastery {
+  margin: 2rem .5rem;
+  background-color: var(--ccl);
+}
+
+.mastery summary {
+  font-weight: 700;
+  font-size: larger;
+}
+
+.mastery ul li {
+  list-style: '🎓 ';
+}
+
+.discussion {
+  background-color: var(--details);
+}
+
+.discussion h5 {
+  color: var(--black);
+}
+
+.question {
+  color: var(--navy);
+  border-top: var(--bord);
+}
+
+blockquote {
+  border-left: 3px solid var(--darkgray);
+}
+
+.smaller {
+  font-size: smaller;
+}
+
+.bold700 {
+  font-weight: 700;
+}
+
+.floatright {
+  float: right;
+  margin: 0 0 0.5rem 0.5rem;
+}
+
+.border {
+  margin: 0 0 .5rem .5rem;
+  border: var(--bord);
+  background-color: #eee;
+  padding: 0.5rem;
+  box-shadow: 0 0 30px #bbb;
+}
+
+.border figcaption {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+}
+
+.step-reset {
+  counter-reset: step;
+}
+
+.step {
+  counter-increment: step;
+}
+
+.step::before {
+  content: 'Step ' counter(step) ':  ';
+  color: var(--navy);
+}
+
+.part-reset {
+  counter-reset: part;
+}
+
+.part {
+  counter-increment: part;
+  margin-left: 1rem;
+}
+
+.part::before {
+  content: 'Part ' counter(part) ':  ';
+  font-size: x-large;
+  color: var(--navy);
+}
+
+.check {
+  list-style: '☑️ ';
+}
+
+#weeks {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+#weeks li {
+  margin-left: 0;
+  margin-right: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: .25rem .5rem;
+}
+
+#weeks li a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+#weeks li:hover {
+  background-color: var(--byuiblue);
+}
+
+#weeks li a:hover {
+  font-weight: 700;
+  text-decoration: underline;
+  color: #fff;
+}
+
+@media screen and (min-width: 600px) {
+
+  .page {
+    position: relative;
+  }
+
+  .logo {
+    width: 75px;
+    padding: 18px 15px;
+    top: -.5rem;
+    right: 1rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  #coursetitle {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .logo {
+    width: 100px;
+    padding: 22px 20px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    margin-left: 0;
+  }
+}
+  </style>
+  
+  <style>
+  input,
+    button {
+      padding: 0.5rem 1rem;
+      border: 1px solid #bbb;
+      border-radius: 0.25rem;
+      margin: 0.5rem;
+    }
+    
+    button {
+      background-color: #000;
+      color: #fff;
+    }
+    
+    #report {
+      margin: 1.5rem;
+      border-top: 1px solid #bbb;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    #report main {
+      display: grid;
+      margin-top: 0;
+    }
+    
+    #report .callout {
+      margin-bottom: 0;
+    }
+    
+    #report main h3 {
+      grid-column: 1/4;
+    }
+    
+    .colhead {
+      background-color: #000;
+      color: #fff;
+      font-weight: 700;
+      font-size: larger;
+      text-align: center;
+    }
+    
+    #message {
+      font-size: smaller;
+      width: 85%;
+      display: none;
+    }
+    
+    .label,
+    .data,
+    .standard {
+      display: flex;
+      align-items: center;
+      border-right: 1px solid rgba(0, 0, 0, .2);
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+      padding: 0.35rem 0.5rem;
+    }
+    
+    .label {
+      justify-content: right;
+      background-color: #000;
+      color: #fff;
+      font-size: smaller;
+      font-weight: 700;
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, .4);
+    }
+    
+    .subhead {
+      font-size: smaller;
+      background-color: #bbb;
+      color: #000;
+      font-weight: 700;
+      border-right: 1px solid #000;
+    }
+    
+    .data {
+      justify-content: center;
+    }
+    
+    .standard {
+      justify-content: left;
+      font-size: smaller;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .blue {
+      padding: 0 .5rem;
+      color: darkblue;
+      background-color: rgba(255, 255, 225, .5);
+    }
+    
+    .highlight {
+      font-size: smaller;
+      color: rgba(33, 3, 33, 0.7);
+      ;
+    }
+    
+    .smaller {
+      font-size: smaller;
+    }
+    
+    dialog {
+      position: relative;
+      max-width: 60ch;
+      background-color: rgba(225, 180, 180, 0.965);
+      border: 1px solid rgba(0, 0, 0, .5);
+      box-shadow: 0 0 2rem #777;
+    
+    }
+    
+    dialog .dtitle {
+      font-weight: 700;
+      border-bottom: 1px solid #777;
+    }
+    
+    dialog .close-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: transparent;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+    
+    dialog>* {
+      padding: .25rem;
+    }
+    
+    dialog::backdrop {
+      background: rgb(0 0 0 / 0.4);
+    }
+    
+    @media (min-width: 520px) {
+      #report main {
+        grid-template-columns: 210px 50px 1fr;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 231<span id="coursetitle">: Web Frontend Development I</span></h1>
+      <div class="logo">BYU<br>Idaho</div>
+    </div>
+  </header>
+  <main class="page">
+    <nav>
+      <span class="active"><a href="../">Home</a></span>
+      <span><a href="../week01">W1</a></span>
+      <span><a href="../week02">W2</a></span>
+      <span><a href="../week03">W3</a></span>
+      <span><a href="../week04">W4</a></span>
+      <span><a href="../week05">W5</a></span>
+      <span><a href="../week06">W6</a></span>
+      <span><a href="../week07">W7</a></span>
+    </nav>
+    <h2>☑️ Page Audit: <span class="highlight">Course Home</span></h2>
+    <div class="callout reference">
+      <label for="student">Enter your GitHub Username:</label>
+      <input type="text" id="student" placeholder="GitHub Username ONLY" required title="GitHub Username Required">
+      <button type="submit" id="getReport">Run Report</button>
+    </div>
+
+    <div id="report"></div>
+
+    <div class="callout warning smaller" id="message">
+      If you do not get a report, there may be something wrong with your repository structure. Check the following:
+      <ul class="check">
+        <li>You entered ONLY your GitHub account <strong>username</strong>.</li>
+        <li>You have a GitHub repository named "<code>wdd231</code>".</li>
+        <li>That you created a file named "<code>index.html</code>" that is located in the wdd231 root.</li>
+        <li>Do not end any CSS file with a code comment.</li>
+      </ul>
+
+      <div class="callout info">
+        Example URL: <code class="plaintext">https://<em>your-github-username</em>.github.io/wdd231</code>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    
+      // #region Set HTML Elements ******************************************
+  const student = document.querySelector('#student');
+  const getReportButton = document.querySelector('#getReport');
+  const report = document.querySelector('#report');
+  const message = document.querySelector('#message');
+  // #endregion *********************************************************
+  
+  getReportButton.addEventListener('click', getReport);
+  
+  document.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      getReport();
+    }
+  });
+  
+  async function getReport() {
+    let studentgh = student.value;
+    if (studentgh === '') {
+      message.textContent = "A valid GitHub username is required."
+      message.style.display = 'block';
+      student.focus();
+      return;
+    }
+  
+    let uri = `http://127.0.0.1:5500/index.html`;
+  
+    let response = await fetch(`http://127.0.0.1:5500/index.html`);
+    if (response.status === 200) {
+      resetReport();
+      const cssStats = await cssstats(uri);
+      report.innerHTML = '';
+      report.innerHTML += buildReport(cssStats, uri);
+      console.log(cssStats);
+    } else {
+      message.textContent = "The index.html page was not found in the wdd231 repo."
+      message.style.display = 'block';
+      return;
+    }
+  };
+  
+  async function cssstats(baseuri) {
+    let url = `https://cssstats.com/api/stats?url=${baseuri}`;
+    let response = await fetch(url);
+    let cssresult = await response.json();
+    return cssresult;
+  }
+  
+  function resetReport() {
+    message.style.display = 'none';
+    report.textContent = '';
+  }
+  
+  // #region Utility Functions ******************************************
+  function getElement(html, element) {
+    let count = 0;
+    let i = 0;
+    while (true) {
+      let elementIndex = html.indexOf(element, i);
+      if (elementIndex === -1) break;
+      count++;
+      i = elementIndex + 1;
+    }
+    return count;
+  }
+  function getContent(html, regex) {
+    let match = html.match(regex);
+    return match ? match[1] : null;
+  }
+  
+  
+  async function validateHTML(h) {
+    let url = `https://validator.w3.org/nu/?out=json`;
+    let htmlErrorCount;
+    let response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'text/html'
+      },
+      body: h
+    });
+    if (response.status !== 200 || !response.ok) {
+      throw new Error(`Validation failed with status code ${response.status}`);
+    }
+    let vResult = await response.json();
+  
+    htmlErrorCount = vResult.messages.reduce((count, message) => {
+      return message.type === 'error' ? count + 1 : count;
+    }, 0);
+  
+    return htmlErrorCount;
+  }
+  
+  async function validateCSS(uri) {
+    let url = `https://jigsaw.w3.org/css-validator/validator?uri=${uri}&profile=css3svg&usermedium=all&output=json`;
+    let cssErrorCount;
+    let response = await fetch(url);
+    if (response.status !== 200 || !response.ok) {
+      throw new Error(`Validation failed with status code ${response.status}`);
+    }
+    let cResult = await response.json();
+    cssErrorCount = cResult.cssvalidation.result.errorcount;
+  
+    return cssErrorCount;
+  }
+  // #endregion *********************************************************
+  
+  
+  function buildReport(data, url) {
+    let h = data.css.html;
+    h = h.replace(/[\n\r]/g, ""); // remove line breaks
+    h = h.replace(/ {2,}/g, " "); // remove extra spaces
+    let c = data.css.css;
+    c = c.replace(/[\n\r]/g, ""); // remove line breaks
+    c = c.replace(/\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm, ''); // remove CSS comments
+  
+    let csslinks = '';
+    data.css.links.forEach(css => {
+      csslinks += `${css.link}<br>`
+    });
+  
+    validateHTML(h)
+      .then((htmlErrorCount) => {
+        document.getElementById('hvalid').innerHTML = (htmlErrorCount === 0) ? '✅' : '❌';
+        document.getElementById('htmlerrorscount').innerHTML = `Errors: ${htmlErrorCount}`;
+      })
+      .catch((error) => {
+        document.getElementById('htmlerrorscount').innerHTML = `HTML Validation failed to report: ${error}`;
+      });
+  
+    validateCSS(url)
+      .then((cssErrorCount) => {
+        document.getElementById('cvalid').innerHTML = (cssErrorCount === 0) ? '✅' : '❌';
+        document.getElementById('csserrorscount').innerHTML = `Errors: ${cssErrorCount}`;
+      })
+      .catch((error) => {
+        document.getElementById('csserrorscount').innerHTML = `CSS Validation failed to report: ${error}`;
+      });
+  
+    return `
+  
+    <main>
+      <h3>w3.org Validation Tools</h3>
+    
+      <div class="label">HTML Validator:</div>
+      <div class="data" id="hvalid"></div>
+      <div class="standard"> <span id="htmlerrorscount"></span> <a href="https://validator.w3.org/check?verbose=1&uri=${url}" target="_blank">Report</a></div>
+  
+      <div class="label">CSS Validator:</div>
+      <div class="data" id="cvalid"></div>
+      <div class="standard"><span id="csserrorscount"></span> <a href="https://jigsaw.w3.org/css-validator/validator?uri=${url}" target="_blank">Report</a></div>
+  
+    <h3>HTML Document</h3>
+        <div class="label">Document Type:</div>
+        <div class="data">${h.includes('<!DOCTYPE html>') || h.includes('<!doctype html>') ? '✅' : '❌'}</div>
+        <div class="standard">&lt;!DOCTYPE html&gt; or &lt;!doctype html&gt; <span class="blue">This should be on the first line.</span></div>
+  
+        <div class="label">&lt;html&gt; & lang Attribute:</div>
+        <div class="data">${h.includes('<html lang="') && h.indexOf('<html') < h.indexOf('<head') && h.indexOf('</html>' > h.indexOf('</body>')) ? '✅' : '❌'}</div>
+        <div class="standard">&lt;html lang="en-US"&gt; <span class="blue">Encases the entire document. lang value OK to be locale.</span></div>
+  
+        <div class="label">&lt;head&gt; element</div>
+        <div class="data">${h.includes('<head>') && h.includes('</head>') && h.indexOf('</head>') < h.indexOf('<body') ? '✅' : '❌'}</div>
+        <div class="standard">&lt;head&gt; ... &lt;/head&gt; <span class="blue">Start tag and end tag before the &lt;body&gt; element</span></div>
+  
+        <div class="label">&lt;body&gt; element</div>
+        <div class="data">${h.includes('<body') && h.includes('</body>') && h.indexOf('</body>') < h.indexOf('</html>') ? '✅' : '❌'}</div>
+        <div class="standard">&lt;body&gt; ... &lt;/body&gt; <span class="blue">Closes before the closing &lt;/html&gt; element</span></div>
+  
+        <h3>&lt;head&gt; Elements</h3>
+  
+      <div class="label">Meta Charset:</div>
+      <div class="data">${h.toLowerCase().includes('<meta charset="utf-8">') ? '✅' : '❌'}</div>
+      <div class="standard"><span class="blue">&lt;meta charset="UTF-8"&gt;</span></div>
+  
+      <div class="label">Meta Viewport:</div>
+      <div class="data">${h.includes('<meta name="viewport"') ? '✅' : '❌'}</div>
+      <div class="standard"><span class="blue">&lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;</span></div>
+  
+      <div class="label">Title:</div>
+      <div class="data">${data.css.pageTitle.length > 15 ? '👀' : '❌'}</div>
+      <div class="standard">&#10077;${data.css.pageTitle}&#10078; <span class="blue">REVIEW: Verify that this title is descriptive for a course home page. Student name should be included.</span></div>
+  
+      <div class="label">Meta Description:</div>
+      <div class="data">${h.includes('<meta name="description" content="') ? '👀' : '❌'}</div>
+      <div class="standard">&#10077;${getContent(h, /<meta\s+name="description"\s+content="([^"]+)"/i)}&#10078; <span class="blue">REVIEW: Is this meta description sufficient and relevant to the content of this page?</span></div>
+  
+      <div class="label">Meta Author:</div>
+      <div class="data">${h.includes('name="author"') ? "👀" : "❌"}</div>
+      <div class="standard">&#10077;${getContent(h, /<meta\s+name="author"\s+content="([^"]+)"/i)}&#10078;
+      <span class="blue">Review: Student name provided?</span></div>
+  
+  
+      <h3>&lt;body&gt; Elements</h3>
+  
+      <div class="label">&lt;header&gt;</div>
+      <div class="data">${h.includes('<header') && h.includes('</header>') && h.indexOf('<header') > h.indexOf('<body') && h.indexOf('</header>') < h.indexOf('<main') ? '✅' : '❌'}</div>
+      <div class="standard"><span class="blue">A &lt;header&gt; element probably should be used. It does not need a class nor id.</span></div>
+  
+      <div class="label">&lt;h1&gt;</div>
+      <div class="data">${h.includes('<h1') && h.includes('</h1>') ? '👀' : '❌'}</div>
+      <div class="standard">${getContent(h, /<h1.*>(.*?)<\/h1>/)} <span class="blue">The h1 should closely match the page's title.</span></div>
+  
+      <div class="label">&lt;nav&gt;</div>
+      <div class="data">${h.includes('<nav') && h.includes('</nav>') ? '✅' : '❌'}</div>
+      <div class="standard"><span class="blue">A &lt;nav&gt; element should be used.</span></div>
+  
+      <div class="label">&lt;a&gt;</div>
+      <div class="data">${getElement(h, '<a href="') >= 4 ? '✅' : '❌'}</div>
+      <div class="standard"><span class="blue">Found ${getElement(h, '<a href="')} anchor tags.</span></div>
+  
+      <div class="label">&lt;main&gt;</div>
+      <div class="data">${h.includes('<main') && h.includes('</main>') ? '✅' : '❌'}</div>
+      <div class="standard"><span class="blue">A &lt;main&gt; should be used.</span></div>
+  
+      <div class="label">&lt;section&gt;</div>
+      <div class="data">${getElement(h, '</section>') >= 3 ? '✅' : '❌'}</div>
+      <div class="standard"><span class="blue">At least three &lt;section&gt; elements are required.</span></div>
+  
+      <div class="label">&lt;footer&gt;</div>
+      <div class="data">${h.includes('<footer') && h.includes('</footer>') && h.indexOf('<footer') > h.indexOf('</main>') && h.indexOf('</footer>') < h.indexOf('</body>') ? '✅' : '❌'}</div>
+      <div class="standard">${getContent(h, /<footer.*>(.*?)<\/footer>/)} <span class="blue">A &lt;footer&gt; should be used.</span></div>
+  
+      <h3>CSS</h3>
+      <div class="label">CSS Files:</div>
+      <div class="data">${h.includes('styles/') && data.css.links.length >= 2 ? '👀' : '❌'}</div>
+      <div class="standard">${data.css.links.length} : ${csslinks}  <span class="blue">Review: referenced CSS files.</span></div>
+  
+      <div class="label">No Embedded/Inline</div>
+        <div class="data">${h.includes("<style>") || h.includes("</style>") || h.includes("style=") ? "❌" : "✅"}</div>
+        <div class="standard"><span class="blue">Embedded (&lt;style&gt;) or inline styles (style=") are not permitted</span></div>
+  
+        <div class="label">Google Font</div>
+        <div class="data">${h.includes('<link rel="preconnect" href="https://fonts.googleapis.com">') && h.includes('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>') && h.includes('<link href="https://fonts.googleapis.com/css2?family') ? '✅' : '❌'}</div>
+        <div class="standard"><span class="blue">Google Font API <a href="https://fonts.google.com/selection/embed" target="_blank" rel="noopener">Embed code</a> required in the &lt;head&gt; preconnect to fonts.googleapis.com</span></div>
+  
+        <div class="label">CSS Flex</div>
+        <div class="data">${c.includes('display: flex;') ? "✅" : "❌"}</div>
+        <div class="standard"><span class="blue">Simple check if display: flex; declaration is used in any CSS. (Another rubric line item has the grader verify that it was used for the main navigation.)</span></div>
+  
+  
+      <h3>JavaScript</h3>
+      
+      <div class="label">JS File</div>
+      <div class="data">${h.includes('src="scripts/') && h.includes('.js') ? "✅" : "❌"}</div>
+      <div class="standard"><span class="blue">External scripts file(s) used.</span></div>
+  
+      <h3>Information Only: HTML and CSS</h3>
+  
+      <div class="label">&lt;h2&gt;</div>
+      <div class="data">📑</div>
+      <div class="standard">${getElement(h, '<h2')}</div>
+  
+      <div class="label">&lt;img&gt;</div>
+      <div class="data">📑</div>
+      <div class="standard">${getElement(h, '<img src=')}</div>
+  
+      <div class="label">&lt;div&gt;</div>
+      <div class="data">📑</div>
+      <div class="standard">${getElement(h, '</div>')}</div>
+  
+      <div class="label">&lt;p&gt;</div>
+      <div class="data">📑</div>
+      <div class="standard">${getElement(h, '</p>')}</div>
+  
+        <div class="label">Selectors:</div>
+        <div class="data">📑</div>
+        <div class="standard">${data.stats.selectors.total} : ${data.stats.selectors.values}</div>
+         <div class="label">Repeated:</div>
+        <div class="data">📑</div>
+        <div class="standard">${data.stats.selectors.repeated.length} : ${data.stats.selectors.repeated}</div>
+        <div class="label">Classes:</div>
+        <div class="data">📑</div>
+        <div class="standard">${data.stats.selectors.class}</div>
+        <div class="label">IDs:</div>
+        <div class="data">📑</div>
+        <div class="standard">${data.stats.selectors.id}</div>
+        <div class="label">Pseudo-classes:</div>
+        <div class="data">📑</div>
+        <div class="standard">${data.stats.selectors.pseudoClass}</div>
+        <div class="label">Pseudo-elements:</div>
+        <div class="data">📑</div>
+        <div class="standard">${data.stats.selectors.pseudoElement}</div>
+      </main>`;
+  }
+  </script>
+
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+</body>
+
+</html>
