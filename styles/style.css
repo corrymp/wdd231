@@ -1,4 +1,3 @@
-/* #region global */
 *,
 ::before,
 ::after {
@@ -47,8 +46,6 @@ ul {
     padding-left: 16px;
 }
 
-/* #endregion global */
-/* #region header */
 header {
     background-color: var(--dark-green);
     display: flex;
@@ -109,8 +106,6 @@ header {
     top: -0.25px;
 }
 
-/* #endregion header*/
-/* #region nav */
 nav {
     background-color: var(--dark-green);
     border-bottom: 1px solid var(--dark-green);
@@ -162,8 +157,6 @@ nav {
     text-shadow: none;
 }
 
-/* #endregion nav */
-/* #region main */
 main {
     background-color: var(--tan);
     padding: 4px 2px;
@@ -185,9 +178,6 @@ h2 {
     padding: 15px;
     text-align: center;
 }
-
-/* #endregion main*/
-/* #region map*/
 
 #location-map {
     display: flex;
@@ -215,8 +205,6 @@ h2 {
     margin-bottom: 4px;
 }
 
-/* #endregion map*/
-/* #region courses */
 #cert-header {
     display: flex;
     flex-direction: column;
@@ -314,8 +302,6 @@ h2 {
     font-style: italic;
 }
 
-/* #endregion courses */
-/* #region popup */
 .popup {
     background-image: linear-gradient(#00000015, #ffffff15, #00000015), linear-gradient(120deg, #2020202a, #dfdfdf2a, #2020202a), linear-gradient(240deg, #4040403f, #bfbfbf3f, #4040403f);
     cursor: default;
@@ -387,8 +373,6 @@ h2 {
     padding-left: 11px;
 }
 
-/* #endregion popup */
-/* #region footer */
 footer {
     background-color: var(--dark-green);
     display: flex;
@@ -417,5 +401,3 @@ footer {
     font-size: 0.9rem;
     margin-top: 8px;
 }
-
-/* #endregion footer */

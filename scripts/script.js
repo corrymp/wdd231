@@ -150,4 +150,8 @@ I like sorting my code like this:
     4. all event listeners
     5. all code that runs immediately
     6. notes that don't belong anywhere else
+
+
+Speaking of notes...
+I added a bunch of "#region name"/"#endregion name" flags to the CSS files, but the CSSStats website crashes when trying to parse them
 */
