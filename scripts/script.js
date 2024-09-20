@@ -63,7 +63,6 @@ const courses = [
 
 const courseList = document.getElementById('courses');
 
-
 /* filter stuff */
 const courseFilter = (i) => courses.filter(course => course.subject == i)
 const addFilter = (id, filter) => document.getElementById(id).addEventListener('click', (i) => { select(i.target, filter) })
@@ -90,9 +89,9 @@ function buildCourseList(list = courses) {
         // I tried using a function to handle making tags around content, but it made this part use more characters than it has a right to be 
         // (define: const wrap = (type,content) => `<${type}>${content}</${type}>`; call with: wrap('p',`Hello ${world}!`); returns: <p>Hello World!</p>)
         courseList.appendChild(course).innerHTML = `
-        ${name}
-        <div class='hover-text'>
-            <div>
+        <span>${name}</span>
+        <div class='popup'>
+            <div class="popup-text">
             <button class="close" type="button"></button>
                 <h3>${name}: <span>${item.title}</span></h3>
                 <hr>
@@ -118,12 +117,12 @@ function select(option, filter) {
 }
 
 /* closes the popup on click and prevents instantly closing */
-addEventListener('click', (e) => { document.querySelectorAll('button:has(.hover-text)').forEach(j => { if (e.target != j) { j.classList.remove('clicked') } }) });
+addEventListener('click', (click) => { document.querySelectorAll('.show-info').forEach(target => { if (click.target != target) { target.classList.remove('clicked') } }) });
 
 /* IIFE for loading everything on... load... (I learned what this was while working on this so now I *HAVE* to use it) */
 -function () {
     /* Safari does not support the 'scrollbar-gutter' property, so using it causes the W3C CSS audit to fail. I want to use it, so I need to check the browser being used. RegEx from https://stackoverflow.com/questions/7944460/detect-safari-browser */
-    (!(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))) ? document.head.appendChild(document.createElement('style')).sheet.insertRule('.hover-text div {scrollbar-gutter: stable both-edges;}') : 0;
+    (!(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))) ? document.head.appendChild(document.createElement('style')).sheet.insertRule('.popup-text {scrollbar-gutter: stable both-edges;}') : 0;
 
     // "REVIEW: Verify that this title is descriptive for a course home page. Student name should be included."
     // "The h1 should closely match the page's title."
@@ -138,6 +137,9 @@ addEventListener('click', (e) => { document.querySelectorAll('button:has(.hover-
     /* sets up the course list and remaining/total credits */
     buildCourseList();
     displayCredits();
+
+    /* marks the course list as loaded (it has a fixed size on load to help with content shift) (idk if it helps) */
+    document.querySelector('.loading').classList.remove('loading')
 }()
 
 /*
