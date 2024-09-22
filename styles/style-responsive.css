@@ -47,7 +47,8 @@
         width: 100%;
     }
 
-    .nav-link:hover {
+    .nav-link:hover,
+    .nav-link:focus-visible {
         color: var(--black);
     }
 
@@ -95,7 +96,9 @@
         line-height: 2rem;
     }
 
-    #map-picture {max-width: 600px;}
+    #map-picture {
+        max-width: 600px;
+    }
 
     #map-caption {
         font-size: 1.125rem;

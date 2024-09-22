@@ -130,14 +130,14 @@ nav {
     padding: 0.2675rem;
     text-decoration: none;
     width: 100%;
-    z-index: 1;
+    z-index: 0;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus-visible {
     background-color: var(--bright-yellow);
-    outline: 0;
     text-shadow: 0 0 3px var(--light-green);
-    z-index: 0;
+    z-index: 1;
 }
 
 .open .nav-link,
@@ -256,7 +256,8 @@ h2,
     color: var(--bright-yellow);
 }
 
-.filter-button:hover {
+.filter-button:hover,
+.filter-button:focus-visible {
     background-color: var(--bright-yellow);
     color: var(--black);
     text-shadow: 0 0 3px var(--light-green);
@@ -280,11 +281,13 @@ h2,
     text-align: center;
 }
 
-.show-info:hover {
+.show-info:hover,
+.show-info:focus-visible {
     box-shadow: 0 0 8px var(--red), 0 0 12px var(--bright-yellow);
 }
 
-.show-info.clicked:hover {
+.show-info.clicked:hover,
+show-info.clicked:focus-visible {
     box-shadow: none;
 }
 
@@ -335,7 +338,8 @@ h2,
     top: 1px;
 }
 
-.close:hover {
+.close:hover,
+.close:focus-visible {
     background-color: var(--red);
 }
 
