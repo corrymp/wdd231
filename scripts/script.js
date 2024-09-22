@@ -117,7 +117,7 @@ function select(option, filter) {
 }
 
 /* closes the popup on click and prevents instantly closing */
-addEventListener('click', (click) => { document.querySelectorAll('.show-info').forEach(target => { if (click.target != target) { target.classList.remove('clicked') } }) });
+addEventListener('click', (click) => { document.querySelectorAll('.show-info').forEach(target => { if (click.target != target && click.target != target.children[0]) { target.classList.remove('clicked') } }) });
 
 /* IIFE for loading everything on... load... (I learned what this was while working on this so now I *HAVE* to use it) */
 -function () {
@@ -126,7 +126,7 @@ addEventListener('click', (click) => { document.querySelectorAll('.show-info').f
 
     // "REVIEW: Verify that this title is descriptive for a course home page. Student name should be included."
     // "The h1 should closely match the page's title."
-    // This confuses me, so I coded it so it is *technically* correct
+    // This confuses me, so instead I am just saying hello
     document.getElementById('title').innerHTML = 'Corry McConnell Palmer';
 
     /* Adds the appropriate click event listners and filters to the filter buttons */

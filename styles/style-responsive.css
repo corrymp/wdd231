@@ -1,4 +1,4 @@
-@media screen and (min-width: 868px) {
+@media screen and (min-width: 918px) {
     header {
         display: grid;
         gap: unset;
@@ -42,41 +42,67 @@
         background-color: var(--off-black);
         color: var(--off-white);
         display: flex;
-        line-height: 1.8rem;
-        padding: 12px;
+        font-size: 1.5rem;
+        padding: 0.75rem;
         width: 100%;
     }
 
     .nav-link:hover {
-        color: var(--off-black);
+        color: var(--black);
     }
 
     .active {
-        color: var(--bright-yellow);
         background-color: var(--off-black);
         box-shadow: unset;
+        color: var(--bright-yellow);
     }
 
-    .active:hover {
-        text-shadow: 0px 0px 3px var(--light-green);
+    .popup-text {
+        font-size: 1.25rem;
+    }
+
+    .popup-text h3 {
+        font-size: 1.75rem;
+    }
+
+    .popup-text span {
+        font-size: 1.5rem;
+    }
+
+    .popup-text li {
+        font-size: 1.125rem;
     }
 }
 
-@media screen and (min-width: 570px) {
-
+@media screen and (min-width: 740px) {
     main {
         display: grid;
+        gap: 4px;
         grid-template-columns: 60% 40%;
         padding: 12px 16px;
-        gap: 4px;
     }
 
     section {
         box-shadow: 0 0 16px var(--off-black);
     }
 
-    #course-work li {
+    h2,
+    #cert-header {
+        font-size: 1.75rem;
+    }
+
+    #course-work-list li {
         line-height: 2rem;
+    }
+
+    #map-picture {max-width: 600px;}
+
+    #map-caption {
+        font-size: 1.125rem;
+    }
+
+    #map-source {
+        font-size: 1rem;
     }
 
     #certificate {
@@ -84,8 +110,13 @@
         margin-bottom: 8px;
     }
 
+    #credits-left {
+        font-size: 1.125rem;
+    }
+
     #cert-filters {
         display: grid;
+        font-size: 1.25rem;
         grid-template-columns: 15% 15% 15%;
         justify-content: center;
     }
@@ -93,11 +124,12 @@
     #courses {
         flex-direction: row;
         flex-wrap: wrap;
-        min-height: 155px;
         justify-content: center;
+        min-height: 155px;
     }
 
     .show-info {
+        font-size: 1.5rem;
         margin: auto;
         padding: 12px;
         width: 30%;
@@ -119,18 +151,82 @@
     }
 
     #lastModified {
+        font-size: 1rem;
         margin-top: 0;
     }
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 500px) {
     #title {
         font-size: 1.75rem;
     }
+
+    h2,
+    #cert-header {
+        font-size: 1.25rem;
+    }
+
+    .nav-link {
+        font-size: 1.125rem;
+    }
+
+    .show-info {
+        font-size: 1.125rem;
+    }
+
+    .filter-button,
+    #credits-left,
+    #footer-text,
+    #map-caption {
+        font-size: 1rem;
+    }
+
+    #lastModified,
+    #map-source {
+        font-size: 0.8125rem;
+    }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 440px) {
+    html {
+        overflow-x: auto;
+    }
+
     #title {
         font-size: 1.5rem;
+    }
+
+    h2,
+    #cert-header {
+        font-size: 1.125rem;
+    }
+
+    .show-info,
+    .filter-button,
+    #credits-left,
+    #map-caption {
+        font-size: 1rem;
+    }
+
+    #footer-text,
+    #lastModified,
+    #map-source {
+        font-size: 0.8125rem;
+    }
+
+    .popup-text {
+        font-size: 1rem;
+    }
+
+    .popup-text h3 {
+        font-size: 1.25rem;
+    }
+
+    .popup-text span {
+        font-size: 1.125rem;
+    }
+
+    .popup-text li {
+        font-size: 0.8125rem;
     }
 }

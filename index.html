@@ -23,12 +23,17 @@
         <header>
             <div id="header-content">
                 <img src="images/corry_san_diego_temple.webp" id="selfie" alt="Pictured is CorryMP in front of the San Diego California Temple" width="96" height="128">
-                <h1 id="title">Corry McConnell Palmer - Hello graders 👀</h1>
+                <h1 id="title">Corry McConnell Palmer (Hello graders 👋)</h1>
                 <!-- "REVIEW: Verify that this title is descriptive for a course home page. Student name should be included." -->
                 <!-- "The h1 should closely match the page's title." -->
                 <!-- This confuses me, so instead I am just saying hello -->
             </div>
-            <button id="menu" type="button" aria-label="navigation menu"></button>
+            <button id="menu" type="button" aria-label="navigation menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <path id="ham-x" fill="#efefef" d="m12 10.55 6-6a.25.25 0 011.42 1.42l-6 6 6 6a.25.25 0 01-1.42 1.42l-6-6-6 6a.25.25 0 01-1.42-1.42l6-6-6-6a.25.25 0 111.42-1.42z" />
+                    <path id="ham-bars" fill="#efefef" d="m4 4.25a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2z" />
+                </svg>
+            </button>
             <nav>
                 <a href="./" class="nav-link active">Home</a>
                 <a href="#" class="nav-link">Chamber</a>
@@ -39,7 +44,7 @@
         <main>
             <section id="course-work">
                 <h2>Course Work</h2>
-                <ul>
+                <ul id="course-work-list">
                     <li> </li>
                     <li> </li>
                     <li> </li>
@@ -50,9 +55,9 @@
                 <figure id="location-map">
                     <a href="https://www.google.com/maps/place/San+Diego+County,+CA/@33.0153772,-117.4697752,10z/" id="map-link">
                         <picture id="map-picture">
-                            <source srcset="images/san_diego_county.webp" media="(min-width:810px)" width="444" height="340">
-                            <source srcset="images/san_diego_county_small.webp" media="(min-width:570px)" width="256" height="196">
-                            <source srcset="images/san_diego_county.webp" media="(min-width:310px)" width="444" height="340">
+                            <source srcset="images/san_diego_county.webp" media="(min-width:860px)" width="444" height="340">
+                            <source srcset="images/san_diego_county_small.webp" media="(min-width:740px)" width="256" height="196">
+                            <source srcset="images/san_diego_county.webp" media="(min-width:345px)" width="444" height="340">
                             <img src="images/san_diego_county_small.webp" alt="Map of San Diego county" id="map-img" width="256" height="196">
                         </picture>
                     </a>
@@ -64,7 +69,7 @@
             </section>
             <section id="certificate">
                 <div id="cert-header">
-                    <h2>Web and Computer Programming Certificate </h2>
+                    <h2>Web and Computer Programming Certificate</h2>
                     <span id="credits-left">(<span id="credits">##/##</span> credits)</span>
                 </div>
                 <div id="course-info-box">
