@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CorryMP | Wdd231 | Sandbox</title>
+    <meta name="author" content="Corry McConnell Palmer">
+    <meta name="description" content="Testing area for lesson matterials and examples from Corry's studies in WDD 231: 'Web Frontend Development I'.">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-responsive.css">
+    <link rel="stylesheet" href="styles/sandbox.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:ital@0;1&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/sandbox.js" defer></script>
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <div id="header-content">
+                <h1 id="title">Corry McConnell Palmer</h1>
+            </div>
+            <button id="menu" type="button" aria-label="navigation menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <path id="ham-x" fill="#efefef" d="m12 10.55 6-6a.25.25 0 011.42 1.42l-6 6 6 6a.25.25 0 01-1.42 1.42l-6-6-6 6a.25.25 0 01-1.42-1.42l6-6-6-6a.25.25 0 111.42-1.42z" />
+                    <path id="ham-bars" fill="#efefef" d="m4 4.25a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2z" />
+                </svg>
+            </button>
+            <nav id="animateme">
+                <ul>
+                    <a href="./" class="nav-link active">Home</a>
+                    <a href="#" class="nav-link">Chamber</a>
+                    <a href="https://github.com/corrymp" class="nav-link" target="_blank">GitHub Profile</a>
+                    <a href="https://www.linkedin.com/in/corry-palmer" class="nav-link" target="_blank">LinkedIn</a>
+                </ul>
+            </nav>
+        </header>
+        <main id="sandbox">
+
+            <div id="primes">
+                <label for="quota">Number of primes:</label>
+                <input type="text" id="quota" name="quota" value="1000000" />
+
+                <button id="generate">Generate primes</button>
+                <button id="reload">Reload</button>
+
+                <div id="output"></div>
+                <textarea name="text" id="text"></textarea>
+            </div>
+
+            <div id="request">
+                <button id="xhr">Click to start request</button>
+                <button id="reload">Reload</button>
+                <pre readonly class="event-log"></pre>
+            </div>
+
+        </main>
+        <footer>
+            <p id="footer-text"><span>&copy;<span id="currentyear"></span></span><span id="name">Corry McConnell Palmer</span><span>California</span></p>
+            <p id="lastModified"></p>
+        </footer>
+    </div>
+</body>
+
+</html>

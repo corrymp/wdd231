@@ -1,0 +1,62 @@
+#sandbox {
+    height: calc(100vh - 128px - 16.35219860076904109vh);
+    display: flex;
+    padding: 0;
+}
+
+#header-content {
+    height: 149px;
+}
+
+@media screen and (min-width: 740px) {
+    #sandbox {
+        height: calc(100vh - 128px - 10.37736082077026263vh);
+    }
+
+    #header-content {
+        height: 96px;
+    }
+}
+
+@media screen and (min-width: 918px) {
+    #sandbox {
+        height: calc(100vh - 100px - 222px);
+    }
+
+    #header-content {
+        height: 149px;
+    }
+}
+
+#primes,#request {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 500px;
+    height: 90%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--white);
+    padding: 8px;
+
+    label,
+    #quota,
+    #output,
+    #text,
+    pre {
+        background-color: var(--light-green);
+        color: var(--bright-yellow);
+    }
+
+    label,
+    button,
+    #quota,
+    #output,
+    #text,
+    pre {
+        border: 1px solid;
+        border-radius: 4px;
+        width: auto;
+        padding: 4px;
+    }
+}

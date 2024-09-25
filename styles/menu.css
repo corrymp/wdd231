@@ -1,0 +1,123 @@
+#menu {
+    background-color: var(--medium-green);
+    border-radius: 8px;
+    height: 24px;
+    position: fixed;
+    right: 8px;
+    top: 8px;
+    width: 24px;
+    z-index: 1;
+}
+
+#ham-bars,
+#ham-x {
+    display: none;
+}
+
+#menu:not(.open) #ham-bars,
+#menu.open #ham-x {
+    display: inline;
+}
+
+nav {
+    background-color: var(--red);
+    border-bottom: 1px solid var(--dark-green);
+    display: grid;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    left: 100%;
+    position: fixed;
+    top: -10%;
+    transition: left 0.25s ease-out, top 0.25s ease-in-out;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+nav.open {
+    left: 0;
+    top: 0;
+}
+
+.nav-link {
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 1.75rem;
+    justify-content: center;
+    outline: 1px solid var(--shadow);
+    text-align: center;
+    text-decoration: none;
+    z-index: 0;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    background-color: var(--bright-yellow);
+    text-shadow: 0 0 3px var(--light-green);
+    z-index: 1;
+}
+
+.active {
+    background-color: var(--bright-yellow);
+    white-space: pre;
+}
+
+.active::before {
+    content: '> ';
+}
+
+.active::after {
+    content: ' <';
+}
+
+@media screen and (min-width: 918px) {
+    #menu {
+        display: none;
+    }
+
+    nav {
+        grid-column: 1/3;
+        grid-template-rows: auto;
+        grid-row: 2/3;
+        position: relative;
+        left: 0;
+        top: 0;
+        transition: left 0s top 0s;
+    }
+
+    nav ul {
+        flex-direction: row;
+        overflow: visible;
+    }
+
+    .nav-link {
+        align-items: center;
+        background-color: var(--off-black);
+        color: var(--off-white);
+        display: flex;
+        font-size: 1.5rem;
+        padding: 0.75rem 0;
+        width: 100%;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus-visible {
+        color: var(--black);
+    }
+
+    .active {
+        background-color: var(--off-black);
+        box-shadow: unset;
+        color: var(--bright-yellow);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav-link {
+        font-size: 1.125rem;
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "familyName": "Palmer",
+    "moveInDate": "09-21-2024",
+    "memberCount": 5,
+    "visited": false,
+    "members": [
+        {
+            "name": "Father",
+            "gender": "m",
+            "dob": "08-17-1988"
+        },
+        {
+            "name": "Mother",
+            "gender": "f",
+            "dob": "08-12-1987"
+        },
+        {
+            "name": "Student",
+            "gender": "nb",
+            "dob": "09-29-1997"
+        },
+        {
+            "name": "Brother",
+            "gender": "m",
+            "dob": "09-03-1999"
+        },
+        {
+            "name": "Sister",
+            "gender": "f",
+            "dob": "02-26-2002"
+        }
+    ]
+}
