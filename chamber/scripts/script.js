@@ -19,8 +19,8 @@ function buildList(members) {
             const img = document.createElement('img');
             img.setAttribute('src', member.image);
             img.setAttribute('alt', `image for ${member.name}`);
-            img.setAttribute('width', img.naturalWidth);
-            img.setAttribute('height', img.naturalHeight);
+            img.setAttribute('width', '250');
+            img.setAttribute('height', '48');
             return img.outerHTML;
         }
         cardHolder.innerHTML = `
