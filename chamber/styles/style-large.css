@@ -1,0 +1,204 @@
+@media screen and (min-width:768px) {
+    :root {
+        --header-bg: var(--darkblue);
+        --header-txt: var(--white);
+        --nav-bg: var(--lilac);
+        --nav-txt: var(--white);
+        --body-bg: var(--green);
+        --body-txt: var(--black);
+        --card-bg: var(--white);
+        --card-txt: var(--black);
+        --footer-bg: var(--darkblue);
+        --footer-txt: var(--white);
+    }
+
+    :root.darkmode {
+        --header-bg: var(--darkblue);
+        --header-txt: var(--black);
+        --nav-bg: var(--skyblue);
+        --nav-txt: var(--black);
+        --body-bg: var(--lightblue);
+        --body-txt: var(--black);
+        --card-bg: var(--darkblue);
+        --card-txt: var(--black);
+        --footer-bg: var(--darkblue);
+        --footer-txt: var(--black);
+    }
+
+    /* HEADER + NAV */
+    header>div {
+        display: grid;
+        grid-template-columns: 64px 2fr 1fr 24px;
+        justify-content: unset;
+        padding: 0 12px;
+    }
+
+    #title-text {
+        text-align: left;
+    }
+
+    nav {
+        align-items: last baseline;
+        background-color: unset;
+        display: flex;
+        position: static;
+        justify-content: space-between;
+        margin: 0 4px 4px 0;
+        gap: 16px;
+    }
+
+    a {
+        padding: 2px;
+    }
+
+    .active {
+        background-color: unset;
+        text-decoration: underline;
+    }
+
+    .active::before {
+        content: '';
+    }
+
+    #header-buttons {
+        font-size: 1rem;
+        align-items: last baseline;
+    }
+
+    #darkmode {
+        height: 24px;
+        position: relative;
+        bottom: 8px;
+        right: 2px;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    /* MAIN main {}*/
+
+    /* FOOTER */
+    footer>div {
+        font-size: 0.7rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: unset;
+        padding: 0 12px;
+    }
+
+    #socials {
+        display: flex;
+        justify-content: center;
+    }
+
+    #toggle-view {
+        aspect-ratio: 1;
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+
+    #toggle-view svg {
+        position: relative;
+        top: -2px;
+        left: -2px;
+        transform: unset;
+    }
+
+    .grid-icon,
+    .list-icon {
+        display: none;
+    }
+
+    .darkmode #toggle-view.grid .grid-icon.light {
+        display: inline;
+    }
+
+    html:not(.darkmode) #toggle-view.grid .grid-icon.dark {
+        display: inline;
+    }
+
+    .darkmode #toggle-view:not(.grid) .list-icon.light {
+        display: inline;
+    }
+
+    html:not(.darkmode) #toggle-view:not(.grid) .list-icon.dark {
+        display: inline;
+    }
+
+    #list-items {
+        margin: 0 auto;
+    }
+
+    /* GRID DISPLAY */
+    #list-items.is-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        max-width: 800px;
+        width: 98%;
+    }
+
+    .is-grid hr {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        min-height: unset;
+        display: block;
+        border: 1px solid var(--trans);
+    }
+
+    .is-grid .card {
+        grid-template-rows: 52px 1px auto;
+        grid-template-columns: minmax(200px, 1fr);
+        height: 100%;
+        width: 100%;
+    }
+
+    .is-grid :is(.card-url, .card-addr, .card-phone) {
+        grid-column: 1/2;
+        border: 0;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .is-grid .card-url {
+        grid-row: 6/7;
+    }
+
+    .is-grid .card-addr {
+        grid-row: 4/5;
+    }
+
+    .is-grid .card-phone {
+        grid-row: 5/6;
+    }
+
+    .is-grid .card-name {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        border: 0;
+    }
+
+    .is-grid :is(.card-header, .card-img) {
+        align-content: center;
+        background-color: var(--lightblue);
+        border: 0;
+        display: block;
+        font-size: 1.125rem;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .is-grid img {
+        height: 48px;
+        width: auto;
+        padding: 0;
+        border: 0;
+        display: block;
+    }
+}

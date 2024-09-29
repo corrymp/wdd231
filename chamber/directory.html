@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Data -->
+    <title>Vista Chamber of Commerce | Directory</title>
+    <meta name="author" content="Corry McConnell Palmer">
+    <meta name="description" content="This is the directory for the Vista Chamber of Commerce - A class Project for Corry McConnell Palmer's classwork in 'WDD231 - Web Frontend Development I'.">
+
+    <!-- Embed Data -->
+    <meta property="og:description" content="Vista Chamber of Commerce - a class Project for Corry McConnell Palmer's classwork in 'WDD231 - Web Frontend Development I'.">
+    <meta property="og:image" content="#">
+    <meta property="og:site_name" content="Vista Chamber of Commerce | CorryMP | WDD231">
+    <meta property="og:title" content="Vista Chamber of Commerce | Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://corrymp.github.io/wdd231/chamber">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image:alt" content="placeholder">
+
+    <!-- Style References -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:ital@0;1&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Script References -->
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/darkmode.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <div>
+                <svg id="logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <!--stripes mask-->
+                    <mask id="a">
+                        <circle cx="12" cy="12" r="8.75" fill="#fff" />
+                        <rect width="24" height="12" fill="" />
+                    </mask>
+                    <!--V mask-->
+                    <mask id="b">
+                        <path fill="#fff" d="m6 6 6 14 6-14-1.5-1-4.5 11-4.5-11z" />
+                    </mask>
+                    <!--C C masks-->
+                    <mask id="c">
+                        <path fill="#fff" d="m7.25 15.125l4-4h-8v8h8l-4-4M16.75 15.125l4-4h-8v8h8l-4-4" />
+                        <circle cx="16.75" cy="15.125" r="2" fill="#000" />
+                        <circle cx="7.25" cy="15.125" r="2" fill="#000" />
+                    </mask>
+                    <mask id="d">
+                        <circle cx="16.75" cy="15.125" r="4" fill="#000" />
+                        <circle cx="7.25" cy="15.125" r="4" fill="#000" />
+                        <circle cx="16.75" cy="15.125" r="3.2" fill="#fff" />
+                        <circle cx="7.25" cy="15.125" r="3.2" fill="#fff" />
+                        <circle cx="16.75" cy="15.125" r="2" fill="#000" />
+                        <circle cx="7.25" cy="15.125" r="2" fill="#000" />
+                    </mask>
+                    <!--Rings-->
+                    <circle cx="12" cy="12" r="12" fill="#5F9FCB" />
+                    <circle cx="12" cy="12" r="11.75" fill="#fff" />
+                    <circle cx="12" cy="12" r="11.25" fill="#134E82" />
+                    <circle cx="12" cy="12" r="9.5" fill="#fff" />
+                    <circle cx="12" cy="12" r="9" fill="#5F9FCB" />
+                    <circle cx="12" cy="12" r="8.75" fill="#AEE0E4" />
+                    <!--Stripes-->
+                    <rect mask="url(#a)" width="24" height="24" fill="#fff" />
+                    <path mask="url(#a)" fill="#fe3318" d="m3 12h1.5v9h1.5v-9h1.5v9h1.5v-9h1.5v9h1.5v-9h1.5v9h1.5v-9 h1.5v9h1.5v-9 h1.5v9h1.5v-9v9h-18" />
+                    <!--C C-->
+                    <path mask="url(#d)" fill="#2a2829" d="m7.5 15.125l4-4h-8v8h8l-4-4M17 15.125l4-4h-8v8h8l-4-4" />
+                    <circle mask="url(#c)" cx="16.75" cy="15.125" r="3" stroke="#2a2829" stroke-width="0.15" fill="#134E82" />
+                    <circle mask="url(#c)" cx="7.25" cy="15.125" r="3" stroke="#2a2829" stroke-width="0.15" fill="#134E82" />
+                    <circle mask="url(#c)" cx="16.75" cy="15.125" r="2.099" stroke="#2a2829" stroke-width="0.35" fill="#134E82" />
+                    <circle mask="url(#c)" cx="7.25" cy="15.125" r="2.099" stroke="#2a2829" stroke-width="0.35" fill="#134E82" />
+                    <!--V-->
+                    <rect mask="url(#b)" fill="#ffb752" width="24" height="24" />
+                    <rect mask="url(#b)" fill="#d7afc2" width="24" height="12.5" />
+                    <rect mask="url(#b)" fill="#f5ed96" width="12.5" height="24" />
+                    <rect mask="url(#b)" fill="#659067" width="12" height="13" />
+                    <path fill="transparent" stroke="#2a2829" stroke-width="0.3" d="m6 6 6 14 6-14-1.5-1-4.5 11-4.5-11z" />
+                    <!--Sun-->
+                    <circle cx="12" cy="9" r="2.5" stroke="#2a2829" stroke-width="0.2" fill="#f5ed96" />
+                    <path fill="#f5ed96" stroke="#2a2829" stroke-width="0.2" d="m12 5l2 7.5-5.5-5.5 7.5 2-7.5 2 5.5-5.5-2 7.5-2-7.5 5.5 5.5-7.5-2 7.5-2-5.5 5.5z" />
+                    <circle cx="12" cy="9" r="2.4" fill="#f5ed96" />
+                </svg>
+
+                <div id="title-text">
+                    <h1 id="title">Vista</h1>
+                    <p id="subtitle">Chamber of Commerce</p>
+                </div>
+                <nav id="animateme">
+                    <a href="../">Home</a>
+                    <a href="directory.html" class="active">Directory</a>
+                    <a href="join.html">Join</a>
+                    <a href="discover.html">Discover</a>
+                </nav>
+                <div id="header-buttons">
+                    <button id="darkmode" type="button" aria-label="dark mode toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <mask id="e">
+                                <mask id="f">
+                                    <path d="m12 0 12 0 0 24 -12 0" fill="#fff" />
+                                </mask>
+                                <circle cx="12" cy="12" r="11" fill="#fff" />
+                                <circle mask="url(#f)" cx="12" cy="12" r="10" fill="#000" />
+                            </mask>
+                            <circle class="dark" mask="url(#e)" cx="12" cy="12" r="11" fill="#000" />
+                            <circle class="light" mask="url(#e)" cx="12" cy="12" r="11" fill="#fff" />
+                        </svg>
+                    </button>
+                    <button id="menu" type="button" aria-label="navigation menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path class="ham-x light" fill="#efefef" d="m12 10.55 6-6a.25.25 0 011.42 1.42l-6 6 6 6a.25.25 0 01-1.42 1.42l-6-6-6 6a.25.25 0 01-1.42-1.42l6-6-6-6a.25.25 0 111.42-1.42z" />
+                            <path class="ham-bars light" fill="#efefef" d="m4 4.25a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2z" />
+                            <path class="ham-x dark" fill="#101010" d="m12 10.55 6-6a.25.25 0 011.42 1.42l-6 6 6 6a.25.25 0 01-1.42 1.42l-6-6-6 6a.25.25 0 01-1.42-1.42l6-6-6-6a.25.25 0 111.42-1.42z" />
+                            <path class="ham-bars dark" fill="#101010" d="m4 4.25a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="search">
+                <input type="text" placeholder="(W.I.P.) Search...">
+                <button id="go" type="button">Go</button>
+                <button id="toggle-view" class="grid" type="button" aria-label="toggle view">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path class="grid-icon dark" fill="#000" d="m5 3q-2 0-2 2v14q0 2 2 2h14q2 0 2-2v-14q0-2-2-2h-0.5v15.5h-13v-13h13h-5.25v5.25h5.25v2.5h-5.25v5.25h5.25h-12.75h5v-5.25h-5.25v-2.5h5.25v-5.25h7.75v-2.5" />
+                        <path class="list-icon dark" fill="#000" d="m5 3a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Zm-6 7a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Zm-6 7a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Z" />
+                        <path class="grid-icon light" fill="#fff" d="m5 3q-2 0-2 2v14q0 2 2 2h14q2 0 2-2v-14q0-2-2-2h-0.5v15.5h-13v-13h13h-5.25v5.25h5.25v2.5h-5.25v5.25h5.25h-12.75h5v-5.25h-5.25v-2.5h5.25v-5.25h7.75v-2.5" />
+                        <path class="list-icon light" fill="#fff" d="m5 3a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Zm-6 7a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Zm-6 7a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Z" />
+                    </svg>
+                </button>
+            </div>
+            <ul id="list-items" class="is-grid">
+                <li class="placeholder">I am a placeholder!</li>
+                <li class="placeholder">I am a placeholder!</li>
+                <li class="placeholder">I am a placeholder!</li>
+                <li class="placeholder">I am a placeholder!</li>
+                <li class="placeholder">I am a placeholder!</li>
+                <li class="placeholder">I am a placeholder!</li>
+                <li class="placeholder">I am a placeholder!</li>
+                <li class="placeholder">I am a placeholder!</li>
+                <li class="placeholder">I am a placeholder!</li>
+            </ul>
+        </main>
+        <footer>
+            <div>
+                <div id="contact">
+                    <p><b>Vista Chamber of Commerce</b></p>
+                    <p>123 Main Street</p>
+                    <p>San Diego, CA 92121</p>
+                    <p>info@vistacc.org</p>
+                    <p>(123) 456-7890</p>
+                </div>
+                <div id="socials">
+                    <a href="https://www.youtube.com/user/VistaChamberCommerce" target="_blank">
+                        <img src="images/youtube.png" alt="youtube icon" width="64" height="64">
+                    </a>
+                    <a href="https://x.com/vistachamber" target="_blank">
+                        <img src="images/twitter.png" alt="twitter icon" width="64" height="64">
+                    </a>
+                    <a href="https://www.linkedin.com/company/vista-chamber-of-commerce/" target="_blank">
+                        <img src="images/linkedin.png" alt="linkedin icon" width="64" height="64">
+                    </a>
+                </div>
+                <div id="info">
+                    <p>WDD231 Class Project</p>
+                    <p>Corry McConnell Palmer</p>
+                    <p>&copy;<span id="currentyear"></span> Vista Chamber of Commerce</p>
+                    <p id="lastModified">#</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
