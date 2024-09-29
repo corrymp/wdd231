@@ -171,6 +171,7 @@ nav {
     top: 67px;
     transition: right 0.25s ease-out, top 0.25s ease-in-out;
 }
+
 nav a {
     height: 24px;
 }
@@ -195,6 +196,7 @@ main {
     display: flex;
     flex-direction: column;
     height: 100%;
+    padding-bottom: 8px;
     width: 100%;
 }
 
