@@ -1,2 +1,3 @@
-document.getElementById('currentyear').innerHTML = `${new Date().getFullYear()}`;
-document.getElementById('lastModified').innerHTML = `Last Modification: ${document.lastModified}`;
+import { ge } from "./utils.mjs";
+ge('currentyear').innerHTML = `${new Date().getFullYear()}`;
+ge('lastModified').innerHTML = `Last Modification: ${document.lastModified}`;

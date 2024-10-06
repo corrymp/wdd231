@@ -1,7 +1,2 @@
-const navigation = document.querySelector('#animateme');
-const hamButton = document.getElementById('menu');
-
-hamButton.addEventListener('click', () => {
-    navigation.classList.toggle('open');
-    hamButton.classList.toggle('open');
-});
+import { toggle } from './utils.mjs';
+toggle('menu', ['menu', 'animateme'], 'open');

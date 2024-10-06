@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Page Data -->
-    <title>Vista Chamber of Commerce | Directory</title>
+    <title>Vista Chamber of Commerce | Home</title>
     <meta name="author" content="Corry McConnell Palmer">
-    <meta name="description" content="This is the directory for the Vista Chamber of Commerce - A class Project for Corry McConnell Palmer's classwork in 'WDD231 - Web Frontend Development I'.">
+    <meta name="description" content="This is the home page for the Vista Chamber of Commerce - A class Project for Corry McConnell Palmer's classwork in 'WDD231 - Web Frontend Development I'.">
 
     <!-- Embed Data -->
     <meta property="og:description" content="Vista Chamber of Commerce - a class Project for Corry McConnell Palmer's classwork in 'WDD231 - Web Frontend Development I'.">
     <meta property="og:image" content="https://corrymp.github.io/wdd231/chamber/images/ogchamber.png">
     <meta property="og:site_name" content="Vista Chamber of Commerce | CorryMP | WDD231">
-    <meta property="og:title" content="Vista Chamber of Commerce | Directory">
+    <meta property="og:title" content="Vista Chamber of Commerce | Home">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://corrymp.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://corrymp.github.io/wdd231/chamber">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image:alt" content="placeholder">
 
@@ -25,8 +25,9 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/style-large.css">
-    <link rel="stylesheet" href="styles/directory.css">
-    <link rel="stylesheet" href="styles/directory-large.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/home-large.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cousine:ital@0;1&family=Lora:ital@0;1&display=swap" rel="stylesheet">
@@ -35,7 +36,9 @@
     <script src="scripts/getdates.js" type="module"></script>
     <script src="scripts/darkmode.js" type="module"></script>
     <script src="scripts/menu.js" type="module"></script>
-    <script src="scripts/directory.js" type="module"></script>
+    <script src="scripts/weather.js" type="module"></script>
+    <script src="scripts/spotlight.js" type="module"></script>
+    <script src="scripts/event.js" type="module"></script>
 </head>
 
 <body>
@@ -99,8 +102,8 @@
                 </div>
                 <div id="nav-holder">
                     <nav id="animateme">
-                        <a href="./">Home</a>
-                        <a href="directory.html" class="active">Directory</a>
+                        <a href="./" class="active">Home</a>
+                        <a href="directory.html">Directory</a>
                         <a href="join.html">Join</a>
                         <a href="discover.html">Discover</a>
                     </nav>
@@ -131,29 +134,99 @@
             </div>
         </header>
         <main>
-            <div id="search">
-                <input type="text" placeholder="(W.I.P.) Search...">
-                <button id="go" type="button">Go</button>
-                <button id="toggle-view" class="is-grid" type="button" aria-label="toggle view">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path class="grid-icon dark" fill="#2a2829" d="m5 3q-2 0-2 2v14q0 2 2 2h14q2 0 2-2v-14q0-2-2-2h-0.5v15.5h-13v-13h13h-5.25v5.25h5.25v2.5h-5.25v5.25h5.25h-12.75h5v-5.25h-5.25v-2.5h5.25v-5.25h7.75v-2.5" />
-                        <path class="list-icon dark" fill="#2a2829" d="m5 3a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Zm-6 7a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Zm-6 7a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Z" />
-                        <path class="grid-icon light" fill="#fff" d="m5 3q-2 0-2 2v14q0 2 2 2h14q2 0 2-2v-14q0-2-2-2h-0.5v15.5h-13v-13h13h-5.25v5.25h5.25v2.5h-5.25v5.25h5.25h-12.75h5v-5.25h-5.25v-2.5h5.25v-5.25h7.75v-2.5" />
-                        <path class="list-icon light" fill="#fff" d="m5 3a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Zm-6 7a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Zm-6 7a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Z" />
-                    </svg>
-                </button>
+            <section id="hero">
+                <img src="images/hero.webp" alt="Hero image" width="740" height="700" id="hero-img">
+                <div id="hero-text">
+                    <h2 id="hero-title">
+                        <span id="hero-y" title="Your City. Your Table.">Y</span>
+                        <span id="hero-city" title="Your City.">our City.</span>
+                        <span id="hero-table" title="Your Table.">our Table.</span>
+                    </h2>
+                    <a href="join.html" id="call-button">Save Your Seat</a>
+                </div>
+            </section>
+            <div id="main">
+                <div id="page">
+                    <h2 id="home-title">Home</h2>
+                    <section id="events">
+                        <h3 id="events-title" class="section-header">Events</h3>
+                        <ul id="event-list">
+                            <li class="event-card">
+                                <p class="event-title">Pumpkin<wbr> Festival</p>
+                                <p class="event-date">When: <span>Oct. 18th</span></p>
+                                <p class="event-place">Where: <span>City Hall</span></p>
+                                <p class="event-info">Why: <span>To enjoy the Gourds!</span></p>
+                            </li>
+                            <li class="event-card">
+                                <p class="event-title">Halloween Trunk-or-Treat</p>
+                                <p class="event-date">When: <span>Oct. 31st</span></p>
+                                <p class="event-place">Where: <span>Main St. by City Hall</span></p>
+                                <p class="event-info">Why: <span>Spooky Trick-or-Treating!</span></p>
+                            </li>
+                            <li class="event-card">
+                                <p class="event-title">Thanksgiving Parade</p>
+                                <p class="event-date">When: <span>Nov. 21st</span></p>
+                                <p class="event-place">Where: <span>Main St.</span></p>
+                                <p class="event-info">Why: <span>Let's show them what A REAL parade looks like!</span></p>
+                            </li>
+                            <li class="event-card">
+                                <p class="event-title">Hanakkah & Christmas Cherity Potluck</p>
+                                <p class="event-date">When: <span>Dec. 23rd</span></p>
+                                <p class="event-place">Where: <span>Community Center</span></p>
+                                <p class="event-info">Why: <span>Think of the Children</span></p>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="current-weather">
+                        <h3 id="weather-title" class="section-header">Current Weather</h3>
+                        <ol id="weather-events">
+                            <li class="weather-event single-event">
+                                <div class=""></div><span>Loading</span>
+                            </li>
+                        </ol>
+                        <ul id="weather-info">
+                            <li><span id="temp-current">Loading...</span>&deg;F</li>
+                            <li id="weather-desc"></li>
+                            <li>High: <span id="temp-high">Loading...</span>&deg;</li>
+                            <li>Low: <span id="temp-low">Loading...</span>&deg;</li>
+                            <li>Humidity: <span id="humidity">Loading...</span>%</li>
+                            <li>Sunrise: <span id="sunrise">Loading...</span></li>
+                            <li>Sunset: <span id="sunset">Loading...</span></li>
+                        </ul>
+                    </section>
+
+                    <section id="forecast-weather">
+                        <h3 id="forecast-title" class="section-header">Weather Forecast</h3>
+                        <ol id="forecast-info">
+                            <li><span id="forecast-today">Loading...</span>&deg;F</li>
+                            <li><span id="forecast-tomorrow">Loading...</span>&deg;F</li>
+                            <li><span id="forecast-overmorrow">Loading...</span>&deg;F</li>
+                        </ol>
+                    </section>
+
+                    <ul id="spotlight-list">
+                        <li class="spotlight-card level-2">
+                            <h4 class="card-header">placeholder Header</h4>
+                            <p class="card-phone">phone: <span>(123)555-4567</span></p>
+                            <p class="card-addr">address: <span>123 Any St Vista CA 92084</span></p>
+                            <p class="card-url">website: <span>placeholder.web</span></p>
+                        </li>
+                        <li class="spotlight-card level-3">
+                            <h4 class="card-header">placeholder Header</h4>
+                            <p class="card-phone">phone: <span>(123)555-4567</span></p>
+                            <p class="card-addr">address: <span>123 Any St Vista CA 92084</span></p>
+                            <p class="card-url">website: <span>placeholder.web</span></p>
+                        </li>
+                        <li class="spotlight-card level-2">
+                            <h4 class="card-header">placeholder Header</h4>
+                            <p class="card-phone">phone: <span>(123)555-4567</span></p>
+                            <p class="card-addr">address: <span>123 Any St Vista CA 92084</span></p>
+                            <p class="card-url">website: <span>placeholder.web</span></p>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <ul id="list-items" class="is-grid">
-                <li class="placeholder">I am a placeholder!</li>
-                <li class="placeholder">I am a placeholder!</li>
-                <li class="placeholder">I am a placeholder!</li>
-                <li class="placeholder">I am a placeholder!</li>
-                <li class="placeholder">I am a placeholder!</li>
-                <li class="placeholder">I am a placeholder!</li>
-                <li class="placeholder">I am a placeholder!</li>
-                <li class="placeholder">I am a placeholder!</li>
-                <li class="placeholder">I am a placeholder!</li>
-            </ul>
         </main>
         <footer>
             <div>

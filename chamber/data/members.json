@@ -3,74 +3,74 @@
         {
             "name": "American Legion Auxilliary Unit 365",
             "address": "1234 S. Santa Fe Avenue, Vista, CA 92084",
-            "phone": "(760) 555-1589",
-            "website": "https://vistapost.org",
+            "phone": "760-555-1589",
+            "website": "vistapost.org",
             "image": "https://chambermaster.blob.core.windows.net/images/customers/493/members/9125/logos/MEMBER_PAGE_HEADER/t_500x300_(2).jpg",
             "level": 1
         },
         {
             "name": "Arco AM PM (Magic Brush Carwash)",
             "address": "1401 E. Vista Way, Vista, CA 92084",
-            "phone": "(760) 555-9624",
-            "website": "https://magicbrushexpress.com",
+            "phone": "760-555-9624",
+            "website": "magicbrushexpress.com",
             "image": "https://chambermaster.blob.core.windows.net/images/customers/493/members/9137/logos/MEMBER_PAGE_HEADER/Web_capture_21-12-2023_134646_www.bing.com.jpeg",
             "level": 2
         },
         {
             "name": "Armed Forces Dispatch Newpaper",
             "address": "2604 El Camino Real #B-280, Carlsbad, CA 92008",
-            "phone": "(760) 555-7444",
-            "website": "https://afdispatch.com",
+            "phone": "760-555-7444",
+            "website": "afdispatch.com",
             "image": null,
-            "level": 1
+            "level": 3
         },
         {
             "name": "Archer's Arrow",
-            "address": "170 Main Street, Vista, CA 92084",
-            "phone": "(760) 555-7875",
-            "website": "https://archersarrowcoffeehouse.com",
+            "address": "170 Main St, Vista, CA 92084",
+            "phone": "760-555-7875",
+            "website": "archersarrowcoffeehouse.com",
             "image": null,
             "level": 2
         },
         {
             "name": "Avis Car Sales",
             "address": "1611 W. Vista Way, Vista, CA 92083",
-            "phone": "(760) 555-5260",
-            "website": "https://aviscarsales.com",
+            "phone": "760-555-5260",
+            "website": "aviscarsales.com",
             "image": null,
             "level": 3
         },
         {
             "name": "Boys & Girls Club of Vista",
             "address": "410 W California Ave, Vista, CA 92083",
-            "phone": "(760) 555-6606",
-            "website": "https://www.bgcvista.org",
+            "phone": "760-555-6606",
+            "website": "www.bgcvista.org",
             "image": "https://chambermaster.blob.core.windows.net/images/customers/493/members/1217/logos/MEMBER_PAGE_HEADER/BGCVVertcompressed1.jpg",
             "level": 1
         },
         {
             "name": "California State University, San Marcos",
             "address": "333 S Twin Oaks Rd, San Marcos, CA 92076",
-            "phone": "(760) 555-8700",
-            "website": "https://csusm.edu",
+            "phone": "760-555-8700",
+            "website": "csusm.edu",
             "image": "https://chambermaster.blob.core.windows.net/images/customers/493/members/1280/logos/MEMBER_PAGE_HEADER/csusmLogo_InitialsHillsAbove_Blue.png",
-            "level": 1
+            "level": 3
         },
         {
             "name": "Frazier Farms",
             "address": "225 Vista Village Dr, Vista, CA 92084",
-            "phone": "(760) 555-7175",
-            "website": "https://frazierfarmsmarket.com",
+            "phone": "760-555-7175",
+            "website": "frazierfarmsmarket.com",
             "image": null,
-            "level": 3
+            "level": 1
         },
         {
             "name": "Guajome Park Academy",
             "address": "2000 N Santa Fe Ave, Vista, CA 92083",
-            "phone": "(760) 555-8500",
-            "website": "https://guajome.net",
+            "phone": "760-555-8500",
+            "website": "guajome.net",
             "image": "https://chambermaster.blob.core.windows.net/images/customers/493/members/1781/logos/MEMBER_LOGO/Copy_of_Guajome-MascotLogoStripe-4C.png",
-            "level": 1
+            "level": 2
         }
     ]
 }

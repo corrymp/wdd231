@@ -1,20 +1,13 @@
-const root = document.documentElement;
-const viewToggleButton = document.querySelector('#toggle-view');
-const listItems = document.querySelector('#list-items');
-let members = null;
-
-async function getMembers() {
-    const data = await fetch('data/members.json');
-    members = await data.json();
-    return members;
-}
-
+import { ge, get, toggle } from "./utils.mjs";
+toggle('toggle-view', ['list-items', 'toggle-view'], 'is-grid', 'listView');
 function buildList(members) {
+    const listItems = ge('list-items');
     listItems.innerHTML = '';
     members.forEach(member => {
         const cardHolder = document.createElement('li');
         cardHolder.classList.add('card-holder', `level-${member.level}`, (member.image) ? 'has-img' : 'no-img');
-        const card = document.createElement('div'); card.classList.add('card');
+        const card = document.createElement('div');
+        card.classList.add('card');
         function img(member) {
             const img = document.createElement('img');
             img.setAttribute('src', member.image);
@@ -30,19 +23,9 @@ function buildList(members) {
                 : `<p class='card-header'><b>${member.name}</b></p><hr>`}
                 <p class='card-addr'>${member.address}</p>
                 <p class='card-phone'>${member.phone}</p>
-                <p class='card-url'>${member.website}</p>
+                <p class='card-url'><a href='https://www.${member.website}' target='_blank'>${member.website}</a></p>
             </div>`;
         listItems.appendChild(cardHolder);
     });
 }
-
-async function build() {
-    const members = await getMembers();
-    buildList(members.members);
-}
-build();
-
-viewToggleButton.addEventListener('click', () => {
-    listItems.classList.toggle('is-grid');
-    viewToggleButton.classList.toggle('grid')
-});
+(async () => buildList((await get('data/members.json')).members, ge('list-items')))();
