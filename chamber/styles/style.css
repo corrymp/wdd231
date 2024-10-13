@@ -42,6 +42,19 @@
     --card-txt: var(--black);
     --footer-bg: var(--darkblue);
     --footer-txt: var(--white);
+
+    --lm-red: #fe3318;
+    --lm-orange: #ffb752;
+    --lm-yellow: #f5ed96;
+    --lm-green: #659067;
+    --lm-skyblue: #aee0e4;
+    --lm-lightblue: #5d9fcb;
+    --lm-darkblue: #134e82;
+    --lm-lilac: #d7afc2;
+    --lm-black: #2a2829;
+    --lm-white: #ffffff;
+    --lm-trans: #0000007f;
+    --lm-outline: #4C6C4D;
 }
 
 :root.darkmode {
@@ -279,10 +292,18 @@ a img {
     width: 48px;
 }
 
+.level-1 {
+    background-image: linear-gradient(-135deg, #6b3d35c0, #b97b58c0, #b6833ec0, #b87333c0, #71291dc0), linear-gradient(22.5deg, #6b3d35, #b97b58, #b6833e, #b87333, #71291d);
+}
+
 .level-2 {
-    background-image: linear-gradient(22.5deg, #dadbdd, #838996, #bcc6cc), linear-gradient(-135deg, #dadbddc0, #838996c0, #bcc6ccc0);
+    background-image: linear-gradient(-135deg, #dadbddc0, #838996c0, #bcc6ccc0), linear-gradient(22.5deg, #dadbdd, #838996, #bcc6cc);
 }
 
 .level-3 {
-    background-image: linear-gradient(22.5deg, #d8a444, #ffd700, #d4af37), linear-gradient(-135deg, #d8a444c0, #ffd700c0, #d4af37c0);
+    background-image: linear-gradient(-135deg, #d8a444c0, #ffd700c0, #d4af37c0), linear-gradient(22.5deg, #d8a444, #ffd700, #d4af37);
+}
+
+.level-np {
+    background-image: linear-gradient(0deg, #ff000055, #ff7f0055, #ffff0055, #7fff0055, #00ff0055, #00ff7f55, #00ffff55, #007fff55, #0000ff55, #7f00ff55, #ff00ff55, #ff007f55), linear-gradient(120deg, #00ff7faa, #00ffffaa, #007fffaa, #0000ffaa, #7f00ffaa, #ff00ffaa, #ff007faa, #ff0000aa, #ff7f00aa, #ffff00aa, #7fff00aa, #00ff00aa), linear-gradient(240deg, #0000ff, #7f00ff, #ff00ff, #ff007f, #ff0000, #ff7f00, #ffff00, #7fff00, #00ff00, #00ff7f, #00ffff, #007fff);
 }

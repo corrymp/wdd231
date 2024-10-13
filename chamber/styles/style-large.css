@@ -23,6 +23,7 @@
     }
 
     nav a {
+        border-radius: 16px;
         color: var(--nav-txt);
         opacity: 1;
         padding: 2px 8px;

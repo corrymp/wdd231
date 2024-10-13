@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Vista Chamber of Commerce | Directory</title>
+    <title>Vista Chamber of Commerce | Join</title>
     <meta name="author" content="Corry McConnell Palmer">
-    <meta name="description" content="This is the directory for the Vista Chamber of Commerce - A class Project for Corry McConnell Palmer's classwork in 'WDD231 - Web Frontend Development I'.">
+    <meta name="description" content="This is the join page for the Vista Chamber of Commerce - A class Project for Corry McConnell Palmer's classwork in 'WDD231 - Web Frontend Development I'.">
 
     <meta property="og:description" content="Vista Chamber of Commerce - a class Project for Corry McConnell Palmer's classwork in 'WDD231 - Web Frontend Development I'.">
     <meta property="og:image" content="https://corrymp.github.io/wdd231/chamber/images/ogchamber.png">
     <meta property="og:site_name" content="Vista Chamber of Commerce | CorryMP | WDD231">
-    <meta property="og:title" content="Vista Chamber of Commerce | Directory">
+    <meta property="og:title" content="Vista Chamber of Commerce | Join">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://corrymp.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://corrymp.github.io/wdd231/chamber/join.html">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image:alt" content="Vista Chamber of Commerce Logo">
 
@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/style-large.css">
-    <link rel="stylesheet" href="styles/directory.css">
-    <link rel="stylesheet" href="styles/directory-large.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/join-large.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cousine:ital@0;1&family=Lora:ital@0;1&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
     <script src="scripts/getdates.js" type="module"></script>
     <script src="scripts/darkmode.js" type="module"></script>
     <script src="scripts/menu.js" type="module"></script>
-    <script src="scripts/directory.js" type="module"></script>
+    <script src="scripts/join.js" type="module"></script>
 </head>
 
 <body>
@@ -96,8 +96,8 @@
                 <div id="nav-holder">
                     <nav id="animateme">
                         <a href="./">Home</a>
-                        <a href="directory.html" class="active">Directory</a>
-                        <a href="join.html">Join</a>
+                        <a href="directory.html">Directory</a>
+                        <a href="join.html" class="active">Join</a>
                         <a href="discover.html">Discover</a>
                     </nav>
                 </div>
@@ -127,29 +127,111 @@
             </div>
         </header>
         <main>
-            <div id="search">
-                <input type="text" placeholder="(W.I.P.) Search...">
-                <button id="go" type="button">Go</button>
-                <button id="toggle-view" class="is-grid" type="button" aria-label="toggle view">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path class="grid-icon dark" fill="#2a2829" d="m5 3q-2 0-2 2v14q0 2 2 2h14q2 0 2-2v-14q0-2-2-2h-0.5v15.5h-13v-13h13h-5.25v5.25h5.25v2.5h-5.25v5.25h5.25h-12.75h5v-5.25h-5.25v-2.5h5.25v-5.25h7.75v-2.5" />
-                        <path class="list-icon dark" fill="#2a2829" d="m5 3a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Zm-6 7a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Zm-6 7a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Z" />
-                        <path class="grid-icon light" fill="#fff" d="m5 3q-2 0-2 2v14q0 2 2 2h14q2 0 2-2v-14q0-2-2-2h-0.5v15.5h-13v-13h13h-5.25v5.25h5.25v2.5h-5.25v5.25h5.25h-12.75h5v-5.25h-5.25v-2.5h5.25v-5.25h7.75v-2.5" />
-                        <path class="list-icon light" fill="#fff" d="m5 3a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Zm-6 7a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Zm-6 7a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Z" />
-                    </svg>
-                </button>
+            <div id="page">
+                <form id="form" action="thankyou.html" method="get">
+                    <h2 id="form-header">Membership Application</h2>
+                    <p id="required">indicates a required field</p>
+
+
+                    <h3>Personal</h3>
+                    <fieldset>
+                        <label id="lbl-first-name">First name:
+                            <input id="first-name" type="text" required name="firstName" title="first name" autocomplete="name">
+                        </label>
+
+                        <label id="lbl-last-name">Last name:
+                            <input id="last-name" type="text" required name="lastName" title="last name" autocomplete="family-name">
+                        </label>
+
+                        <label id="lbl-org-title">Title:<span class="opt">(optional)</span>
+                            <input id="org-title" type="text" name="orgTitle" title="Minimum 7 characters. Only A-Z (case insensitive), hyphens, and spaces" autocomplete="organization-title" pattern="[a-zA-Z\-\s]{7,}">
+                            <span id="title-limit">Minimum 7 characters<br>A-Z only (case insensitive)<br>Hyphens and spaces allowed</span>
+                        </label>
+                    </fieldset>
+
+                    <h3>Contact</h3>
+                    <fieldset>
+
+                        <label id="lbl-email">Email:
+                            <input id="email" type="email" required name="email" title="email" autocomplete="email" placeholder="you@email.web">
+                        </label>
+
+                        <label id="lbl-phone">Phone:
+                            <input id="phone" type="tel" required name="phone" title="phone number" autocomplete="tel">
+                        </label>
+
+                    </fieldset>
+
+                    <h3>Business/organization</h3>
+                    <fieldset>
+                        <label id="lbl-org-name">Name:
+                            <input id="org-name" type="text" required name="orgName" title="business or organization name" autocomplete="organization">
+                        </label>
+
+                        <label id="lbl-org-desc">Description:<span class="opt">(optional)</span>
+                            <textarea id="org-desc" name="orgDesc" title="description of business or organization"></textarea>
+                        </label>
+
+                        <p id="level-label">Membership level: <span id="details-location"></span></p>
+                        <fieldset id="level">
+                            <label id="lbl-level-bronze">
+                                <input id="level-bronze" type="radio" name="level" value="bronze" required> Bronze
+                            </label>
+                            <label id="lbl-level-silver">
+                                <input id="level-silcer" type="radio" name="level" value="silver" required> Silver
+                            </label>
+                            <label id="lbl-level-gold">
+                                <input id="level-gold" type="radio" name="level" value="gold" required> Gold
+                            </label>
+                            <label id="lbl-level-np">
+                                <input id="level-np" type="radio" name="level" value="np" required> Non-Profit
+                            </label>
+                        </fieldset>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <label id="what">"Each field element, including the textarea, should be encased in a label tag to support accessibility."<input id="time" type="hidden" name="time"></label>
+
+                        <button id="submit" type="submit">Send application</button>
+                    </fieldset>
+                </form>
+
+                <section id="level-details">
+                    <h2 id="level-header">Membership Levels</h2>
+                    <p id="level-inquire">Please contact us for any membership inquiries</p>
+                    <div id="level-cards">
+                        <div id="bronze-card" class="level-card">
+                            <div class="card-backing level-1"></div>
+                            <div class="card-content">
+                                <p>Bronze Level</p>
+                                <button id="bronze-info" data-level="bronze" class="info-button" type="button">Learn More</button>
+                            </div>
+                        </div>
+                        <div id="silver-card" class="level-card">
+                            <div class="card-backing level-2"></div>
+                            <div class="card-content">
+                                <p>Silver Level</p>
+                                <button id="silver-info" data-level="silver" class="info-button" type="button">Learn More</button>
+                            </div>
+                        </div>
+                        <div id="gold-card" class="level-card">
+                            <div class="card-backing level-3"></div>
+                            <div class="card-content">
+                                <p>Gold Level</p>
+                                <button id="gold-info" data-level="gold" class="info-button" type="button">Learn More</button>
+                            </div>
+                        </div>
+                        <div id="np-card" class="level-card">
+                            <div class="card-backing level-np"></div>
+                            <div class="card-content">
+                                <p>Non-Profit</p>
+                                <button id="np-info" data-level="np" class="info-button" type="button">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <ul id="list-items" class="is-grid">
-                <li class="placeholder">I am a placeholder!</li>
-                <li class="placeholder">I am a placeholder!</li>
-                <li class="placeholder">I am a placeholder!</li>
-                <li class="placeholder">I am a placeholder!</li>
-                <li class="placeholder">I am a placeholder!</li>
-                <li class="placeholder">I am a placeholder!</li>
-                <li class="placeholder">I am a placeholder!</li>
-                <li class="placeholder">I am a placeholder!</li>
-                <li class="placeholder">I am a placeholder!</li>
-            </ul>
         </main>
         <footer>
             <div>
@@ -179,6 +261,15 @@
                 </div>
             </div>
         </footer>
+        <dialog id="modal">
+            <div id="modal-border">
+                <div id="modal-content">
+                    <button id="modal-close" type="button"></button>
+                    <h2>The <span id="modal-level">( level )</span> Level</h2>
+                    <ul id="modal-list"></ul>
+                </div>
+            </div>
+        </dialog>
     </div>
 </body>
 

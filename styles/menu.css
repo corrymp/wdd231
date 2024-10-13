@@ -27,14 +27,14 @@ nav {
     grid-row: 2/3;
     left: 100%;
     position: fixed;
-    top: -10%;
-    transition: left 0.25s ease-out, top 0.25s ease-in-out;
+    transition: left 0.25s ease-out;
     width: 100%;
 }
 
 nav ul {
     display: flex;
     flex-direction: column;
+    list-style: none;
     overflow: hidden;
 }
 
@@ -50,8 +50,11 @@ nav.open {
     justify-content: center;
     outline: 1px solid var(--shadow);
     text-align: center;
-    text-decoration: none;
     z-index: 0;
+}
+
+.nav-link a {
+    text-decoration: none;
 }
 
 .nav-link:hover,
@@ -86,7 +89,7 @@ nav.open {
         position: relative;
         left: 0;
         top: 0;
-        transition: left 0s top 0s;
+        transition: left 0s;
     }
 
     nav ul {

@@ -61,97 +61,55 @@ const courses = [
     }
 ];
 
-const courseList = document.getElementById('courses');
+const courseFilter = (i) => courses.filter(course => course.subject == i);
+const addFilter = (id, filter) => document.getElementById(id).addEventListener('click', (i) => { select(i.target, filter) });
 
-/* filter stuff */
-const courseFilter = (i) => courses.filter(course => course.subject == i)
-const addFilter = (id, filter) => document.getElementById(id).addEventListener('click', (i) => { select(i.target, filter) })
-
-/* credits display stuff */
 const getCredits = (total) => courses.reduce((sum, course) => ((total) ? sum + course.credits : (course.completed) ? sum + course.credits : sum), 0);
 const displayCredits = () => document.getElementById('credits').innerHTML = `${getCredits()}/${getCredits(true)}`;
 
-/* I almost wrote "builds the course list" here, but then I remembered the function name */
 function buildCourseList(list = courses) {
+    const courseList = document.getElementById('courses');
+
     courseList.innerHTML = '';
-    list.forEach(item => {
+
+    list.forEach(i => {
+        const name = `${i.subject} ${i.number}`;
+
         const course = document.createElement('button');
-        const name = `${item.subject} ${item.number}`
+        course.classList.add('show-info', (i.completed) ? 'done' : 'wip');
+        courseList.appendChild(course).innerHTML = `<span>${name}</span>`;
 
-        // build tech list
-        let courseTech = '';
-        item.technology.forEach(tech => { courseTech = `${courseTech}<li>${tech}</li>` });
+        course.addEventListener('click', () => {
+            let courseTech = '';
+            i.technology.forEach(tech => { courseTech = `${courseTech}<li>${tech}</li>` });
 
-        // set completion status
-        course.classList.add('show-info', (item.completed) ? 'done' : 'wip');
-        course.addEventListener('click', () => course.classList.add('clicked'));
+            const popup = document.getElementById('popup');
+            popup.innerHTML = `<div id='popup-text'><button id='close' type='button'></button> <h3 id='course-name'>${name}: <span id='course-title'>${i.title}</span></h3> <hr> <p>${i.description}</p> <hr> <p>Technology Used:</p> <ul id='course-tech'>${courseTech}</ul> <hr> <p>Credits: ${i.credits}</p> <p>Part of a ${i.certificate} certificate.</p></div>`;
 
-        // I tried using a function to handle making tags around content, but it made this part use more characters than it has a right to be 
-        // (define: const wrap = (type,content) => `<${type}>${content}</${type}>`; call with: wrap('p',`Hello ${world}!`); returns: <p>Hello World!</p>)
-        courseList.appendChild(course).innerHTML = `
-        <span>${name}</span>
-        <div class='popup'>
-            <div class="popup-text">
-            <button class="close" type="button"></button>
-                <h3>${name}: <span>${item.title}</span></h3>
-                <hr>
-                <p>${item.description}</p>
-                <hr>
-                <p>Technology Used:</p>
-                <ul>${courseTech}</ul>
-                <hr>
-                <p>Credits: ${item.credits}</p>
-                <p>Part of a ${item.certificate} certificate.</p>
-            </div>
-        </div>`;
+            popup.showModal();
+
+            addEventListener('click', (click) => { if (click.target == document.getElementById('close') || click.target == popup) popup.close() })
+        });
     });
-}
+};
 
-/* ignores filter selection if it is already selected, otherwise builds the list with the appropriate filter */
 function select(option, filter) {
     if (!option.classList.contains('selected')) {
         document.querySelector('.selected').classList.remove('selected');
         option.classList.add('selected');
         buildCourseList(filter);
     }
-}
+};
 
-/* closes the popup on click and prevents instantly closing */
-addEventListener('click', (click) => { document.querySelectorAll('.show-info').forEach(target => { if (click.target != target && click.target != target.children[0]) { target.classList.remove('clicked') } }) });
-
-/* IIFE for loading everything on... load... (I learned what this was while working on this so now I *HAVE* to use it) */
--function () {
+(() => {
     /* Safari does not support the 'scrollbar-gutter' property, so using it causes the W3C CSS audit to fail. I want to use it, so I need to check the browser being used. RegEx from https://stackoverflow.com/questions/7944460/detect-safari-browser */
-    (!(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))) ? document.head.appendChild(document.createElement('style')).sheet.insertRule('.popup-text {scrollbar-gutter: stable both-edges;}') : 0;
+    (!(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))) ? document.head.appendChild(document.createElement('style')).sheet.insertRule('.popup-text,#popup-text {scrollbar-gutter: stable both-edges;}') : 0;
 
-    // "REVIEW: Verify that this title is descriptive for a course home page. Student name should be included."
-    // "The h1 should closely match the page's title."
-    // This confuses me, so instead I am just saying hello
-    document.getElementById('title').innerHTML = 'Corry McConnell Palmer';
-
-    /* Adds the appropriate click event listners and filters to the filter buttons */
     addFilter('sort-all', courses);
     addFilter('sort-cse', courseFilter('CSE'));
     addFilter('sort-wdd', courseFilter('WDD'));
 
-    /* sets up the course list and remaining/total credits */
     buildCourseList();
     displayCredits();
-
-    /* marks the course list as loaded (it has a fixed size on load to help with content shift) (idk if it helps) */
-    document.querySelector('.loading').classList.remove('loading')
-}()
-
-/*
-I like sorting my code like this: 
-    1. all consts
-    2. all lets
-    3. all functions
-    4. all event listeners
-    5. all code that runs immediately
-    6. notes that don't belong anywhere else
-
-
-Speaking of notes...
-I added a bunch of "#region name"/"#endregion name" flags to the CSS files, but the CSSStats website crashes when trying to parse them
-*/
+    document.querySelector('.loading').classList.remove('loading');
+})();

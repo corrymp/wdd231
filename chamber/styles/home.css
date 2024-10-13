@@ -26,6 +26,7 @@ ul {
 
 section {
     background-color: var(--white);
+    border: 2px solid var(--darkblue);
     border-radius: 8px;
     margin: 4px;
 }
@@ -137,10 +138,11 @@ section {
 
 #home-title {
     background-color: var(--lightblue);
+    border: 2px solid var(--darkblue);
     border-radius: 8px;
     color: #000;
     font-size: 2rem;
-    margin: 0 4px;
+    margin: 4px;
     text-align: center;
 }
 
@@ -269,6 +271,7 @@ section {
 }
 
 .spotlight-card {
+    border: 2px solid var(--darkblue);
     border-radius: 8px;
     display: grid;
     grid-template-columns: auto 1fr;

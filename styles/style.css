@@ -1,5 +1,14 @@
 #course-work ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 4px;
     padding-left: 16px;
+}
+
+#course-work a {
+    display: inline-block;
+    height: 24px;
 }
 
 h2,
@@ -137,50 +146,57 @@ show-info.clicked:focus-visible {
     font-style: italic;
 }
 
-.popup {
-    background-image: linear-gradient(#00000015, #ffffff15, #00000015), linear-gradient(120deg, #2020202a, #dfdfdf2a, #2020202a), linear-gradient(240deg, #4040403f, #bfbfbf3f, #4040403f);
-    cursor: default;
+#popup {
+    background-color: transparent;
     display: none;
     flex-direction: column;
     font-style: normal;
     height: 100vh;
     left: 0;
+    max-height: unset;
+    max-width: unset;
     position: fixed;
+    text-align: center;
     top: 0;
     width: 100vw;
     z-index: 2;
 }
 
-.clicked .popup {
+#popup[open] {
     display: flex;
 }
 
-.close {
+::backdrop {
+    background: none;
+    background-image: linear-gradient(#00000015, #ffffff15, #00000015), linear-gradient(120deg, #2020202a, #dfdfdf2a, #2020202a), linear-gradient(240deg, #4040403f, #bfbfbf3f, #4040403f);
+}
+
+#close {
     background-color: transparent;
     border: 1px solid var(--bright-yellow);
     border-radius: 100%;
     color: var(--off-white);
     float: right;
-    font-size: 12px;
-    height: 16px;
+    font-size: 24px;
+    height: 32px;
     position: relative;
     right: -4px;
     top: -8px;
-    width: 16px;
+    width: 32px;
 }
 
-.close::before {
+#close::before {
     content: 'X';
     position: relative;
     top: 1px;
 }
 
-.close:hover,
-.close:focus-visible {
+#close:hover,
+#close:focus-visible {
     background-color: var(--red);
 }
 
-.popup-text {
+#popup-text {
     background-color: var(--dark-green);
     border: 4px solid var(--bright-yellow);
     border-radius: 8px;
@@ -195,24 +211,67 @@ show-info.clicked:focus-visible {
     width: 75%;
 }
 
-.popup-text h3 {
+#course-name {
     font-size: 1.5rem;
     text-align: center;
 }
 
-.popup-text span {
+#course-title {
     font-size: 1.25rem;
 }
 
-.popup-text hr {
+#popup-text hr {
     border: 1px solid var(--bright-yellow);
     margin: 8px -4px;
 }
 
-.popup-text ul {
+#course-tech {
     padding-left: 11px;
 }
 
-.popup-text li {
+#course-tech li {
     font-size: 1rem;
+}
+
+.anim {transform: rotate3d(1,0,0,3690deg) translateX(-100px);}
+
+.animate0 { animation: 3.125s ease-out 0.125s 1 both anim2, 3.125s ease-out 0.125s 1 both anim; }
+.animate1 { animation: 3.000s ease-out 0.250s 1 both anim2, 3.000s ease-out 0.250s 1 both anim; }
+.animate2 { animation: 2.875s ease-out 0.375s 1 both anim2, 2.875s ease-out 0.375s 1 both anim; }
+.animate3 { animation: 2.750s ease-out 0.500s 1 both anim2, 2.750s ease-out 0.500s 1 both anim; }
+.animate4 { animation: 2.625s ease-out 0.625s 1 both anim2, 2.625s ease-out 0.625s 1 both anim; }
+.animate5 { animation: 2.500s ease-out 0.750s 1 both anim2, 2.500s ease-out 0.750s 1 both anim; }
+.animate6 { animation: 2.375s ease-out 0.875s 1 both anim2, 2.375s ease-out 0.875s 1 both anim; }
+.animate7 { animation: 2.250s ease-out 1.000s 1 both anim2, 2.250s ease-out 1.000s 1 both anim; }
+.animate8 { animation: 2.125s ease-out 1.125s 1 both anim2, 2.125s ease-out 1.125s 1 both anim; }
+
+@keyframes anim {
+    000.000% {translate:-100.000px}
+    000.813% {translate:-061.804px}
+    001.315% {translate:-038.198px}
+    002.128% {translate:-023.608px}
+    003.444% {translate:-014.591px}
+    005.573% {translate:-009.017px}
+    009.017% {translate:-005.573px}
+    014.591% {translate:-003.444px}
+    023.608% {translate:-002.128px}
+    038.198% {translate:-001.315px}
+    061.804% {translate:-000.813px}
+    100.000% {translate:-000.000px}
+}
+
+@keyframes anim2 { 
+    000.000% {transform:rotate3d(1, 0.00, 0.00, 3690deg)}
+    001.010% {transform:rotate3d(1, 0.01, 0.01, 3689deg)}
+    009.090% {transform:rotate3d(1, 0.01, 0.01, 3295deg)}
+    018.181% {transform:rotate3d(1, 0.01, 0.01, 2914deg)}
+    027.272% {transform:rotate3d(1, 0.01, 0.01, 2541deg)}
+    036.363% {transform:rotate3d(1, 0.01, 0.01, 2173deg)}
+    045.454% {transform:rotate3d(1, 0.01, 0.01, 1808deg)}
+    054.545% {transform:rotate3d(1, 0.01, 0.01, 1445deg)}
+    063.636% {transform:rotate3d(1, 0.01, 0.01, 1083deg)}
+    072.727% {transform:rotate3d(1, 0.01, 0.01, 0722deg)}
+    081.818% {transform:rotate3d(1, 0.01, 0.01, 0361deg)}
+    090.909% {transform:rotate3d(1, 0.00, 0.00, 0001deg)}
+    100.000% {transform:rotate3d(1, 0.00, 0.00, 0000deg)}
 }

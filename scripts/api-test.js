@@ -1,6 +1,6 @@
 // testing parameters
 const fakeUrl = true; // true: use an empty string in place of the api url
-const useTestData = true; // true: use testResults when using fakeUrl
+const useTestData = false; // true: use testResults when using fakeUrl
 const responseOk = true; // true: simulate 'ok' from api when using test data
 const mode = [fakeUrl, useTestData, responseOk];
 

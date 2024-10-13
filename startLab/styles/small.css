@@ -1,0 +1,6 @@
+*{box-sizing: border-box;}
+
+button {background-color: aqua;}
+#dialogBox {background-color: lavender;}
+#closeButton {background-color: violet;}
+::backdrop {background-color: #ff800080;}

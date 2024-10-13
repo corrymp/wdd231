@@ -1,17 +1,17 @@
 @media screen and (min-width: 918px) {
-    .popup-text {
+    #popup-text {
         font-size: 1.25rem;
     }
 
-    .popup-text h3 {
+    #course-name {
         font-size: 1.75rem;
     }
 
-    .popup-text span {
+    #course-title {
         font-size: 1.5rem;
     }
 
-    .popup-text li {
+    #popup li {
         font-size: 1.125rem;
     }
 }
@@ -117,19 +117,19 @@
         font-size: 0.8125rem;
     }
 
-    .popup-text {
+    #popup-text {
         font-size: 1rem;
     }
 
-    .popup-text h3 {
+    #course-name {
         font-size: 1.25rem;
     }
 
-    .popup-text span {
+    #course-title {
         font-size: 1.125rem;
     }
 
-    .popup-text li {
+    #popup li {
         font-size: 0.8125rem;
     }
 }

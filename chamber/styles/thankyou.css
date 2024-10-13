@@ -1,0 +1,47 @@
+#thankyou {
+    background-color: var(--white);
+    border: 2px solid var(--darkblue);
+    border-radius: 8px;
+    margin: 6px 2px;
+}
+
+#thankyou h2 {
+    background-color: var(--lightblue);
+    border-bottom: 2px solid var(--darkblue);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    color: var(--lm-black);
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin: 0 auto 4px auto;
+    padding-bottom: 4px;
+    text-align: center;
+}
+
+#thankyou p {
+    font-size: 1.125rem;
+    padding: 8px 32px;
+}
+
+#thankyou span {
+    font-weight: bold;
+}
+
+#thankyou #chamber-phone {
+    font-style: italic;
+    font-weight: normal;
+}
+
+#thankyou p:last-child {
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-top: 8px;
+    padding-top: 8px;
+    text-align: center;
+}
+
+@media screen and (min-width:868px) {
+    #thankyou {
+        margin: 8px 38px;
+    }
+}

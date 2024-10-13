@@ -41,10 +41,7 @@
         <header>
             <div id="header-content">
                 <img src="images/corry_san_diego_temple.webp" id="selfie" alt="Pictured is CorryMP in front of the San Diego California Temple" width="96" height="128">
-                <h1 id="title">Corry McConnell Palmer (Hello graders 👋)</h1>
-                <!-- "REVIEW: Verify that this title is descriptive for a course home page. Student name should be included." -->
-                <!-- "The h1 should closely match the page's title." -->
-                <!-- This confuses me, so instead I am just saying hello -->
+                <h1 id="title">Corry McConnell Palmer</h1>
             </div>
             <button id="menu" type="button" aria-label="navigation menu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -54,20 +51,26 @@
             </button>
             <nav id="animateme">
                 <ul id="nav">
-                    <a href="./" class="nav-link active">Home</a>
-                    <a href="#" class="nav-link">Chamber</a>
-                    <a href="https://github.com/corrymp" class="nav-link" target="_blank">GitHub Profile</a>
-                    <a href="https://www.linkedin.com/in/corry-palmer" class="nav-link" target="_blank">LinkedIn</a>
+                    <li class="nav-link active"><a href="./">Home</a></li>
+                    <li class="nav-link"><a href="chamber/">Chamber</a></li>
+                    <li class="nav-link"><a href="https://github.com/corrymp" target="_blank">GitHub Profile</a></li>
+                    <li class="nav-link"><a href="https://www.linkedin.com/in/corry-palmer" target="_blank">LinkedIn</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <section id="course-work">
-                <h2>Course Work</h2>
+                <h2>Course Work & Past Semesters</h2>
                 <ul id="course-work-list">
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
+                    <li class="animate0 anim"><a href="prophets.html">The Fetch API</a></li>
+                    <li class="animate1 anim"><a href="modules/modules.html">Programming with Modules</a></li>
+                    <li class="animate2 anim"><a href="api-test.html">Consuming APIs</a></li>
+                    <li class="animate3 anim"><a href="startLabTemple">HTML Modals</a></li>
+                    <li class="animate4 anim"><a href="startHere">Advanced HTML Forms</a></li>
+                    <li class="animate5 anim"><a href="chamber">Multi-week Project</a></li>
+                    <li class="animate6 anim"><a href="project">WDD231 (this course) Final Project</a></li>
+                    <li class="animate7 anim"><a href="https://corrymp.github.io/wdd130/thebestboy">WDD130 Final Project</a></li>
+                    <li class="animate8 anim"><a href="https://corrymp.github.io/wdd131/project/project.html">WDD131 Final Project</a></li>
                 </ul>
             </section>
             <section id="location">
@@ -108,6 +111,7 @@
                     </div>
                 </div>
             </section>
+            <dialog id="popup"></dialog>
         </main>
         <footer>
             <p id="footer-text"><span>&copy;<span id="currentyear"></span></span><span id="name">Corry McConnell Palmer</span><span>California</span></p>
