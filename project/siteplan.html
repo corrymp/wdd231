@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../project/">
+    <title>MC Player Resource | Siteplan</title>
+    <meta name="author" content="Corry McConnell Palmer">
+    <meta name="description" content="Site plan for Corry McConnell Palmer's final project in WDD 231: 'Web Frontend Development I'.">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/font.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-large.css">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <script src="scripts/siteplan.js" type="module"></script>
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <svg id="logo" viewBox="0 0 32 32" aria-label="logo">
+                <mask id="a"><path fill="#fff" d="M2.14 8V24L16 32 29.86 24V8L16 0z"/></mask>
+                <mask id="b"><path fill="#fff" d="M16 16 2.14 8 16 0 29.86 8z"/></mask>
+                <mask id="c"><path fill="#fff" d="M16 16 2.14 8V24L16 32V16z"/></mask>
+                <mask id="d"><path fill="#fff" d="M16 16V32L29.86 24V8L16 16z"/></mask>
+                <path mask="url(#a)" fill="#600" d="M16 16 2.14 8 16 0 29.86 8z"/>
+                <path mask="url(#a)" fill="#060" d="M16 16 2.14 8V24L16 32V16z"/>
+                <path mask="url(#a)" fill="#006" d="M16 16V32L29.86 24V8L16 16z"/>
+                <path mask="url(#b)" fill="none" stroke="#F00" d="M16 16 2.14 8 16 0 29.86 8z"/>
+                <path mask="url(#c)" fill="none" stroke="#0F0" d="M16 16 2.14 8V24L16 32V16z"/>
+                <path mask="url(#d)" fill="none" stroke="#00F" d="M16 16V32L29.86 24V8L16 16z"/>
+                <path mask="url(#a)" fill="none" stroke="#1D1D21" stroke-width="0.666" d="M2.14 8V24L16 32 29.86 24V8L16 0zM2.14 8L16 16V32 16L29.86 8"/>
+                <path mask="url(#a)" fill="none" stroke="#F9FFFE" stroke-width="0.05" d="M2.14 8V24L16 32 29.86 24V8L16 0zM2.14 8L16 16V32 16L29.86 8"/>
+                <path mask="url(#a)" fill="none" stroke="#9D9D97" stroke-width="0.01" d="M2.14 8V24L16 32 29.86 24V8L16 0zM2.14 8L16 16V32 16L29.86 8"/>
+                <path fill="#FFF" stroke="#6666667f" stroke-width="0.125" d="m16.5 16.2886m0 3.7114m0 1.8557m1.6075  -0.92785l3.215 -1.8557v 1.8557l-3.215 1.8557v-1.8557zm6.43 -3.7114l3.215 -1.8557v 1.8557l-3.215 1.8557v-1.8557z"/>
+                <path fill="#000" stroke="#F0EBCC20" stroke-width="0.0125" d="m18.125 31v-4h-4v4h4zm0-16h8v-8h-20v4h4v-8h12v16h-8v4h4z"/>
+                <path fill="#808080" stroke="#33333320" stroke-width="0.5" d="m17.8125 30.625v-4h-4v4h4zm0-16h8v-8h-20v4h4v-8h12v16h-8v4h4z"/>
+                <path fill="#FFF" stroke="#66666620" stroke-width="0.9875" d="m17.5 30.25v-4h-4v4h4zm0-16h8v-8h-20v4h4v-8h12v16h-8v4h4z"/>
+            </svg>
+          
+            <h1 id="site-title">MC Player Resource</h1>
+
+            <button type="menu" id="menu">
+                <svg viewBox="0 0 24 24"  aria-label="navigation menu">
+                    <path class="ham-x" fill="#FFFF00" stroke-width="0.5" stroke="#666600" d="m12 10.55 6-6a.25.25 0 011.42 1.42l-6 6 6 6a.25.25 0 01-1.42 1.42l-6-6-6 6a.25.25 0 01-1.42-1.42l6-6-6-6a.25.25 0 111.42-1.42z" />
+                    <path class="ham-bars" fill="#FFFF00" stroke-width="0.5" stroke="#666600" d="m4 4.25a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2z" />
+                </svg>
+            </button>
+
+            <nav class="nav">
+                <a class="active" href="./">List</a>
+                <a href="lookup">Lookup</a>
+                <a href="view">View</a>
+            </nav>
+
+        </header>
+        <main>
+            <article>
+                <section id="site-name">
+                    <h2>Site name</h2>
+                    <p>Name: <span>MC Player Resource</span></p>
+                    <p>Domain: <span>https://mc-player-resource.com</span></p>
+                    <h3>Reason</h3>
+                    <p>Mojang policy prevents using "Minecraft", but "MC" is okay to use.</p>
+                    <p>The site aims to be a resources for easily viewing Minecraft player information.</p>
+                </section>
+                <section id="site-purpose">
+                    <h2>Site Purpose</h2>
+                    <p>
+                        The purpose of the site is to allow users to view public information on select Minecraft players.
+                        The site offers tools to view public information on players in an easy-to-consume format,
+                        add new players to their personal list,
+                        and get a better view of what those players currently look like in the game.
+                    </p>
+                </section>
+                <section id="scenarios">
+                    <h2>Scenarios</h2>
+                    <ul>
+                        <li>A fan of Minecraft-focused YouTubers wants to see their favorite players in 3D.</li>
+                        <li>An avid Minecraft player is interested in viewing characters and names of their friends in one place.</li>
+                        <li>A Minecraft server administrator wants to quickly check if a troublemaker has even been punished by Mojang.</li>
+                    </ul>
+                </section>
+                <section id="colors">
+                    <h2>Color Schema</h2>
+                    <ul id="color-category-list">
+                        <li class="color-category-item">
+                            <h3>Primary</h3>
+                            <ul class="color-list">
+                                <li class="color-list-item light-gray">Light Gray</li>
+                                <li class="color-list-item gray">Gray</li>
+                                <li class="color-list-item black">Black</li>
+                            </ul>
+                        </li>
+                        <li class="color-category-item">
+                            <h3>Accent</h3>
+                            <ul class="color-list">
+                                <li class="color-list-item red">Red</li>
+                                <li class="color-list-item green">Green</li>
+                                <li class="color-list-item blue">Blue</li>
+                            </ul>
+                        </li>
+                        <li class="color-category-item">
+                            <h3>Utility</h3>
+                            <ul class="color-list">
+                                <li class="color-list-item yellow">Yellow</li>
+                                <li class="color-list-item tan">Tan</li>
+                                <li class="color-list-item white">White</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div id="color-context">
+                        <h4>Colors in Context</h4>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p>Rem assumenda aut deleniti accusantium, libero quaerat ipsam fuga impedit quidem magnam et inventore praesentium deserunt voluptates?</p>
+                        <p>Ipsam exercitationem corrupti nemo voluptatibus amet ducimus.</p>
+                    </div>
+
+                </section>
+                <section id="fonts">
+                    <h2>Typography</h2>
+                    <ul>
+                        <li class="font-1">Headings: MCFont <span>(Minecraft font recreation by me)</span></li>
+                        <li class="font-2">Body: Reddit Mono <span>(Google font)</span></li>
+                    </ul>
+                </section>
+                <section id="wireframes">
+                    <h2>Wireframes</h2>
+                    <figure id="desktop">
+                        <figcaption>Desktop view</figcaption>
+                        <img src="images/wireframe-desktop.png" alt="Wireframe of desktop view">
+                    </figure>
+                    <figure id="mobile">
+                        <figcaption>Mobile view</figcaption>
+                        <img src="images/wireframe-mobile.png" alt="Wireframe of mobile view">
+                    </figure>
+                </section>
+            </article>
+        </main>
+        <footer>
+
+            <p id="copyright" class="footer-item">&copy;2024 <a href="../"> | Corry McConnell Palmer</a></p>
+
+            <p id="disclaimer" class="footer-item">This website was made for a class project - It is not an official Minecraft website and is not affiliated with Mojang or Microsoft in any way - All information is taken from public sources</p>
+
+            <a href="attributions" id="attributions" class="footer-item">Attributions</a>
+
+        </footer>
+    </div>
+</body>
+
+</html>

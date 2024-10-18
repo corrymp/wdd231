@@ -1,0 +1,236 @@
+article {
+    background-color: var(--gray-main);
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+
+section {
+    padding: 8px;
+    background-color: var(--light-gray-edge);
+}
+
+section p {
+    margin-left: 4px;
+}
+
+figure {
+    background-color: var(--white-edge);
+    padding: 8px;
+}
+
+figcaption {
+    padding: 4px;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 0 2px var(--white-glow);
+}
+
+
+#colors {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#colors h3 {
+    text-align: center;
+}
+
+#color-category-list {
+    color: var(--black-main);
+    background-color: var(--light-gray-main);
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 8px;
+    padding: 8px;
+}
+
+.color-category-item {
+    margin: 4px;
+    background-color: var(--light-gray-glow);
+}
+
+.color-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.color-list-item {
+    background-color: var(--light-gray-edge);
+    border: 1px solid;
+    padding: 4px;
+    flex: 1;
+    text-align: center;
+}
+
+
+
+
+.light-gray {
+    border-color: var(--black-main);
+    background-color: var(--light-gray-main);
+    text-shadow: 1px 1px 2px var(--gray-edge);
+}
+
+.gray {
+    color: var(--white-glow);
+    border-color: var(--white-main);
+    background-color: var(--gray-main);
+    text-shadow: 1px 1px 2px var(--light-gray-edge);
+}
+
+.black {
+    border-color: var(--white-main);
+    background-color: var(--black-main);
+    color: var(--white-glow);
+    text-shadow: 1px 1px 2px var(--black-edge);
+}
+
+.red {
+    border-color: var(--);
+    background-color: var(--red-main);
+    color: var(--white-glow);
+    text-shadow: 1px 1px 2px var(--red-edge);
+}
+
+.green {
+    border-color: var(--);
+    background-color: var(--green-main);
+    color: var(--white-glow);
+    text-shadow: 1px 1px 2px var(--green-edge);
+}
+
+.blue {
+    border-color: var(--white-main);
+    background-color: var(--blue-main);
+    color: var(--white-glow);
+    text-shadow: 1px 1px 2px var(--blue-edge);
+}
+
+.yellow {
+    background-color: var(--yellow-main);
+    text-shadow: 1px 1px 2px var(--yellow-edge);
+}
+
+.tan {
+    border-color: var(--black-main);
+    background-color: var(--black-edge);
+    text-shadow: 1px 1px 2px var(--black-glow);
+}
+
+.white {
+    border-color: var(--black-main);
+    background-color: var(--white-main);
+    text-shadow: 1px 1px 2px var(--white-edge);
+}
+
+#color-context {
+    background-color: var(--light-gray-main);
+    color: var(--blue-edge);
+    padding: 8px;
+}
+
+#color-context hr {
+    border: 1px solid var(--blue-edge);
+    margin: 2px 0;
+}
+
+#color-context p:first-of-type {
+    background-color: var(--light-gray-edge);
+    border-color: var(--red-main);
+    color: var(--yellow-glow);
+}
+
+#color-context p {
+    background-color: var(--gray-glow);
+    border: 1px solid var(--black-edge);
+    color: var(--black-glow);
+    margin: 0;
+    padding: 8px;
+}
+
+#color-context p:last-of-type {
+    background-color: var(--black-main);
+    border-color: var(--blue-glow);
+    color: var(--green-glow);
+}
+
+#wireframes {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 4px;
+}
+
+#wireframes h2 {
+    grid-column: 1/2;
+}
+
+#site-name h3 {
+    margin: 16px 0 4px 0;
+}
+
+h3 {
+    margin: 8px 0 4px 0;
+}
+
+.font-1 {
+    font-family: var(--font-heading);
+}
+
+.font-2 {
+    font-family: var(--font-body);
+}
+
+@media screen and (min-width:800px) {
+
+    article {
+        display: grid;
+        grid-template-areas:
+            'a a d d d'
+            'b b d d d'
+            'c c c c c'
+            'e e e e e'
+            'f f f f f'
+        ;
+    }
+
+    #site-name {
+        grid-area: a;
+    }
+
+    #site-purpose {
+        grid-area: b;
+    }
+
+    #scenarios {
+        grid-area: c;
+    }
+
+    #colors {
+        grid-area: d;
+    }
+
+    #fonts {
+        grid-area: e;
+    }
+
+    #wireframes {
+        grid-area: f;
+        grid-template-columns: 5fr 3fr;
+        grid-template-rows: auto auto;
+    }
+
+    #wireframes h2 {
+        grid-column: 1/3;
+    }
+
+}

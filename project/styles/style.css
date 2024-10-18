@@ -1,0 +1,401 @@
+/* GLOBAL */
+* {
+    border: none;
+    box-sizing: border-box;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: normal;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+
+/* general root*/
+:root {
+    --font-heading: mcfont, system-ui, system;
+    --font-body: "Reddit Mono", monospace, monospace;
+
+    --sidebar-width: 158px;
+    --footer-height: 57.5px;
+
+    --color-body: var(--black-glow);
+    --color-main: var(--black-main);
+    --color-header: var(--black-glow);
+    --color-footer: var(--black-glow);
+}
+
+/* core colors */
+:root {
+    --white-glow: #FFFFFF;
+    --white-main: #F9FFFE;
+    --white-edge: #666666;
+    --light-gray-glow: #D3D3D3;
+    --light-gray-main: #9D9D97;
+    --light-gray-edge: #545454;
+    --gray-glow: #808080;
+    --gray-main: #474F52;
+    --gray-edge: #333333;
+    --black-glow: #000000;
+    --black-main: #1D1D21;
+    --black-edge: #F0EBCC;
+    --red-glow: #FF0000;
+    --red-main: #B02E26;
+    --red-edge: #660000;
+    --brown-glow: #8B4513;
+    --brown-main: #835432;
+    --brown-edge: #371B07;
+    --orange-glow: #FF681F;
+    --orange-main: #F9801D;
+    --orange-edge: #66290C;
+    --yellow-glow: #FFFF00;
+    --yellow-main: #FED83D;
+    --yellow-edge: #666600;
+    --lime-glow: #BFFF00;
+    --lime-main: #80C71F;
+    --lime-edge: #4C6600;
+    --green-glow: #00FF00;
+    --green-main: #5E7C16;
+    --green-edge: #006600;
+    --cyan-glow: #00FFFF;
+    --cyan-main: #169C9C;
+    --cyan-edge: #006666;
+    --light-blue-glow: #9AC0CD;
+    --light-blue-main: #3AB3DA;
+    --light-blue-edge: #3D4C52;
+    --blue-glow: #0000FF;
+    --blue-main: #3C44AA;
+    --blue-edge: #000066;
+    --purple-glow: #A020F0;
+    --purple-main: #8932B8;
+    --purple-edge: #400C60;
+    --magenta-glow: #FF00FF;
+    --magenta-main: #C74EBD;
+    --magenta-edge: #660066;
+    --pink-glow: #FF69B4;
+    --pink-main: #F38BAA;
+    --pink-edge: #662A48;
+}
+
+/* glow text */
+:root {
+    --glow-white:
+        0.075em 0.075em 0.25px var(--white-edge),
+        -0.075em 0.075em 0.25px var(--white-edge),
+        0.075em -0.075em 0.25px var(--white-edge),
+        -0.075em -0.075em 0.25px var(--white-edge),
+        0.075em 0.000px 0.25px var(--white-edge),
+        -0.075em 0.000px 0.25px var(--white-edge),
+        0.000px 0.075em 0.25px var(--white-edge),
+        0.000px -0.075em 0.25px var(--white-edge);
+
+
+    --glow-light-gray:
+        0.075em 0.075em 0.25px var(--light-gray-edge),
+        -0.075em 0.075em 0.25px var(--light-gray-edge),
+        0.075em -0.075em 0.25px var(--light-gray-edge),
+        -0.075em -0.075em 0.25px var(--light-gray-edge),
+        0.075em 0.000px 0.25px var(--light-gray-edge),
+        -0.075em 0.000px 0.25px var(--light-gray-edge),
+        0.000px 0.075em 0.25px var(--light-gray-edge),
+        0.000px -0.075em 0.25px var(--light-gray-edge);
+
+
+    --glow-gray:
+        0.075em 0.075em 0.25px var(--gray-edge),
+        -0.075em 0.075em 0.25px var(--gray-edge),
+        0.075em -0.075em 0.25px var(--gray-edge),
+        -0.075em -0.075em 0.25px var(--gray-edge),
+        0.075em 0.000px 0.25px var(--gray-edge),
+        -0.075em 0.000px 0.25px var(--gray-edge),
+        0.000px 0.075em 0.25px var(--gray-edge),
+        0.000px -0.075em 0.25px var(--gray-edge);
+
+
+    --glow-black:
+        0.075em 0.075em 0.25px var(--black-edge),
+        -0.075em 0.075em 0.25px var(--black-edge),
+        0.075em -0.075em 0.25px var(--black-edge),
+        -0.075em -0.075em 0.25px var(--black-edge),
+        0.075em 0.000px 0.25px var(--black-edge),
+        -0.075em 0.000px 0.25px var(--black-edge),
+        0.000px 0.075em 0.25px var(--black-edge),
+        0.000px -0.075em 0.25px var(--black-edge);
+
+
+    --glow-red:
+        0.075em 0.075em 0.25px var(--red-edge),
+        -0.075em 0.075em 0.25px var(--red-edge),
+        0.075em -0.075em 0.25px var(--red-edge),
+        -0.075em -0.075em 0.25px var(--red-edge),
+        0.075em 0.000px 0.25px var(--red-edge),
+        -0.075em 0.000px 0.25px var(--red-edge),
+        0.000px 0.075em 0.25px var(--red-edge),
+        0.000px -0.075em 0.25px var(--red-edge);
+
+
+    --glow-brown:
+        0.075em 0.075em 0.25px var(--brown-edge),
+        -0.075em 0.075em 0.25px var(--brown-edge),
+        0.075em -0.075em 0.25px var(--brown-edge),
+        -0.075em -0.075em 0.25px var(--brown-edge),
+        0.075em 0.000px 0.25px var(--brown-edge),
+        -0.075em 0.000px 0.25px var(--brown-edge),
+        0.000px 0.075em 0.25px var(--brown-edge),
+        0.000px -0.075em 0.25px var(--brown-edge);
+
+
+    --glow-orange:
+        0.075em 0.075em 0.25px var(--orange-edge),
+        -0.075em 0.075em 0.25px var(--orange-edge),
+        0.075em -0.075em 0.25px var(--orange-edge),
+        -0.075em -0.075em 0.25px var(--orange-edge),
+        0.075em 0.000px 0.25px var(--orange-edge),
+        -0.075em 0.000px 0.25px var(--orange-edge),
+        0.000px 0.075em 0.25px var(--orange-edge),
+        0.000px -0.075em 0.25px var(--orange-edge);
+
+
+    --glow-yellow:
+        0.075em 0.075em 0.25px var(--yellow-edge),
+        -0.075em 0.075em 0.25px var(--yellow-edge),
+        0.075em -0.075em 0.25px var(--yellow-edge),
+        -0.075em -0.075em 0.25px var(--yellow-edge),
+        0.075em 0.000px 0.25px var(--yellow-edge),
+        -0.075em 0.000px 0.25px var(--yellow-edge),
+        0.000px 0.075em 0.25px var(--yellow-edge),
+        0.000px -0.075em 0.25px var(--yellow-edge);
+
+
+    --glow-lime:
+        0.075em 0.075em 0.25px var(--lime-edge),
+        -0.075em 0.075em 0.25px var(--lime-edge),
+        0.075em -0.075em 0.25px var(--lime-edge),
+        -0.075em -0.075em 0.25px var(--lime-edge),
+        0.075em 0.000px 0.25px var(--lime-edge),
+        -0.075em 0.000px 0.25px var(--lime-edge),
+        0.000px 0.075em 0.25px var(--lime-edge),
+        0.000px -0.075em 0.25px var(--lime-edge);
+
+
+
+    --glow-green:
+        0.075em 0.075em 0.25px var(--light-green-edge),
+        -0.075em 0.075em 0.25px var(--light-green-edge),
+        0.075em -0.075em 0.25px var(--light-green-edge),
+        -0.075em -0.075em 0.25px var(--light-green-edge),
+        0.075em 0.000px 0.25px var(--light-green-edge),
+        -0.075em 0.000px 0.25px var(--light-green-edge),
+        0.000px 0.075em 0.25px var(--light-green-edge),
+        0.000px -0.075em 0.25px var(--light-green-edge);
+
+
+    --glow-cyan:
+        0.075em 0.075em 0.25px var(--cyan-edge),
+        -0.075em 0.075em 0.25px var(--cyan-edge),
+        0.075em -0.075em 0.25px var(--cyan-edge),
+        -0.075em -0.075em 0.25px var(--cyan-edge),
+        0.075em 0.000px 0.25px var(--cyan-edge),
+        -0.075em 0.000px 0.25px var(--cyan-edge),
+        0.000px 0.075em 0.25px var(--cyan-edge),
+        0.000px -0.075em 0.25px var(--cyan-edge);
+
+
+    --glow-light-blue:
+        0.075em 0.075em 0.25px var(--light-blue-edge),
+        -0.075em 0.075em 0.25px var(--light-blue-edge),
+        0.075em -0.075em 0.25px var(--light-blue-edge),
+        -0.075em -0.075em 0.25px var(--light-blue-edge),
+        0.075em 0.000px 0.25px var(--light-blue-edge),
+        -0.075em 0.000px 0.25px var(--light-blue-edge),
+        0.000px 0.075em 0.25px var(--light-blue-edge),
+        0.000px -0.075em 0.25px var(--light-blue-edge);
+
+
+    --glow-blue:
+        0.075em 0.075em 0.25px var(--blue-edge),
+        -0.075em 0.075em 0.25px var(--blue-edge),
+        0.075em -0.075em 0.25px var(--blue-edge),
+        -0.075em -0.075em 0.25px var(--blue-edge),
+        0.075em 0.000px 0.25px var(--blue-edge),
+        -0.075em 0.000px 0.25px var(--blue-edge),
+        0.000px 0.075em 0.25px var(--blue-edge),
+        0.000px -0.075em 0.25px var(--blue-edge);
+
+
+    --glow-purple:
+        0.075em 0.075em 0.25px var(--purple-edge),
+        -0.075em 0.075em 0.25px var(--purple-edge),
+        0.075em -0.075em 0.25px var(--purple-edge),
+        -0.075em -0.075em 0.25px var(--purple-edge),
+        0.075em 0.000px 0.25px var(--purple-edge),
+        -0.075em 0.000px 0.25px var(--purple-edge),
+        0.000px 0.075em 0.25px var(--purple-edge),
+        0.000px -0.075em 0.25px var(--purple-edge);
+
+
+    --glow-magenta:
+        0.075em 0.075em 0.25px var(--magenta-edge),
+        -0.075em 0.075em 0.25px var(--magenta-edge),
+        0.075em -0.075em 0.25px var(--magenta-edge),
+        -0.075em -0.075em 0.25px var(--magenta-edge),
+        0.075em 0.000px 0.25px var(--magenta-edge),
+        -0.075em 0.000px 0.25px var(--magenta-edge),
+        0.000px 0.075em 0.25px var(--magenta-edge),
+        0.000px -0.075em 0.25px var(--magenta-edge);
+
+
+    --glow-pink:
+        0.075em 0.075em 0.25px var(--pink-edge),
+        -0.075em 0.075em 0.25px var(--pink-edge),
+        0.075em -0.075em 0.25px var(--pink-edge),
+        -0.075em -0.075em 0.25px var(--pink-edge),
+        0.075em 0.000px 0.25px var(--pink-edge),
+        -0.075em 0.000px 0.25px var(--pink-edge),
+        0.000px 0.075em 0.25px var(--pink-edge),
+        0.000px -0.075em 0.25px var(--pink-edge);
+
+
+}
+
+body {
+    background-color: var(--color-body);
+    font-family: var(--font-body);
+    color: var(--white-main);
+    font-size: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+#content {
+    max-width: 1920px;
+}
+
+h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); }
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.125rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.9rem; }
+
+
+/* HEADER */
+header {
+    background-color: var(--color-header);
+    display: grid;
+    grid-template-columns: 1fr 66.666% 1fr;
+    grid-template-rows: auto;
+    padding: 4px;
+    align-items: center;
+}
+
+#logo {
+    padding-right: 4px;
+    grid-column: 1/2;
+    height: 100%;
+    width: 100%;
+    border-radius: 24px;
+}
+
+#site-title {
+    text-shadow: var(--glow-white);
+    text-align: center;
+    grid-column: 2/3;
+    margin: 0;
+}
+
+#menu {
+    grid-column: 3/4;
+    aspect-ratio: 1;
+    z-index: 2;
+    border-radius: 24px;
+    background: none;
+    cursor: pointer;
+    display: inline;
+    height: 100%;
+    width: 100%;
+}
+
+#menu.open .ham-bars,
+#menu:not(.open) .ham-x {
+    display: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    left: 0;
+    top: -16.5%;
+    transition: top 0.25s ease-out;
+}
+
+nav.open {
+    top: 0;
+    height: 100%;
+}
+
+nav a {
+    background-color: var(--gray-edge);
+    color: var(--yellow-main);
+    padding: 8px;
+    font-size: 1.5rem;
+}
+
+nav a.active {
+    color: var(--yellow-glow);
+    text-shadow: var(--glow-yellow);
+}
+
+
+/* MAIN */
+main {
+    background-color: var(--color-main);
+}
+
+main>* {
+    padding: 8px;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: var(--color-footer);
+    border-top: 1px solid var(--black-edge);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    font-size: 0.75rem;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.footer-item {
+    height: 100%; 
+    padding: 8px;
+    display: flex;
+}
+
+#copyright {
+    grid-column: 1/2;
+    justify-content: left;
+}
+
+#disclaimer {
+    border-top: 1px solid var(--black-edge);
+    flex-wrap: wrap;
+    grid-row: 2/3;
+    grid-column: 1/3;
+    text-align: center;
+}
+
+#attributions {
+    grid-column: 2/3;
+    justify-content: right;
+}
