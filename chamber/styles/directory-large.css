@@ -36,7 +36,6 @@
     }
 
     .is-grid hr {
-        border: 1px solid var(--trans);
         display: block;
         grid-column: 1/2;
         grid-row: 2/3;
@@ -53,8 +52,8 @@
     .is-grid :is(.card-url, .card-addr, .card-phone) {
         border: 0;
         grid-column: 1/2;
-        margin: 0;
-        padding: 0;
+        margin: 0 2px;
+        padding: 1px;
     }
 
     .is-grid .card-name {
@@ -79,7 +78,8 @@
         align-content: center;
         background-color: var(--lightblue);
         border: 0;
-        color: var(--lm-black);
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 6px;
         display: block;
         font-size: 1.125rem;
         grid-column: 1/2;

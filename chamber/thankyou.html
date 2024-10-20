@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/style-large.css">
     <link rel="stylesheet" href="styles/thankyou.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cousine:ital@0;1&family=Lora:ital@0;1&display=swap" rel="stylesheet">
@@ -30,14 +31,14 @@
     <script src="scripts/getdates.js" type="module"></script>
     <script src="scripts/darkmode.js" type="module"></script>
     <script src="scripts/menu.js" type="module"></script>
-    <script src="scripts/response.js" defer></script>
+    <script src="scripts/response.js" type="module"></script>
 </head>
 
 <body>
-    <div id="content">
-        <header>
-            <div>
-                <svg id="logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <div id="content" class="marg-0a bg-color-lightblue">
+        <header class="bg-color-darkblue color-lm-white">
+            <div class="marg-0a width100">
+                <svg id="logo" class="width100" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <!--stripes mask-->
                     <mask id="a">
                         <circle cx="12" cy="12" r="8.75" fill="#fff" />
@@ -88,12 +89,12 @@
                     <path fill="#f5ed96" stroke="#2a2829" stroke-width="0.2" d="m12 5l2 7.5-5.5-5.5 7.5 2-7.5 2 5.5-5.5-2 7.5-2-7.5 5.5 5.5-7.5-2 7.5-2-5.5 5.5z" />
                     <circle cx="12" cy="9" r="2.4" fill="#f5ed96" />
                 </svg>
-                <div id="title-text">
-                    <h1 id="title">Vista</h1>
-                    <p id="subtitle">Chamber of Commerce</p>
+                <div id="title-text" class="width100">
+                    <h1 id="title"class="font-size-2rem">Vista</h1>
+                    <p id="subtitle"class="font-size-0-75rem">Chamber of Commerce</p>
                 </div>
                 <div id="nav-holder">
-                    <nav id="animateme">
+                    <nav id="animateme" class="font-size-1-5rem bg-color-darkblue color-lm-white">
                         <a href="./">Home</a>
                         <a href="directory.html">Directory</a>
                         <a href="join.html">Join</a>
@@ -101,7 +102,7 @@
                     </nav>
                 </div>
                 <div id="header-buttons">
-                    <button id="darkmode" type="button" aria-label="dark mode toggle">
+                    <button id="darkmode" class="width100" type="button" aria-label="dark mode toggle">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <mask id="e">
                                 <mask id="f">
@@ -114,7 +115,7 @@
                             <circle class="light" mask="url(#e)" cx="12" cy="12" r="11" fill="#fff" />
                         </svg>
                     </button>
-                    <button id="menu" type="button" aria-label="navigation menu">
+                    <button id="menu" class="width100" type="button" aria-label="navigation menu">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path class="ham-x light" fill="#efefef" d="m12 10.55 6-6a.25.25 0 011.42 1.42l-6 6 6 6a.25.25 0 01-1.42 1.42l-6-6-6 6a.25.25 0 01-1.42-1.42l6-6-6-6a.25.25 0 111.42-1.42z" />
                             <path class="ham-bars light" fill="#efefef" d="m4 4.25a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2z" />
@@ -126,25 +127,25 @@
             </div>
         </header>
 
-        <main>
-            <section id="thankyou">
-                <h2>Thank you for your application.</h2>
+        <main class="marg-0a width100 style bg-color-green">
+            <section id="thankyou" class="font-size-1-125rem">
+                <h2 class="font-size-1-75rem center bold">Thank you for your application.</h2>
 
-                <p>We are glad you have taken the time to apply, <span id="firstName">[firstName]</span> <span id="lastName">[lastName]</span>.</p>
+                <p>We are glad you have taken the time to apply, <span id="firstName" class="bold">[firstName]</span> <span id="lastName" class="bold">[lastName]</span>.</p>
 
-                <p>Your application was sent on <span id="time">[Weekday, Month 00th, Year]</span>.</p>
+                <p>Your application was sent on <span id="time" class="bold">[Weekday, Month 00th, Year]</span>.</p>
 
-                <p>You will be hearing from us soon via your email (<span id="email">[you@email.net]</span>) or phone (<span id="phone">[1(234)567-8901]</span>) regarding "<span id="orgName">[orgName]</span>" spot in the Vista Chamber of Commerce.</p>
+                <p>You will be hearing from us soon via your email (<span id="email" class="bold">[you@email.net]</span>) or phone (<span id="phone" class="bold">[1(234)567-8901]</span>) regarding "<span id="orgName" class="bold">[orgName]</span>" spot in the Vista Chamber of Commerce.</p>
 
-                <p>If you don't hear from us, please check your spam folder and make sure our number (<span id="chamber-phone">123-456-7890</span>) is not in your blocked numbers list.</p>
+                <p>If you don't hear from us, please check your spam folder and make sure our number (<span id="chamber-phone" class="italic">123-456-7890</span>) is not in your blocked numbers list.</p>
 
-                <p>We hope to see you soon!</p>
+                <p class="font-size-1-25rem center italic">We hope to see you soon!</p>
 
             </section>
         </main>
 
-        <footer>
-            <div>
+        <footer class="font-size-0-75rem width100 bg-color-darkblue color-lm-white">
+            <div class="marg-0a width100">
                 <div id="contact">
                     <p><b>Vista Chamber of Commerce</b></p>
                     <p>123 Main Street</p>

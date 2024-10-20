@@ -27,6 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cousine:ital@0;1&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+
     <script src="scripts/getdates.js" type="module"></script>
     <script src="scripts/darkmode.js" type="module"></script>
     <script src="scripts/menu.js" type="module"></script>
@@ -36,10 +37,10 @@
 </head>
 
 <body>
-    <div id="content">
-        <header>
-            <div>
-                <svg id="logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <div id="content" class="marg-0a bg-color-lightblue">
+        <header class="bg-color-darkblue color-lm-white">
+            <div class="marg-0a width100">
+                <svg id="logo" class="width100" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <!--stripes mask-->
                     <mask id="a">
                         <circle cx="12" cy="12" r="8.75" fill="#fff" />
@@ -90,12 +91,12 @@
                     <path fill="#f5ed96" stroke="#2a2829" stroke-width="0.2" d="m12 5l2 7.5-5.5-5.5 7.5 2-7.5 2 5.5-5.5-2 7.5-2-7.5 5.5 5.5-7.5-2 7.5-2-5.5 5.5z" />
                     <circle cx="12" cy="9" r="2.4" fill="#f5ed96" />
                 </svg>
-                <div id="title-text">
-                    <h1 id="title">Vista</h1>
-                    <p id="subtitle">Chamber of Commerce</p>
+                <div id="title-text" class="width100">
+                    <h1 id="title"class="font-size-2rem">Vista</h1>
+                    <p id="subtitle"class="font-size-0-75rem">Chamber of Commerce</p>
                 </div>
                 <div id="nav-holder">
-                    <nav id="animateme">
+                    <nav id="animateme" class="font-size-1-5rem bg-color-darkblue color-lm-white">
                         <a href="./" class="active">Home</a>
                         <a href="directory.html">Directory</a>
                         <a href="join.html">Join</a>
@@ -103,7 +104,7 @@
                     </nav>
                 </div>
                 <div id="header-buttons">
-                    <button id="darkmode" type="button" aria-label="dark mode toggle">
+                    <button id="darkmode" class="width100" type="button" aria-label="dark mode toggle">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <mask id="e">
                                 <mask id="f">
@@ -116,7 +117,7 @@
                             <circle class="light" mask="url(#e)" cx="12" cy="12" r="11" fill="#fff" />
                         </svg>
                     </button>
-                    <button id="menu" type="button" aria-label="navigation menu">
+                    <button id="menu" class="width100" type="button" aria-label="navigation menu">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path class="ham-x light" fill="#efefef" d="m12 10.55 6-6a.25.25 0 011.42 1.42l-6 6 6 6a.25.25 0 01-1.42 1.42l-6-6-6 6a.25.25 0 01-1.42-1.42l6-6-6-6a.25.25 0 111.42-1.42z" />
                             <path class="ham-bars light" fill="#efefef" d="m4 4.25a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2z" />
@@ -127,23 +128,23 @@
                 </div>
             </div>
         </header>
-        <main>
-            <section id="hero">
-                <img src="images/hero.webp" alt="Hero image" width="740" height="700" id="hero-img">
-                <div id="hero-text">
+
+        <main class="marg-0a width100 color-black">
+            <section id="hero" class="marg-0a width100 bg-color-green">
+                <img src="images/hero.webp" alt="Hero image" width="740" height="700" id="hero-img" class="width100">
+                <div id="hero-text" class="font-size-1-125rem color-lm-white">
                     <h2 id="hero-title">
                         <span id="hero-y" title="Your City. Your Table.">Y</span>
-                        <span id="hero-city" title="Your City.">our City.</span>
-                        <span id="hero-table" title="Your Table.">our Table.</span>
+                        <span id="hero-city" class="italic" title="Your City.">our City.</span>
+                        <span id="hero-table" class="italic" title="Your Table.">our Table.</span>
                     </h2>
-                    <a href="join.html" id="call-button">Save Your Seat</a>
+                    <a href="join.html" id="call-button" class="center italic width100">Save Your Seat</a>
                 </div>
             </section>
-            <div id="main">
-                <div id="page">
-                    <h2 id="home-title">Home</h2>
+            <div id="main" class="font-size-0-75rem marg-0a width100 style bg-color-green">
+                    <h2 id="home-title" class="font-size-2rem center header">Home</h2>
                     <section id="events">
-                        <h3 id="events-title" class="section-header">Events</h3>
+                        <h3 id="events-title" class="section-header center">Events</h3>
                         <ul id="event-list">
                             <li class="event-card">
                                 <p class="event-title">Pumpkin<wbr> Festival</p>
@@ -173,14 +174,14 @@
                     </section>
 
                     <section id="current-weather">
-                        <h3 id="weather-title" class="section-header">Current Weather</h3>
+                        <h3 id="weather-title" class="section-header center width100">Current Weather</h3>
                         <ol id="weather-events">
                             <li class="weather-event single-event">
-                                <div class=""></div><span>Loading</span>
+                                <div></div><span>Loading</span>
                             </li>
                         </ol>
                         <ul id="weather-info">
-                            <li><span id="temp-current">Loading...</span>&deg;F</li>
+                            <li><span id="temp-current" class="bold">Loading...</span>&deg;F</li>
                             <li id="weather-desc"></li>
                             <li>High: <span id="temp-high">Loading...</span>&deg;</li>
                             <li>Low: <span id="temp-low">Loading...</span>&deg;</li>
@@ -191,15 +192,15 @@
                     </section>
 
                     <section id="forecast-weather">
-                        <h3 id="forecast-title" class="section-header">Weather Forecast</h3>
-                        <ol id="forecast-info">
-                            <li><span id="forecast-today">Loading...</span>&deg;F</li>
-                            <li><span id="forecast-tomorrow">Loading...</span>&deg;F</li>
-                            <li><span id="forecast-overmorrow">Loading...</span>&deg;F</li>
+                        <h3 id="forecast-title" class="section-header center">Weather Forecast</h3>
+                        <ol id="forecast-info" class="font-size-1-125rem">
+                            <li class="center"><span id="forecast-today">Loading...</span>&deg;F</li>
+                            <li class="center"><span id="forecast-tomorrow">Loading...</span>&deg;F</li>
+                            <li class="center"><span id="forecast-overmorrow">Loading...</span>&deg;F</li>
                         </ol>
                     </section>
 
-                    <ul id="spotlight-list">
+                    <ul id="spotlight-list" class="style">
                         <li class="spotlight-card level-2">
                             <h4 class="card-header">placeholder Header</h4>
                             <p class="card-phone">phone: <span>(123)555-4567</span></p>
@@ -219,11 +220,11 @@
                             <p class="card-url">website: <span>placeholder.web</span></p>
                         </li>
                     </ul>
-                </div>
             </div>
         </main>
-        <footer>
-            <div>
+
+        <footer class="font-size-0-75rem width100 bg-color-darkblue color-lm-white">
+            <div class="marg-0a width100">
                 <div id="contact">
                     <p><b>Vista Chamber of Commerce</b></p>
                     <p>123 Main Street</p>

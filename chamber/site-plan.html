@@ -5,43 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Page Data -->
     <title>Vista Chamber of Commerce | Site Plan</title>
     <meta name="author" content="Corry McConnell Palmer">
     <meta name="description" content="This is the Site Plan for the Vista Chamber of Commerce- a class project for Corry McConnell Palmer's classwork in 'WDD231 - Web Frontend Development I'.">
 
-    <!-- Embed Data -->
     <meta property="og:description" content="Vista Chamber of Commerce Site Plan - a class Project for Corry McConnell Palmer's classwork in 'WDD231 - Web Frontend Development I'.">
-    <meta property="og:image" content="#">
+    <meta property="og:image" content="https://corrymp.github.io/wdd231/chamber/images/ogchamber.png">
     <meta property="og:site_name" content="Vista Chamber of Commerce | CorryMP | WDD231">
     <meta property="og:title" content="Vista Chamber of Commerce | Site Plan">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://corrymp.github.io/wdd231/chamber">
+    <meta property="og:url" content="https://corrymp.github.io/wdd231/chamber/site-plan.html">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:image:alt" content="placeholder">
+    <meta name="twitter:image:alt" content="Vista Chamber of Commerce Logo">
 
-    <!-- Style References -->
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-large.css">
     <link rel="stylesheet" href="styles/siteplan.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cousine:ital@0;1&family=Lora:ital@0;1&display=swap" rel="stylesheet">
 
-    <!-- Script References -->
-    <script src="scripts/getdates.js" defer></script>
-    <script src="scripts/menu.js" defer></script>
-    <script src="scripts/darkmode.js" defer></script>
-    <script src="scripts/script.js" defer></script>
+    <script src="scripts/getdates.js" type="module"></script>
+    <script src="scripts/menu.js" type="module"></script>
+    <script src="scripts/darkmode.js" type="module"></script>
     <script src="scripts/siteplan.js" defer></script>
 </head>
 
 <body>
-    <div id="content">
+    <div id="content" class="marg-0a">
         <header>
-            <div>
-                <svg id="logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <div class="marg-0a width100">
+                <svg id="logo" class="width100" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <!--stripes mask-->
                     <mask id="a">
                         <circle cx="12" cy="12" r="8.75" fill="#fff" />
@@ -92,21 +89,20 @@
                     <path fill="#f5ed96" stroke="#2a2829" stroke-width="0.2" d="m12 5l2 7.5-5.5-5.5 7.5 2-7.5 2 5.5-5.5-2 7.5-2-7.5 5.5 5.5-7.5-2 7.5-2-5.5 5.5z" />
                     <circle cx="12" cy="9" r="2.4" fill="#f5ed96" />
                 </svg>
-
-                <div id="title-text">
-                    <h1 id="title">Vista</h1>
-                    <p id="subtitle">Chamber of Commerce</p>
+                <div id="title-text" class="width100">
+                    <h1 id="title"class="font-size-2rem">Vista</h1>
+                    <p id="subtitle"class="font-size-0-75rem">Chamber of Commerce</p>
                 </div>
-
-                <nav id="animateme">
-                    <a href="./">Home</a>
-                    <a href="directory.html">Directory</a>
-                    <a href="join.html">Join</a>
-                    <a href="discover.html">Discover</a>
-                </nav>
-
+                <div id="nav-holder">
+                    <nav id="animateme" class="font-size-1-5rem">
+                        <a href="./">Home</a>
+                        <a href="directory.html">Directory</a>
+                        <a href="join.html">Join</a>
+                        <a href="discover.html">Discover</a>
+                    </nav>
+                </div>
                 <div id="header-buttons">
-                    <button id="darkmode" type="button" aria-label="dark mode toggle">
+                    <button id="darkmode" class="width100" type="button" aria-label="dark mode toggle">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <mask id="e">
                                 <mask id="f">
@@ -119,7 +115,7 @@
                             <circle class="light" mask="url(#e)" cx="12" cy="12" r="11" fill="#fff" />
                         </svg>
                     </button>
-                    <button id="menu" type="button" aria-label="navigation menu">
+                    <button id="menu" class="width100" type="button" aria-label="navigation menu">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path class="ham-x light" fill="#efefef" d="m12 10.55 6-6a.25.25 0 011.42 1.42l-6 6 6 6a.25.25 0 01-1.42 1.42l-6-6-6 6a.25.25 0 01-1.42-1.42l6-6-6-6a.25.25 0 111.42-1.42z" />
                             <path class="ham-bars light" fill="#efefef" d="m4 4.25a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2z" />
@@ -130,7 +126,8 @@
                 </div>
             </div>
         </header>
-        <main>
+
+        <main class="marg-0a width100">
             <article>
                 <h2>The Chamber of Commerce Site Plan</h2>
 
@@ -227,21 +224,22 @@
                 </section>
                 <section>
                     <h3>Wireframes</h3>
-                    <figure>
+                    <figure class="marg-0a">
                         <figcaption>Desktop</figcaption>
 
-                        <img src="https://byui-cse.github.io/wdd231-ww-course/images/chamber-desktop-wireframe.webp" alt="Chamber Wireframe Desktop View">
+                        <img src="https://byui-cse.github.io/wdd231-ww-course/images/chamber-desktop-wireframe.webp" alt="Chamber Wireframe Desktop View" class="marg-0a width100">
                     </figure>
-                    <figure>
+                    <figure class="marg-0a">
                         <figcaption>Mobile</figcaption>
 
-                        <img src="https://byui-cse.github.io/wdd231-ww-course/images/chamber-mobile-wireframe.webp" alt="Chamber Wireframe Mobile View">
+                        <img src="https://byui-cse.github.io/wdd231-ww-course/images/chamber-mobile-wireframe.webp" alt="Chamber Wireframe Mobile View" class="marg-0a width100">
                     </figure>
                 </section>
             </article>
         </main>
-        <footer>
-            <div>
+
+        <footer class="font-size-0-75rem width100">
+            <div class="marg-0a width100">
                 <div id="contact">
                     <p><b>Vista Chamber of Commerce</b></p>
                     <p>123 Main Street</p>
@@ -263,8 +261,8 @@
                 <div id="info">
                     <p>WDD231 Class Project</p>
                     <p>Corry McConnell Palmer</p>
-                    <p>&copy;<span id="currentyear"></span> Vista Chamber of Commerce</p>
-                    <p id="lastModified">#</p>
+                    <p>&copy;<span id="currentyear">####</span> Vista Chamber of Commerce</p>
+                    <p id="lastModified">##/##/## ##:##:##</p>
                 </div>
             </div>
         </footer>

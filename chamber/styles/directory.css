@@ -1,5 +1,4 @@
 #search {
-    color: #000;
     display: flex;
     gap: 4px;
     margin: 6px auto;
@@ -13,9 +12,6 @@
 
 #search button {
     aspect-ratio: 1;
-    background-color: var(--orange);
-    color: var(--black);
-    text-align: center;
 }
 
 #toggle-view {
@@ -35,27 +31,38 @@
 
 .card-holder {
     background-color: var(--darkblue);
-    border-radius: 4px;
-    color: var(--card-txt);
+    color: var(--black);
     list-style: none;
     padding: 2px;
 }
 
 .card {
-    background-color: var(--card-bg);
+    background-color: var(--white);
+    border: none;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    padding: 2px;
 }
 
 .card-addr,
 .card-url,
-.card-header,
 .card-name,
 .card-phone {
+    margin: 2px;
     border-bottom: 2px solid var(--trans);
     grid-column: 2/3;
+}
+
+.card-header {
+    grid-column: 2/3;
+    padding: 0 2px 2px 2px;
+}
+
+.card-img {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 6px;
+    border-right: 2px solid var(--darkblue);
+    border-bottom: 0;
 }
 
 .card-header b {
@@ -89,7 +96,7 @@
 }
 
 .card p {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     padding: 1px;
 }
 

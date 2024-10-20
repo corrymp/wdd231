@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Vista Chamber of Commerce | Join</title>
+    <title>Vista Chamber of Commerce | Discover</title>
     <meta name="author" content="Corry McConnell Palmer">
-    <meta name="description" content="This is the join page for the Vista Chamber of Commerce - A class Project for Corry McConnell Palmer's classwork in 'WDD231 - Web Frontend Development I'.">
+    <meta name="description" content="This is the Discover page for the Vista Chamber of Commerce - A class Project for Corry McConnell Palmer's classwork in 'WDD231 - Web Frontend Development I'.">
 
     <meta property="og:description" content="Vista Chamber of Commerce - a class Project for Corry McConnell Palmer's classwork in 'WDD231 - Web Frontend Development I'.">
     <meta property="og:image" content="https://corrymp.github.io/wdd231/chamber/images/ogchamber.png">
     <meta property="og:site_name" content="Vista Chamber of Commerce | CorryMP | WDD231">
-    <meta property="og:title" content="Vista Chamber of Commerce | Join">
+    <meta property="og:title" content="Vista Chamber of Commerce | Discover">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://corrymp.github.io/wdd231/chamber/join.html">
+    <meta property="og:url" content="https://corrymp.github.io/wdd231/chamber/discover.html">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image:alt" content="Vista Chamber of Commerce Logo">
 
@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/style-large.css">
-    <link rel="stylesheet" href="styles/join.css">
-    <link rel="stylesheet" href="styles/join-large.css">
+    <link rel="stylesheet" href="styles/thankyou.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cousine:ital@0;1&family=Lora:ital@0;1&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
     <script src="scripts/getdates.js" type="module"></script>
     <script src="scripts/darkmode.js" type="module"></script>
     <script src="scripts/menu.js" type="module"></script>
-    <script src="scripts/join.js" type="module"></script>
+    <script src="scripts/discover.js" type="module"></script>
 </head>
 
 <body>
@@ -97,8 +97,8 @@
                     <nav id="animateme" class="font-size-1-5rem bg-color-darkblue color-lm-white">
                         <a href="./">Home</a>
                         <a href="directory.html">Directory</a>
-                        <a href="join.html" class="active">Join</a>
-                        <a href="discover.html">Discover</a>
+                        <a href="join.html">Join</a>
+                        <a href="discover.html" class="active">Discover</a>
                     </nav>
                 </div>
                 <div id="header-buttons">
@@ -128,110 +128,147 @@
         </header>
 
         <main class="marg-0a width100 bg-color-green">
-            <div id="page" class="nopad width100 style">
-                <form id="form" action="thankyou.html" method="get" class="width100">
-                    <h2 id="form-header" class="font-size-1-75rem center width100">Membership Application</h2>
-                    <p id="required" class="font-size-0-75rem italic">indicates a required field</p>
 
+            <div id="discover-page" class="marg-0a style">
 
-                    <h3 class="font-size-1-25rem width100 notheader">Personal</h3>
-                    <fieldset class="nopad">
-                        <label id="lbl-first-name" class="font-size-1rem nomarg">First name:
-                            <input id="first-name" class="width100 color-lm-black" type="text" required name="firstName" title="first name" autocomplete="name">
-                        </label>
+                <p id="last-visited" class="header center">{last visited message}</p>
 
-                        <label id="lbl-last-name" class="font-size-1rem nomarg">Last name:
-                            <input id="last-name" class="width100 color-lm-black" type="text" required name="lastName" title="last name" autocomplete="family-name">
-                        </label>
-
-                        <label id="lbl-org-title" class="font-size-1rem nomarg">Title:<span class="opt font-size-0-75rem italic">(optional)</span>
-                            <input id="org-title" class="width100 color-lm-black" type="text" name="orgTitle" title="Minimum 7 characters. Only A-Z (case insensitive), hyphens, and spaces" autocomplete="organization-title" pattern="[a-zA-Z\-\s]{7,}">
-                            <span id="title-limit" class="font-size-0-75rem">Minimum 7 characters<br>A-Z only (case insensitive)<br>Hyphens and spaces allowed</span>
-                        </label>
-                    </fieldset>
-
-                    <h3 class="font-size-1-25rem width100 notheader">Contact</h3>
-                    <fieldset class="nopad">
-
-                        <label id="lbl-email" class="font-size-1rem nomarg">Email:
-                            <input id="email" class="width100 color-lm-black" type="email" required name="email" title="email" autocomplete="email" placeholder="you@email.web">
-                        </label>
-
-                        <label id="lbl-phone" class="font-size-1rem nomarg">Phone:
-                            <input id="phone" class="width100 color-lm-black" type="tel" required name="phone" title="phone number" autocomplete="tel">
-                        </label>
-
-                    </fieldset>
-
-                    <h3 class="font-size-1-25rem width100 notheader">Business/organization</h3>
-                    <fieldset class="nopad">
-                        <label id="lbl-org-name" class="font-size-1rem nomarg">Name:
-                            <input id="org-name" class="width100 color-lm-black" type="text" required name="orgName" title="business or organization name" autocomplete="organization">
-                        </label>
-
-                        <label id="lbl-org-desc" class="font-size-1rem nomarg">Description:<span class="opt font-size-0-75rem italic">(optional)</span>
-                            <textarea id="org-desc" class="width100 color-lm-black" name="orgDesc" title="description of business or organization"></textarea>
-                        </label>
-
-                        <p id="level-label" class="font-size-1rem nomarg">Membership level: <span id="details-location" class="font-size-0-75rem italic"></span></p>
-                        <fieldset id="level" class="nopad">
-                            <label id="lbl-level-bronze" class="font-size-0-75rem center nomarg bg-color-lm-white">
-                                <input id="level-bronze" type="radio" name="level" value="bronze" required> Bronze
-                            </label>
-                            <label id="lbl-level-silver" class="font-size-0-75rem center nomarg bg-color-lm-white">
-                                <input id="level-silcer" type="radio" name="level" value="silver" required> Silver
-                            </label>
-                            <label id="lbl-level-gold" class="font-size-0-75rem center nomarg bg-color-lm-white">
-                                <input id="level-gold" type="radio" name="level" value="gold" required> Gold
-                            </label>
-                            <label id="lbl-level-np" class="font-size-0-75rem center nomarg bg-color-lm-white">
-                                <input id="level-np" type="radio" name="level" value="np" required> Non-Profit
-                            </label>
-                        </fieldset>
-
-                    </fieldset>
-
-                    <fieldset class="nopad">
-                        <label id="what">"Each field element, including the textarea, should be encased in a label tag to support accessibility."<input id="time" type="hidden" name="time"></label>
-
-                        <button id="submit" class="width100 bg-color-lm-white color-lm-black" type="submit">Send application</button>
-                    </fieldset>
-                </form>
-
-                <section id="level-details" class="center width100">
-                    <h2 id="level-header" class="font-size-1-75rem center width100">Membership Levels</h2>
-                    <p id="level-inquire" class="font-size-0-75rem italic">Please contact us for any membership inquiries</p>
-                    <div id="level-cards" class="width100">
-                        <div id="bronze-card" class="level-card width100 color-lm-black">
-                            <div class="card-backing level-1"></div>
-                            <div class="card-content bg-color-yellow">
-                                <p>Bronze Level</p>
-                                <button id="bronze-info" data-level="bronze" class="info-button bg-color-lm-orange" type="button">Learn More</button>
-                            </div>
-                        </div>
-                        <div id="silver-card" class="level-card width100 color-lm-black">
-                            <div class="card-backing level-2"></div>
-                            <div class="card-content bg-color-yellow">
-                                <p>Silver Level</p>
-                                <button id="silver-info" data-level="silver" class="info-button bg-color-lm-orange" type="button">Learn More</button>
-                            </div>
-                        </div>
-                        <div id="gold-card" class="level-card width100 color-lm-black">
-                            <div class="card-backing level-3"></div>
-                            <div class="card-content bg-color-yellow">
-                                <p>Gold Level</p>
-                                <button id="gold-info" data-level="gold" class="info-button bg-color-lm-orange" type="button">Learn More</button>
-                            </div>
-                        </div>
-                        <div id="np-card" class="level-card width100 color-lm-black">
-                            <div class="card-backing level-np"></div>
-                            <div class="card-content bg-color-yellow">
-                                <p>Non-Profit</p>
-                                <button id="np-info" data-level="np" class="info-button bg-color-lm-orange" type="button">Learn More</button>
-                            </div>
-                        </div>
-                    </div>
+                <section id="welcome-to-vista">
+                    <h2 class="center">About Vista</h2>
+                    <p>Incorporated January 28th 1963, Vista holds a population of 100,291 within the 19 square miles</p>
                 </section>
+
+                <section id="sights-and-sounds">
+                    <h2 class="center">Sights and Sounds</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim reprehenderit facere illum dolores esse distinctio ullam! Ab ipsa explicabo veritatis saepe sint pariatur natus placeat, accusantium culpa dolore praesentium ex!</p>
+                </section>
+
+                <div id="cal-box">
+                    <table id="calendar" class="center marg-0a bg-color-darkblue color-lm-black">
+                        <thead>
+                            <tr>
+                                <td class="cal-button nopad"><button id="cal-back" class="width100">&blacktriangleleft;</button></td>
+                                <th id="today" colspan="5" scope="colgroup">mmm dd, yyyy</th>
+                                <td class="cal-button nopad"><button id="cal-next" class="width100">&blacktriangleright;</button></td>
+                            </tr>
+                            <tr id="weekdays">
+                                <th id="Su" class="weekday">Su</th>
+                                <th id="Mo" class="weekday">Mo</th>
+                                <th id="Tu" class="weekday">Tu</th>
+                                <th id="We" class="weekday">We</th>
+                                <th id="Th" class="weekday">Th</th>
+                                <th id="Fr" class="weekday">Fr</th>
+                                <th id="Sa" class="weekday">Sa</th>
+                            </tr>
+                        </thead>
+                        <tbody id="month">
+                            <tr class="week">
+                                <td class="day Sunday"></td>
+                                <td class="day Monday"></td>
+                                <td class="day Tuesday"></td>
+                                <td class="day Wednesday"></td>
+                                <td class="day Thursday"></td>
+                                <td class="day Friday"></td>
+                                <td class="day Saturday"></td>
+                            </tr>
+                            <tr class="week">
+                                <td class="day Sunday"></td>
+                                <td class="day Monday"></td>
+                                <td class="day Tuesday"></td>
+                                <td class="day Wednesday"></td>
+                                <td class="day Thursday"></td>
+                                <td class="day Friday"></td>
+                                <td class="day Saturday"></td>
+                            </tr>
+                            <tr class="week">
+                                <td class="day Sunday"></td>
+                                <td class="day Monday"></td>
+                                <td class="day Tuesday"></td>
+                                <td class="day Wednesday"></td>
+                                <td class="day Thursday"></td>
+                                <td class="day Friday"></td>
+                                <td class="day Saturday"></td>
+                            </tr>
+                            <tr class="week">
+                                <td class="day Sunday"></td>
+                                <td class="day Monday"></td>
+                                <td class="day Tuesday"></td>
+                                <td class="day Wednesday"></td>
+                                <td class="day Thursday"></td>
+                                <td class="day Friday"></td>
+                                <td class="day Saturday"></td>
+                            </tr>
+                            <tr class="week">
+                                <td class="day Sunday"></td>
+                                <td class="day Monday"></td>
+                                <td class="day Tuesday"></td>
+                                <td class="day Wednesday"></td>
+                                <td class="day Thursday"></td>
+                                <td class="day Friday"></td>
+                                <td class="day Saturday"></td>
+                            </tr>
+                            <tr class="week">
+                                <td class="day Sunday"></td>
+                                <td class="day Monday"></td>
+                                <td class="day Tuesday"></td>
+                                <td class="day Wednesday"></td>
+                                <td class="day Thursday"></td>
+                                <td class="day Friday"></td>
+                                <td class="day Saturday"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <figure id="agasem">
+                    <picture class="header">
+                        <source srcset="images/agasem.webp" media="(min-width:638px)" width="835" height="470">
+                        <img src="images/agasem-small.webp" alt="Placeholder" height="338" width="600" loading="eager">
+                    </picture>
+                    <figcaption>Antique Gas and Steam Engine Musuem</figcaption>
+                </figure>
+
+                <figure id="alta-vista">
+                    <picture class="header">
+                        <source srcset="images/alta-vista-botanical-gardens.webp" media="(min-width:638px)" width="835" height="470">
+                        <img src="images/alta-vista-botanical-gardens-small.webp" alt="Placeholder" height="338" width="600" loading="eager">
+                    </picture>
+                    <figcaption>Alta Vista Botanical Gardens</figcaption>
+                </figure>
+
+                <figure id="bub-williamson">
+                    <picture class="header">
+                        <source srcset="images/bub-williamson-park.webp" media="(min-width:638px)" width="835" height="470">
+                        <img src="images/bub-williamson-park-small.webp" alt="Placeholder" height="338" width="600" loading="lazy">
+                    </picture>
+                    <figcaption>Bub Williamson Park</figcaption>
+                </figure>
+
+                <figure id="buena-vista">
+                    <picture class="header">
+                        <source srcset="images/buena-vista-park.webp" media="(min-width:638px)" width="835" height="470">
+                        <img src="images/buena-vista-park-small.webp" alt="Placeholder" height="338" width="600" loading="lazy">
+                    </picture>
+                    <figcaption>Buena Vista Park</figcaption>
+                </figure>
+
+                <figure id="guajome">
+                    <picture class="header">
+                        <source srcset="images/guajome.webp" media="(min-width:638px)" width="835" height="470">
+                        <img src="images/guajome-small.webp" alt="Placeholder" height="338" width="600" loading="lazy">
+                    </picture>
+                    <figcaption>Guajome Regional Park</figcaption>
+                </figure>
+
+                <figure id="moonlight">
+                    <picture class="header">
+                        <source srcset="images/moonlight-amp.webp" media="(min-width:638px)" width="835" height="470">
+                        <img src="images/moonlight-amp-small.webp" alt="Placeholder" height="338" width="600" loading="lazy">
+                    </picture>
+                    <figcaption>Moonlight Ampetheatre in Brengle Terrace Park</figcaption>
+                </figure>
+
+
             </div>
         </main>
 
@@ -264,15 +301,14 @@
             </div>
         </footer>
 
-        <dialog id="modal" class="width100">
-            <div id="modal-border" class="width100">
-                <div id="modal-content" class="width100">
-                    <button class="close-button" type="button"></button>
-                    <h2 class="font-size-1-75rem center bg-color-lightblue">The <span id="modal-level" class="italic">( level )</span> Level</h2>
-                    <ul id="modal-list" class="bg-color-skyblue"></ul>
-                </div>
-            </div>
+        <dialog id="debug" class="marg-0a bg-color-lm-white color-lm-black">
+            <button class="close-button" type="button"></button>
+            <p>Test different last visit/current visit dates here.</p>
+            <label class="bg-color-lm-green color-lm-white">Date for last visit: <input type="date" id="dbLastVisit" class="bg-color-lm-green color-lm-white"></label>
+            <label class="bg-color-lm-green color-lm-white">Date for this visit: <input type="date" id="dbThisVisit" class="bg-color-lm-green color-lm-white"></label>
+            <button type="button" id="dbTestDates" class="bg-color-lm-green color-lm-white">Test Dates</button>
         </dialog>
+
     </div>
 </body>
 

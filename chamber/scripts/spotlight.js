@@ -18,7 +18,7 @@ function buildList(members, list) {
     for (let i = 0; i < c.length; i++) {
         list.innerHTML += `
         <li class='spotlight-card level-${c[i].level}'>
-            <p class='card-header${(c[i].name.length > 22) ? ' long-name' : ''}'>${c[i].name}</p>
+            <p class='card-header header${(c[i].name.length > 22) ? ' long-name' : ''}'>${c[i].name}</p>
             ${(c[i].image) ? `<div class='card-img-holder'><img src='${c[i].image}' alt='image for ${c[i].name}' class='card-img' width='329.6' height='188.2'></div>` : '<div class="spacer"></div>'}
             <p class='card-phone'>PHONE: <span>${c[i].phone}</span></p>
             <p class='card-addr'>ADDRESS: <span>${c[i].address}</span></p>

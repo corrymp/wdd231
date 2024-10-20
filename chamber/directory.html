@@ -35,10 +35,10 @@
 </head>
 
 <body>
-    <div id="content">
-        <header>
-            <div>
-                <svg id="logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <div id="content" class="marg-0a bg-color-lightblue">
+        <header class="bg-color-darkblue color-lm-white">
+            <div class="marg-0a width100">
+                <svg id="logo" class="width100" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <!--stripes mask-->
                     <mask id="a">
                         <circle cx="12" cy="12" r="8.75" fill="#fff" />
@@ -89,12 +89,12 @@
                     <path fill="#f5ed96" stroke="#2a2829" stroke-width="0.2" d="m12 5l2 7.5-5.5-5.5 7.5 2-7.5 2 5.5-5.5-2 7.5-2-7.5 5.5 5.5-7.5-2 7.5-2-5.5 5.5z" />
                     <circle cx="12" cy="9" r="2.4" fill="#f5ed96" />
                 </svg>
-                <div id="title-text">
-                    <h1 id="title">Vista</h1>
-                    <p id="subtitle">Chamber of Commerce</p>
+                <div id="title-text" class="width100">
+                    <h1 id="title"class="font-size-2rem">Vista</h1>
+                    <p id="subtitle"class="font-size-0-75rem">Chamber of Commerce</p>
                 </div>
                 <div id="nav-holder">
-                    <nav id="animateme">
+                    <nav id="animateme" class="font-size-1-5rem bg-color-darkblue color-lm-white">
                         <a href="./">Home</a>
                         <a href="directory.html" class="active">Directory</a>
                         <a href="join.html">Join</a>
@@ -102,7 +102,7 @@
                     </nav>
                 </div>
                 <div id="header-buttons">
-                    <button id="darkmode" type="button" aria-label="dark mode toggle">
+                    <button id="darkmode" class="width100" type="button" aria-label="dark mode toggle">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <mask id="e">
                                 <mask id="f">
@@ -115,7 +115,7 @@
                             <circle class="light" mask="url(#e)" cx="12" cy="12" r="11" fill="#fff" />
                         </svg>
                     </button>
-                    <button id="menu" type="button" aria-label="navigation menu">
+                    <button id="menu" class="width100" type="button" aria-label="navigation menu">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path class="ham-x light" fill="#efefef" d="m12 10.55 6-6a.25.25 0 011.42 1.42l-6 6 6 6a.25.25 0 01-1.42 1.42l-6-6-6 6a.25.25 0 01-1.42-1.42l6-6-6-6a.25.25 0 111.42-1.42z" />
                             <path class="ham-bars light" fill="#efefef" d="m4 4.25a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2z" />
@@ -126,11 +126,12 @@
                 </div>
             </div>
         </header>
-        <main>
+
+        <main class="marg-0a width100 bg-color-green">
             <div id="search">
-                <input type="text" placeholder="(W.I.P.) Search...">
-                <button id="go" type="button">Go</button>
-                <button id="toggle-view" class="is-grid" type="button" aria-label="toggle view">
+                <input type="text" placeholder="(W.I.P.) Search..." class="color-lm-black">
+                <button id="go" type="button" class="center bg-color-orange color-black">Go</button>
+                <button id="toggle-view" class="is-grid center bg-color-orange color-black" type="button" aria-label="toggle view">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path class="grid-icon dark" fill="#2a2829" d="m5 3q-2 0-2 2v14q0 2 2 2h14q2 0 2-2v-14q0-2-2-2h-0.5v15.5h-13v-13h13h-5.25v5.25h5.25v2.5h-5.25v5.25h5.25h-12.75h5v-5.25h-5.25v-2.5h5.25v-5.25h7.75v-2.5" />
                         <path class="list-icon dark" fill="#2a2829" d="m5 3a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Zm-6 7a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Zm-6 7a1 1 0 0 0 0 4a1 1 0 0 0 0-4m6 0a1 1 0 0 0 0 4h8a1 1 0 0 0 0-4Z" />
@@ -139,7 +140,7 @@
                     </svg>
                 </button>
             </div>
-            <ul id="list-items" class="is-grid">
+            <ul id="list-items" class="is-grid style">
                 <li class="placeholder">I am a placeholder!</li>
                 <li class="placeholder">I am a placeholder!</li>
                 <li class="placeholder">I am a placeholder!</li>
@@ -151,8 +152,9 @@
                 <li class="placeholder">I am a placeholder!</li>
             </ul>
         </main>
-        <footer>
-            <div>
+
+        <footer class="font-size-0-75rem width100 bg-color-darkblue color-lm-white">
+            <div class="marg-0a width100">
                 <div id="contact">
                     <p><b>Vista Chamber of Commerce</b></p>
                     <p>123 Main Street</p>

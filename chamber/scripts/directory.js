@@ -5,9 +5,7 @@ function buildList(members) {
     listItems.innerHTML = '';
     members.forEach(member => {
         const cardHolder = document.createElement('li');
-        cardHolder.classList.add('card-holder', `level-${member.level}`, (member.image) ? 'has-img' : 'no-img');
-        const card = document.createElement('div');
-        card.classList.add('card');
+        cardHolder.classList.add('card-holder', `level-${member.level}`, (member.image) ? 'has-img' : 'no-img','style');
         function img(member) {
             const img = document.createElement('img');
             img.setAttribute('src', member.image);
@@ -19,8 +17,8 @@ function buildList(members) {
         cardHolder.innerHTML = `
             <div class='card'>
                 ${(member.image)
-                ? `<div class='card-img'>${img(member)}</div><hr><p class='card-name'>${member.name}</p>`
-                : `<p class='card-header'><b>${member.name}</b></p><hr>`}
+                ? `<div class='header card-img'>${img(member)}</div><hr><p class='card-name'>${member.name}</p>`
+                : `<p class='header card-header'><b>${member.name}</b></p><hr>`}
                 <p class='card-addr'>${member.address}</p>
                 <p class='card-phone'>${member.phone}</p>
                 <p class='card-url'><a href='https://www.${member.website}' target='_blank'>${member.website}</a></p>

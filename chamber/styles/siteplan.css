@@ -34,13 +34,10 @@ article {
     img {
         display: block;
         height: auto;
-        margin: 0 auto;
         max-width: 500px;
-        width: 100%;
     }
 
     figure {
-        margin: 0 auto;
         width: 50%;
     }
 
@@ -51,34 +48,114 @@ article {
 
 .brief-list {
 
-    li {margin: 2px 0 0 2px; padding-left: 8px; list-style-type: disc;}
-    li li {margin: 2px 0 0 4px;}
-    li li li {margin: 2px 0 0 6px;}
+    li {
+        margin: 2px 0 0 2px;
+        padding-left: 8px;
+        list-style-type: disc;
+    }
 
-    li:nth-of-type(odd) { background-color: #aee0e440;}
-    li li:nth-of-type(even) { background-color: #aee0e47f;}
-    li li li:nth-of-type(odd) { background-color: #134e8240;}
-    li:nth-of-type(even) { background-color: #134e827f;}
-    li li:nth-of-type(odd) { background-color: #5f9fcb40;}
-    li li li:nth-of-type(even) { background-color: #5f9fcb7f;}
+    li li {
+        margin: 2px 0 0 4px;
+    }
 
-    span { display: inline-block; padding: 4px; }
-    li.list-header {background-color: #6099bb7f;}
+    li li li {
+        margin: 2px 0 0 6px;
+    }
 
-    .colors { color: var(--black);}
-    .primary { background-color: var(--darkblue); color: var(--white); }
-    .secondary { background-color: var(--skyblue);}
-    .background { background-color: var(--lightblue);}
-    .text { background-color: var(--white);}
+    li:nth-of-type(odd) {
+        background-color: #aee0e440;
+    }
 
-    .accents { color: var(--black);}
-    .accent-1 { background-color: var(--red); color: #000000; }
-    .accent-2 { background-color: var(--orange); color: var(--black);}
-    .accent-3 { background-color: var(--yellow); color: var(--black);}
-    .accent-4 { background-color: var(--green); color: #000000; }
-    .accent-5 { background-color: var(--lilac); color: var(--black);}
+    li li:nth-of-type(even) {
+        background-color: #aee0e47f;
+    }
 
-    .fonts { color: var(--black);}
-    .mono { font-family: var(--mono); color: var(--black); }
-    .serif { font-family: var(--serif); color: var(--black); }
+    li li li:nth-of-type(odd) {
+        background-color: #134e8240;
+    }
+
+    li:nth-of-type(even) {
+        background-color: #134e827f;
+    }
+
+    li li:nth-of-type(odd) {
+        background-color: #5f9fcb40;
+    }
+
+    li li li:nth-of-type(even) {
+        background-color: #5f9fcb7f;
+    }
+
+    span {
+        display: inline-block;
+        padding: 4px;
+    }
+
+    li.list-header {
+        background-color: #6099bb7f;
+    }
+
+    .colors {
+        color: var(--black);
+    }
+
+    .primary {
+        background-color: var(--darkblue);
+        color: var(--white);
+    }
+
+    .secondary {
+        background-color: var(--skyblue);
+    }
+
+    .background {
+        background-color: var(--lightblue);
+    }
+
+    .text {
+        background-color: var(--white);
+    }
+
+    .accents {
+        color: var(--black);
+    }
+
+    .accent-1 {
+        background-color: var(--red);
+        color: #000000;
+    }
+
+    .accent-2 {
+        background-color: var(--orange);
+        color: var(--black);
+    }
+
+    .accent-3 {
+        background-color: var(--yellow);
+        color: var(--black);
+    }
+
+    .accent-4 {
+        background-color: var(--green);
+        color: #000000;
+    }
+
+    .accent-5 {
+        background-color: var(--lilac);
+        color: var(--black);
+    }
+
+    .fonts {
+        color: var(--black);
+    }
+
+    .mono {
+        font-family: var(--mono);
+        color: var(--black);
+    }
+
+    .serif {
+        font-family: var(--serif);
+        color: var(--black);
+    }
 }

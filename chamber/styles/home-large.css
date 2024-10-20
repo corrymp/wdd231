@@ -19,7 +19,7 @@
     }
 
     #hero-text {
-        font-size: 26px;
+        font-size: 1.625rem;
         grid-column: 2/6;
         grid-row: 2/6;
         padding-top: 48px;
@@ -30,7 +30,7 @@
         width: 100%;
     }
 
-    #page {
+    #main {
         display: grid;
         grid-template-columns: 2.1fr 1fr 1fr;
         grid-template-rows: auto auto auto;
@@ -78,7 +78,6 @@
 
     .spotlight-card {
         grid-template-rows: 47px auto auto auto;
-        height: 170px;
     }
 
     .spotlight-card:nth-of-type(3) {
