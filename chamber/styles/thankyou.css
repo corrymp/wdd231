@@ -179,6 +179,6 @@ picture {
         border-color: transparent;
         box-shadow: 0 0 16px var(--yellow);
         outline: 2px solid var(--yellow);
-        transform: scale(100.5%);
+        transform: scale(1.005);
     }
 }
