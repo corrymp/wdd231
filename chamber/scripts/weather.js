@@ -3,7 +3,7 @@ import { ge } from "./utils.mjs";
 // #region testing & debug stuff
 const testOk = true;
 const testWeatherEvents = 1;
-const liveData = false;
+const liveData = true;
 const log = false;
 
 const weatherEvents = (c) => (c > 1) ? (c > 2) ? (c > 3) ? [{ "description": "clear sky", "icon": "01d" }, { "description": "clear sky", "icon": "01d" }, { "description": "clear sky", "icon": "01d" }, { "description": "clear sky", "icon": "01d" }] : [{ "description": "clear sky", "icon": "01d" }, { "description": "clear sky", "icon": "01d" }, { "description": "clear sky", "icon": "01d" }] : [{ "description": "clear sky", "icon": "01d" }, { "description": "clear sky", "icon": "01d" }] : [{ "description": "clear sky", "icon": "01d" }];
