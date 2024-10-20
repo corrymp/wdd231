@@ -54,6 +54,15 @@ h2 {
     margin: 4px 2px;
 }
 
+#discover-page section :is(p, ul, li) {
+    margin: 4px;
+}
+
+#discover-page a:hover {
+    color: var(--red);
+    text-decoration: underline;
+}
+
 #last-visited {
     grid-area: a;
     padding: 4px;
@@ -70,6 +79,8 @@ h2 {
 #cal-box {
     grid-area: d;
     padding: 8px;
+    display: inline-flex;
+    flex-direction: column;
 }
 
 #agasem {
@@ -119,7 +130,6 @@ picture {
 
 #calendar {
     border-radius: 4px;
-    margin: 0 auto;
 }
 
 #calendar td {
@@ -150,13 +160,25 @@ picture {
     }
 
     #discover-page {
-        grid-template-areas: 'a e' 'b e' 'b f' 'd f' 'd g' 'c g' 'c h' 'c h' 'c i' 'c i' 'c j' 'c j';
+        grid-template-areas:
+            'a e'
+            'b e'
+            'b f'
+            'b f'
+            'b g'
+            'c g'
+            'c h'
+            'c h'
+            'c i'
+            'd i'
+            'd j'
+            'd j';
     }
 
     #discover-page img:hover {
         border-color: transparent;
         box-shadow: 0 0 16px var(--yellow);
         outline: 2px solid var(--yellow);
-        scale: 100.5%;
+        transform: scale(100.5%);
     }
 }
