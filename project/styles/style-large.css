@@ -11,8 +11,8 @@
     header {
         border-right: 2px solid var(--black-edge);
         width: var(--sidebar-width);
-        display: flex;
         flex-direction: column;
+        justify-content: unset;
         position: fixed;
         height: 100%;
     }
@@ -20,6 +20,7 @@
     #logo {
         padding: 24px;
         height: auto;
+        width: auto;
     }
 
     #site-title {
@@ -41,6 +42,7 @@
     nav a {
         color: var(--white-main);
     }
+
     nav a.active {
         color: var(--white-glow);
         text-shadow: var(--glow-white);
@@ -49,9 +51,9 @@
     /* MAIN */
     main {
         grid-row: 1/2;
-        height: 100%;
         margin-left: var(--sidebar-width);
         margin-bottom: var(--footer-height);
+        margin-top: 0;
     }
 
     /* FOOTER */
@@ -60,24 +62,60 @@
         display: grid;
         grid-template-columns: auto auto auto;
         text-align: center;
-        height: auto;
         grid-row: 2/3;
         position: fixed;
         width: 100%;
         bottom: 0;
         z-index: 2;
+        height: var(--footer-height);
     }
 
-    #content .footer-item {
-        align-items: center;
-        justify-content: center;
+    #content :where(.footer-item) {
         grid-column: unset;
         grid-row: unset;
+        border: 0;
+    }
+
+    #disclaimer-button {
+        display: none;
     }
 
     #disclaimer {
         border-left: 2px solid var(--black-edge);
         border-right: 2px solid var(--black-edge);
         border-top: 0;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:800px) {
+    :root {
+        --footer-height: 73.2px
+    }
+}
+
+@media screen and (min-width:833px) {
+    :root {
+        --footer-height: 59.4px
+    }
+}
+
+@media screen and (min-width:1029px) {
+    :root {
+        --footer-height: 45.6px
+    }
+}
+
+@media screen and (min-width:1663px) {
+    :root {
+        --footer-height: 31.8px
+    }
+}
+
+@media screen and (max-height:439px) {
+    #logo {
+        height: clamp(33.333vh,22.222vh,11.111vh);
     }
 }

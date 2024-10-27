@@ -17,6 +17,3 @@ Purple      #A020F0     #8932B8     #400C60
 Magenta     #FF00FF     #C74EBD     #660066
 Pink        #FF69B4     #F38BAA     #662A48
 */
-
-import { toggle } from "./utils.js";
-toggle('menu',['menu','nav'],'open')

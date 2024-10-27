@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../">
+
+    <title>MC Player Resource | View</title>
+    <meta name="author" content="Corry McConnell Palmer">
+    <meta name="description" content="View page for Corry McConnell Palmer's final project in WDD 231: 'Web Frontend Development I'.">
+
+    <meta property="og:description" content="MC Player Resource - Corry McConnell Palmer's final project in 'WDD231 - Web Frontend Development I'.">
+    <meta property="og:image" content="https://corrymp.github.io/wdd231/project/images/ogimage.png">
+    <meta property="og:site_name" content="MC Player Resource | CorryMP | WDD231">
+    <meta property="og:title" content="MC Player Resource | View">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://corrymp.github.io/wdd231/project">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image:alt" content="MC Player Resource Logo">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/font.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-large.css">
+    <link rel="stylesheet" href="styles/view.css">
+    <link rel="stylesheet" href="styles/player.css">
+
+    <script src="scripts/global.js" type="module"></script>
+    <script src="scripts/view.js" type="module"></script>
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <svg id="logo" viewBox="0 0 32 32" aria-label="logo">
+                <mask id="a">
+                    <path fill="#fff" d="M2.14 8V24L16 32 29.86 24V8L16 0z" />
+                </mask>
+                <mask id="b">
+                    <path fill="#fff" d="M16 16 2.14 8 16 0 29.86 8z" />
+                </mask>
+                <mask id="c">
+                    <path fill="#fff" d="M16 16 2.14 8V24L16 32V16z" />
+                </mask>
+                <mask id="d">
+                    <path fill="#fff" d="M16 16V32L29.86 24V8L16 16z" />
+                </mask>
+                <path mask="url(#a)" fill="#600" d="M16 16 2.14 8 16 0 29.86 8z" />
+                <path mask="url(#a)" fill="#060" d="M16 16 2.14 8V24L16 32V16z" />
+                <path mask="url(#a)" fill="#006" d="M16 16V32L29.86 24V8L16 16z" />
+                <path mask="url(#b)" fill="none" stroke="#F00" d="M16 16 2.14 8 16 0 29.86 8z" />
+                <path mask="url(#c)" fill="none" stroke="#0F0" d="M16 16 2.14 8V24L16 32V16z" />
+                <path mask="url(#d)" fill="none" stroke="#00F" d="M16 16V32L29.86 24V8L16 16z" />
+                <path mask="url(#a)" fill="none" stroke="#1D1D21" stroke-width="0.666" d="M2.14 8V24L16 32 29.86 24V8L16 0zM2.14 8L16 16V32 16L29.86 8" />
+                <path mask="url(#a)" fill="none" stroke="#F9FFFE" stroke-width="0.05" d="M2.14 8V24L16 32 29.86 24V8L16 0zM2.14 8L16 16V32 16L29.86 8" />
+                <path mask="url(#a)" fill="none" stroke="#9D9D97" stroke-width="0.01" d="M2.14 8V24L16 32 29.86 24V8L16 0zM2.14 8L16 16V32 16L29.86 8" />
+                <path fill="#FFF" stroke="#6666667f" stroke-width="0.125" d="m16.5 16.2886m0 3.7114m0 1.8557m1.6075  -0.92785l3.215 -1.8557v 1.8557l-3.215 1.8557v-1.8557zm6.43 -3.7114l3.215 -1.8557v 1.8557l-3.215 1.8557v-1.8557z" />
+                <path fill="#000" stroke="#F0EBCC20" stroke-width="0.0125" d="m18.125 31v-4h-4v4h4zm0-16h8v-8h-20v4h4v-8h12v16h-8v4h4z" />
+                <path fill="#808080" stroke="#33333320" stroke-width="0.5" d="m17.8125 30.625v-4h-4v4h4zm0-16h8v-8h-20v4h4v-8h12v16h-8v4h4z" />
+                <path fill="#FFF" stroke="#66666620" stroke-width="0.9875" d="m17.5 30.25v-4h-4v4h4zm0-16h8v-8h-20v4h4v-8h12v16h-8v4h4z" />
+            </svg>
+            <h1 id="site-title">MC Player Resource</h1>
+            <button type="button" id="menu">
+                <svg viewBox="0 0 24 24" aria-label="navigation menu">
+                    <path class="ham-x" fill="#FFFF00" stroke-width="0.5" stroke="#666600" d="m12 10.55 6-6a.25.25 0 011.42 1.42l-6 6 6 6a.25.25 0 01-1.42 1.42l-6-6-6 6a.25.25 0 01-1.42-1.42l6-6-6-6a.25.25 0 111.42-1.42z" />
+                    <path class="ham-bars" fill="#FFFF00" stroke-width="0.5" stroke="#666600" d="m4 4.25a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2z" />
+                </svg>
+            </button>
+            <nav class="nav">
+                <a href="./">List</a>
+                <a href="add">Add</a>
+                <a href="view" class="active">View</a>
+            </nav>
+        </header>
+
+        <main>
+            <div id="page">
+                <div id="buttons">
+                    <button type="button" class="button" id="up">&uarr;</button>
+                    <button type="button" class="button" id="left">&larr;</button>
+                    <label class="button" id="lbl-run" for="run">&olarr;</label>
+                    <button type="button" class="button" id="right">&rarr;</button>
+                    <button type="button" class="button" id="down">&darr;</button>
+                    <select class="button" id="pose" title="select pose">
+                        <option id="none" value="1">No Pose</option>
+                        <option id="natural" value="2">Natural</option>
+                        <option id="walking" value="3">Walking</option>
+                        <option id="sitting" value="5">Sitting</option>
+                        <option id="jumping" value="6">Praise Sun</option>
+                    </select>
+                    <label class="button" id="toggle-outer" for="layer-toggle" title="toggle outer layers">Outer</label>
+                    <button type="button" class="button" id="reset" title="set player to default">Reset</button>
+                </div>
+                <div id="viewport">
+                    <div id="y">
+                        <div id="x">
+                            <input hidden type="checkbox" id="run">
+                            <input hidden type="checkbox" id="layer-toggle">
+                            <div id="player" class="none">
+                                <div class="player-joint" id="player-bodypart-head">
+                                    <div class="player-head inner-layer" id="player-head">
+                                        <div class="player-face top-face" id="head-top"></div>
+                                        <div class="player-face front-face" id="head-front"></div>
+                                        <div class="player-face right-face" id="head-right"></div>
+                                        <div class="player-face left-face" id="head-left"></div>
+                                        <div class="player-face back-face" id="head-back"></div>
+                                        <div class="player-face bottom-face" id="head-down"></div>
+                                    </div>
+                                    <div class="player-head outer-layer" id="player-hat">
+                                        <div class="player-face top-face" id="hat-top"></div>
+                                        <div class="player-face front-face" id="hat-front"></div>
+                                        <div class="player-face right-face" id="hat-right"></div>
+                                        <div class="player-face left-face" id="hat-left"></div>
+                                        <div class="player-face back-face" id="hat-back"></div>
+                                        <div class="player-face bottom-face" id="hat-down"></div>
+                                    </div>
+                                </div>
+                                <div class="player-joint" id="player-bodypart-body">
+                                    <div class="player-torso inner-layer" id="player-body">
+                                        <div class="player-face top-face" id="body-top"></div>
+                                        <div class="player-face front-face" id="body-front"></div>
+                                        <div class="player-face right-face" id="body-right"></div>
+                                        <div class="player-face left-face" id="body-left"></div>
+                                        <div class="player-face back-face" id="body-back"></div>
+                                        <div class="player-face bottom-face" id="body-down"></div>
+                                    </div>
+                                    <div class="player-torso outer-layer" id="player-jacket">
+                                        <div class="player-face top-face" id="jacket-top"></div>
+                                        <div class="player-face front-face" id="jacket-front"></div>
+                                        <div class="player-face right-face" id="jacket-right"></div>
+                                        <div class="player-face left-face" id="jacket-left"></div>
+                                        <div class="player-face back-face" id="jacket-back"></div>
+                                        <div class="player-face bottom-face" id="jacket-down"></div>
+                                    </div>
+                                </div>
+                                <div class="player-joint" id="player-bodypart-right-arm">
+                                    <div class="player-limb player-arm limb-right inner-layer" id="player-arm-right">
+                                        <div class="player-face top-face" id="arm-right-top"></div>
+                                        <div class="player-face front-face" id="arm-right-front"></div>
+                                        <div class="player-face right-face" id="arm-right-right"></div>
+                                        <div class="player-face left-face" id="arm-right-left"></div>
+                                        <div class="player-face back-face" id="arm-right-back"></div>
+                                        <div class="player-face bottom-face" id="arm-right-down"></div>
+                                    </div>
+                                    <div class="player-limb player-arm limb-right outer-layer" id="player-sleeve-right">
+                                        <div class="player-face top-face" id="sleeve-right-top"></div>
+                                        <div class="player-face front-face" id="sleeve-right-front"></div>
+                                        <div class="player-face right-face" id="sleeve-right-right"></div>
+                                        <div class="player-face left-face" id="sleeve-right-left"></div>
+                                        <div class="player-face back-face" id="sleeve-right-back"></div>
+                                        <div class="player-face bottom-face" id="sleeve-right-down"></div>
+                                    </div>
+                                </div>
+                                <div class="player-joint" id="player-bodypart-left-arm">
+                                    <div class="player-limb player-arm limb-left inner-layer" id="player-arm-left">
+                                        <div class="player-face top-face" id="arm-left-top"></div>
+                                        <div class="player-face front-face" id="arm-left-front"></div>
+                                        <div class="player-face right-face" id="arm-left-right"></div>
+                                        <div class="player-face left-face" id="arm-left-left"></div>
+                                        <div class="player-face back-face" id="arm-left-back"></div>
+                                        <div class="player-face bottom-face" id="arm-left-down"></div>
+                                    </div>
+                                    <div class="player-limb player-arm limb-left outer-layer" id="player-sleeve-left">
+                                        <div class="player-face top-face" id="sleeve-left-top"></div>
+                                        <div class="player-face front-face" id="sleeve-left-front"></div>
+                                        <div class="player-face right-face" id="sleeve-left-right"></div>
+                                        <div class="player-face left-face" id="sleeve-left-left"></div>
+                                        <div class="player-face back-face" id="sleeve-left-back"></div>
+                                        <div class="player-face bottom-face" id="sleeve-left-down"></div>
+                                    </div>
+                                </div>
+                                <div class="player-joint leg-joint" id="player-bodypart-right-leg">
+                                    <div class="player-limb player-leg limb-right inner-layer" id="player-leg-right">
+                                        <div class="player-face top-face" id="leg-right-top"></div>
+                                        <div class="player-face front-face" id="leg-right-front"></div>
+                                        <div class="player-face right-face" id="leg-right-right"></div>
+                                        <div class="player-face left-face" id="leg-right-left"></div>
+                                        <div class="player-face back-face" id="leg-right-back"></div>
+                                        <div class="player-face bottom-face" id="leg-right-down"></div>
+                                    </div>
+                                    <div class="player-limb player-leg limb-right outer-layer" id="player-pants-right">
+                                        <div class="player-face top-face" id="pants-right-top"></div>
+                                        <div class="player-face front-face" id="pants-right-front"></div>
+                                        <div class="player-face right-face" id="pants-right-right"></div>
+                                        <div class="player-face left-face" id="pants-right-left"></div>
+                                        <div class="player-face back-face" id="pants-right-back"></div>
+                                        <div class="player-face bottom-face" id="pants-right-down"></div>
+                                    </div>
+                                </div>
+                                <div class="player-joint leg-joint" id="player-bodypart-left-leg">
+                                    <div class="player-limb player-leg limb-left inner-layer" id="player-leg-left">
+                                        <div class="player-face top-face" id="leg-left-top"></div>
+                                        <div class="player-face front-face" id="leg-left-front"></div>
+                                        <div class="player-face right-face" id="leg-left-right"></div>
+                                        <div class="player-face left-face" id="leg-left-left"></div>
+                                        <div class="player-face back-face" id="leg-left-back"></div>
+                                        <div class="player-face bottom-face" id="leg-left-down"></div>
+                                    </div>
+                                    <div class="player-limb player-leg limb-left outer-layer" id="player-pants-left">
+                                        <div class="player-face top-face" id="pants-left-top"></div>
+                                        <div class="player-face front-face" id="pants-left-front"></div>
+                                        <div class="player-face right-face" id="pants-left-right"></div>
+                                        <div class="player-face left-face" id="pants-left-left"></div>
+                                        <div class="player-face back-face" id="pants-left-back"></div>
+                                        <div class="player-face bottom-face" id="pants-left-down"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p id="copyright" class="footer-item">&copy;2024 <a href="../"> | Corry McConnell Palmer</a></p>
+            <button type="button" id="disclaimer-button" class="footer-item" title="view disclaimer">Disclaimer</button>
+            <p id="disclaimer" class="footer-item">This website was made for a class project - It is not an official Minecraft website and is not affiliated with Mojang or Microsoft in any way - All information is taken from public sources</p>
+            <a href="attributions" id="attributions" class="footer-item">Attributions</a>
+
+            <dialog id="disclaimer-popup">
+                <div id="disc-content">
+                    <p>This website was made for a class project</p>
+                    <p>It is not an official Minecraft website and is not affiliated with Mojang or Microsoft in any way</p>
+                    <p>All information is taken from public sources</p>
+                    <button title="close" type="button" id="disc-close">OK</button>
+                </div>
+            </dialog>
+        </footer>
+    </div>
+</body>
+
+</html>

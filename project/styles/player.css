@@ -1,0 +1,526 @@
+#player {
+    animation: rot 60s linear 0s infinite paused both;
+    font-size: 16px;
+}
+
+#player div {
+    transform-style: preserve-3d;
+}
+
+.player-face {
+    position: absolute;
+    background-size: 64em;
+    image-rendering: pixelated;
+}
+
+.inner-layer * {
+    outline: 0.1px solid var(--black-main);
+}
+
+.player-head .player-face,
+.player-torso :is(.top-face, .bottom-face, .front-face, .back-face) {
+    width: 8em;
+}
+
+.player-limb .player-face,
+.player-torso :is(.right-face, .left-face) {
+    width: 4em;
+}
+
+.slim .player-arm :is(.front-face, .back-face, .top-face, .bottom-face) {
+    width: 3em;
+}
+
+.player-head .player-face {
+    height: 8em;
+}
+
+:is(.player-torso, .player-limb) :is(.top-face, .bottom-face) {
+    height: 4em;
+}
+
+:is(.player-torso, .player-limb) :is(.front-face, .right-face, .left-face, .back-face) {
+    height: 12em;
+}
+
+#player-bodypart-head {
+    transform: var(--joint-head) var(--rot-head)
+}
+
+#player-bodypart-head>.inner-layer {
+    transform: var(--body-head)
+}
+
+#player-bodypart-head>.outer-layer {
+    transform-origin: var(--out);
+    transform: var(--body-head)
+}
+
+#player-bodypart-body {
+    transform: var(--rot-body)
+}
+
+#player-bodypart-body>.inner-layer {
+    transform: var(--body-body)
+}
+
+#player-bodypart-body>.outer-layer {
+    transform-origin: var(--out);
+    transform: var(--body-body)
+}
+
+#player-bodypart-right-arm {
+    transform: var(--joint-r-arm) var(--rot-r-arm)
+}
+
+#player-bodypart-right-arm>.inner-layer {
+    transform: var(--body-r-arm)
+}
+
+#player-bodypart-right-arm>.outer-layer {
+    transform-origin: var(--out);
+    transform: var(--body-r-arm) var(--scale)
+}
+
+#player-bodypart-left-arm {
+    transform: var(--joint-l-arm) var(--rot-l-arm)
+}
+
+#player-bodypart-left-arm>.inner-layer {
+    transform: var(--body-l-arm)
+}
+
+#player-bodypart-left-arm>.outer-layer {
+    transform-origin: var(--out);
+    transform: var(--body-l-arm) var(--scale)
+}
+
+#player-bodypart-right-leg {
+    transform: var(--joint-r-leg) var(--rot-r-leg)
+}
+
+#player-bodypart-left-leg {
+    transform: var(--joint-l-leg) var(--rot-l-leg)
+}
+
+.leg-joint>.inner-layer {
+    transform: var(--body-leg)
+}
+
+.leg-joint>.outer-layer {
+    transform-origin: var(--out);
+    transform: var(--body-leg) var(--scale)
+}
+
+.slim #player-bodypart-right-arm>.inner-layer {
+    transform: var(--body-r-arm-slim)
+}
+
+.slim #player-bodypart-right-arm>.outer-layer {
+    transform-origin: var(--out);
+    transform: var(--body-r-arm-slim) var(--scale)
+}
+
+#head-top {
+    background-position: -08em -00em;
+    transform: var(--head-top) var(--top-face)
+}
+
+#head-front {
+    background-position: -08em -08em;
+    transform: var(--head-front) var(--front-face)
+}
+
+#head-right {
+    background-position: -00em -08em;
+    transform: var(--head-right) var(--right-face)
+}
+
+#head-left {
+    background-position: -16em -08em;
+    transform: var(--head-left) var(--left-face)
+}
+
+#head-back {
+    background-position: -24em -08em;
+    transform: var(--head-back) var(--back-face)
+}
+
+#head-down {
+    background-position: -16em -00em;
+    transform: var(--head-down) var(--bottom-face)
+}
+
+#hat-top {
+    background-position: -40em -00em;
+    transform: var(--head-top) var(--top-face) var(--scale-head)
+}
+
+#hat-front {
+    background-position: -40em -08em;
+    transform: var(--head-front) var(--front-face) var(--scale-head)
+}
+
+#hat-right {
+    background-position: -32em -08em;
+    transform: var(--head-right) var(--right-face) var(--scale-head)
+}
+
+#hat-left {
+    background-position: -48em -08em;
+    transform: var(--head-left) var(--left-face) var(--scale-head)
+}
+
+#hat-back {
+    background-position: -56em -08em;
+    transform: var(--head-back) var(--back-face) var(--scale-head)
+}
+
+#hat-down {
+    background-position: -48em -00em;
+    transform: var(--head-down) var(--bottom-face) var(--scale-head)
+}
+
+#body-top {
+    background-position: -20em -16em;
+    transform: var(--top-face) var(--z2)
+}
+
+#body-front {
+    background-position: -20em -20em;
+    transform: var(--front-face) var(--z2)
+}
+
+#body-right {
+    background-position: -16em -20em;
+    transform: var(--right-face) var(--z2)
+}
+
+#body-left {
+    background-position: -28em -20em;
+    transform: var(--left-face) var(--z6)
+}
+
+#body-back {
+    background-position: -32em -20em;
+    transform: var(--back-face) var(--z2)
+}
+
+#body-down {
+    background-position: -28em -16em;
+    transform: var(--bottom-face) var(--z10)
+}
+
+#jacket-top {
+    background-position: -20em -32em;
+    transform: var(--top-face) var(--z2) var(--scale-down)
+}
+
+#jacket-front {
+    background-position: -20em -36em;
+    transform: var(--front-face) var(--z2) var(--scale-front)
+}
+
+#jacket-right {
+    background-position: -16em -36em;
+    transform: var(--right-face) var(--z2) var(--scale-side)
+}
+
+#jacket-left {
+    background-position: -28em -36em;
+    transform: var(--left-face) var(--z6) var(--scale-side)
+}
+
+#jacket-back {
+    background-position: -32em -36em;
+    transform: var(--back-face) var(--z2) var(--scale-front)
+}
+
+#jacket-down {
+    background-position: -28em -32em;
+    transform: var(--bottom-face) var(--z10) var(--scale-down)
+}
+
+#arm-right-top {
+    background-position: -44em -16em;
+}
+
+#arm-right-front {
+    background-position: -44em -20em;
+}
+
+#arm-right-right {
+    background-position: -40em -20em;
+}
+
+#arm-right-left {
+    background-position: -48em -20em;
+}
+
+#arm-right-back {
+    background-position: -52em -20em;
+}
+
+#arm-right-down {
+    background-position: -48em -16em;
+}
+
+#sleeve-right-top {
+    background-position: -44em -32em;
+}
+
+#sleeve-right-front {
+    background-position: -44em -36em;
+}
+
+#sleeve-right-right {
+    background-position: -40em -36em;
+}
+
+#sleeve-right-left {
+    background-position: -48em -36em;
+}
+
+#sleeve-right-back {
+    background-position: -52em -36em;
+}
+
+#sleeve-right-down {
+    background-position: -48em -32em;
+}
+
+#arm-left-top {
+    background-position: -36em -48em;
+}
+
+#arm-left-front {
+    background-position: -36em -52em;
+}
+
+#arm-left-right {
+    background-position: -32em -52em;
+}
+
+#arm-left-left {
+    background-position: -40em -52em;
+}
+
+#arm-left-back {
+    background-position: -44em -52em;
+}
+
+#arm-left-down {
+    background-position: -40em -48em;
+}
+
+#sleeve-left-top {
+    background-position: -52em -48em;
+}
+
+#sleeve-left-front {
+    background-position: -52em -52em;
+}
+
+#sleeve-left-right {
+    background-position: -48em -52em;
+}
+
+#sleeve-left-left {
+    background-position: -56em -52em;
+}
+
+#sleeve-left-back {
+    background-position: -60em -52em;
+}
+
+#sleeve-left-down {
+    background-position: -56em -48em;
+}
+
+#leg-right-top {
+    background-position: -04em -16em;
+}
+
+#leg-right-front {
+    background-position: -04em -20em;
+}
+
+#leg-right-right {
+    background-position: -00em -20em;
+}
+
+#leg-right-back {
+    background-position: -12em -20em;
+}
+
+#leg-right-left {
+    background-position: -08em -20em;
+}
+
+#leg-right-down {
+    background-position: -08em -16em;
+}
+
+#pants-right-top {
+    background-position: -04em -32em;
+}
+
+#pants-right-front {
+    background-position: -04em -36em;
+}
+
+#pants-right-right {
+    background-position: -00em -36em;
+}
+
+#pants-right-back {
+    background-position: -12em -36em;
+}
+
+#pants-right-left {
+    background-position: -08em -36em;
+}
+
+#pants-right-down {
+    background-position: -08em -32em;
+}
+
+#leg-left-top {
+    background-position: -20em -48em;
+}
+
+#leg-left-front {
+    background-position: -20em -52em;
+}
+
+#leg-left-right {
+    background-position: -16em -52em;
+}
+
+#leg-left-back {
+    background-position: -28em -52em;
+}
+
+#leg-left-left {
+    background-position: -24em -52em;
+}
+
+#leg-left-down {
+    background-position: -24em -48em;
+}
+
+#pants-left-top {
+    background-position: -04em -48em;
+}
+
+#pants-left-front {
+    background-position: -04em -52em;
+}
+
+#pants-left-right {
+    background-position: 00em -52em;
+}
+
+#pants-left-back {
+    background-position: -12em -52em;
+}
+
+#pants-left-left {
+    background-position: -08em -52em;
+}
+
+#pants-left-down {
+    background-position: -08em -48em;
+}
+
+.player-limb .top-face {
+    transform: var(--top-face) var(--z2);
+}
+
+.player-limb .front-face {
+    transform: var(--front-face) var(--z2);
+}
+
+.player-limb .right-face {
+    transform: var(--right-face) var(--z2);
+}
+
+.player-limb .left-face {
+    transform: var(--left-face) var(--z2);
+}
+
+.player-limb .back-face {
+    transform: var(--back-face) var(--z2);
+}
+
+.player-limb .bottom-face {
+    transform: var(--bottom-face) var(--z10);
+}
+
+.slim #arm-right-down {
+    background-position: -47em -16em;
+}
+
+.slim #arm-right-front {
+    background-position: -43em -20em;
+}
+
+.slim #arm-right-left {
+    background-position: -47em -20em;
+}
+
+.slim #arm-right-back {
+    background-position: -50em -20em;
+}
+
+.slim #sleeve-right-down {
+    background-position: -47em -32em;
+}
+
+.slim #sleeve-right-front {
+    background-position: -43em -36em;
+}
+
+.slim #sleeve-right-left {
+    background-position: -47em -36em;
+}
+
+.slim #sleeve-right-back {
+    background-position: -50em -36em;
+}
+
+.slim #arm-left-down {
+    background-position: -39em -48em;
+}
+
+.slim #arm-left-front {
+    background-position: -35em -52em;
+}
+
+.slim #arm-left-left {
+    background-position: -39em -52em;
+}
+
+.slim #arm-left-back {
+    background-position: -42em -52em;
+}
+
+.slim #sleeve-left-down {
+    background-position: -55em -48em;
+}
+
+.slim #sleeve-left-front {
+    background-position: -51em -52em;
+}
+
+.slim #sleeve-left-left {
+    background-position: -55em -52em;
+}
+
+.slim #sleeve-left-back {
+    background-position: -58em -52em;
+}
+
+.slim :is(#arm-left-left, #sleeve-left-left, #arm-right-left, #sleeve-right-left) {
+    transform: var(--left-face) translateZ(1em);
+}

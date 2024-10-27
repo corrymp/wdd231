@@ -1,0 +1,17 @@
+main {
+    height: calc(100vh - var(--footer-height));
+}
+ul {
+    display: inline-flex;
+    flex-direction: column;
+    background-color: var(--gray-edge);
+    padding: 16px;
+    box-shadow: 2px 2px 4px var(--gray-edge);
+    height: 100%;
+    width: 100%;
+    line-height: 2rem;
+}
+li {
+    padding: 2px;
+    border-bottom: 1px solid var(--yellow-glow);
+}

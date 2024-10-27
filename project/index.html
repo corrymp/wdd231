@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../project/">
+
+    <title>MC Player Resource | List</title>
+    <meta name="author" content="Corry McConnell Palmer">
+    <meta name="description" content="List and home page for Corry McConnell Palmer's final project in WDD 231: 'Web Frontend Development I'.">
+
+    <meta property="og:description" content="MC Player Resource - Corry McConnell Palmer's final project in 'WDD231 - Web Frontend Development I'.">
+    <meta property="og:image" content="https://corrymp.github.io/wdd231/project/images/ogimage.png">
+    <meta property="og:site_name" content="MC Player Resource | CorryMP | WDD231">
+    <meta property="og:title" content="MC Player Resource | List">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://corrymp.github.io/wdd231/project">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image:alt" content="MC Player Resource Logo">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/font.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-large.css">
+    <link rel="stylesheet" href="styles/list.css">
+
+    <script src="scripts/global.js" type="module"></script>
+    <script src="scripts/list.js" type="module"></script>
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <svg id="logo" viewBox="0 0 32 32" aria-label="logo">
+                <mask id="a"><path fill="#fff" d="M2.14 8V24L16 32 29.86 24V8L16 0z" /></mask>
+                <mask id="b"><path fill="#fff" d="M16 16 2.14 8 16 0 29.86 8z" /></mask>
+                <mask id="c"><path fill="#fff" d="M16 16 2.14 8V24L16 32V16z" /></mask>
+                <mask id="d"><path fill="#fff" d="M16 16V32L29.86 24V8L16 16z" /></mask>
+                <path mask="url(#a)" fill="#600" d="M16 16 2.14 8 16 0 29.86 8z" />
+                <path mask="url(#a)" fill="#060" d="M16 16 2.14 8V24L16 32V16z" />
+                <path mask="url(#a)" fill="#006" d="M16 16V32L29.86 24V8L16 16z" />
+                <path mask="url(#b)" fill="none" stroke="#F00" d="M16 16 2.14 8 16 0 29.86 8z" />
+                <path mask="url(#c)" fill="none" stroke="#0F0" d="M16 16 2.14 8V24L16 32V16z" />
+                <path mask="url(#d)" fill="none" stroke="#00F" d="M16 16V32L29.86 24V8L16 16z" />
+                <path mask="url(#a)" fill="none" stroke="#1D1D21" stroke-width="0.666" d="M2.14 8V24L16 32 29.86 24V8L16 0zM2.14 8L16 16V32 16L29.86 8" />
+                <path mask="url(#a)" fill="none" stroke="#F9FFFE" stroke-width="0.05" d="M2.14 8V24L16 32 29.86 24V8L16 0zM2.14 8L16 16V32 16L29.86 8" />
+                <path mask="url(#a)" fill="none" stroke="#9D9D97" stroke-width="0.01" d="M2.14 8V24L16 32 29.86 24V8L16 0zM2.14 8L16 16V32 16L29.86 8" />
+                <path fill="#FFF" stroke="#6666667f" stroke-width="0.125" d="m16.5 16.2886m0 3.7114m0 1.8557m1.6075  -0.92785l3.215 -1.8557v 1.8557l-3.215 1.8557v-1.8557zm6.43 -3.7114l3.215 -1.8557v 1.8557l-3.215 1.8557v-1.8557z" />
+                <path fill="#000" stroke="#F0EBCC20" stroke-width="0.0125" d="m18.125 31v-4h-4v4h4zm0-16h8v-8h-20v4h4v-8h12v16h-8v4h4z" />
+                <path fill="#808080" stroke="#33333320" stroke-width="0.5" d="m17.8125 30.625v-4h-4v4h4zm0-16h8v-8h-20v4h4v-8h12v16h-8v4h4z" />
+                <path fill="#FFF" stroke="#66666620" stroke-width="0.9875" d="m17.5 30.25v-4h-4v4h4zm0-16h8v-8h-20v4h4v-8h12v16h-8v4h4z" />
+            </svg>
+            <h1 id="site-title">MC Player Resource</h1>
+            <button type="button" id="menu">
+                <svg viewBox="0 0 24 24" aria-label="navigation menu">
+                    <path class="ham-x" fill="#FFFF00" stroke-width="0.5" stroke="#666600" d="m12 10.55 6-6a.25.25 0 011.42 1.42l-6 6 6 6a.25.25 0 01-1.42 1.42l-6-6-6 6a.25.25 0 01-1.42-1.42l6-6-6-6a.25.25 0 111.42-1.42z" />
+                    <path class="ham-bars" fill="#FFFF00" stroke-width="0.5" stroke="#666600" d="m4 4.25a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2zm0 6.71699a1 1 0 000 2h16a1 1 0 000-2z" />
+                </svg>
+            </button>
+            <nav class="nav">
+                <a href="./" class="active">List</a>
+                <a href="add">Add</a>
+                <a href="view">View</a>
+            </nav>
+        </header>
+
+        <div id="list-controls">
+            <button class="list-control" id="backup">Backup/Load</button>
+            <button class="list-control" id="refresh-all">Refresh List</button>
+            <button class="list-control" id="reset-all">Clear List</button>
+        </div>
+
+        <main>
+            <ul id="player-list">
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+                <li class="loading">
+                    <figure class="player-card">
+                        <div class="card-face-inner"></div>
+                        <div class="card-face-outer"></div>
+                        <figcaption>Loading...</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </main>
+
+        <footer>
+            <p id="copyright" class="footer-item">&copy;2024 <a href="../"> | Corry McConnell Palmer</a></p>
+            <button type="button" id="disclaimer-button" class="footer-item" title="view disclaimer">Disclaimer</button>
+            <p id="disclaimer" class="footer-item">This website was made for a class project - It is not an official Minecraft website and is not affiliated with Mojang or Microsoft in any way - All information is taken from public sources</p>
+            <a href="attributions" id="attributions" class="footer-item">Attributions</a>
+            <dialog id="disclaimer-popup">
+                <div id="disc-content">
+                    <p>This website was made for a class project</p>
+                    <p>It is not an official Minecraft website and is not affiliated with Mojang or Microsoft in any way</p>
+                    <p>All information is taken from public sources</p>
+                    <button title="close" type="button" id="disc-close">OK</button>
+                </div>
+            </dialog>
+        </footer>
+
+        <dialog id="modal">
+            <div id="modal-content">
+                <button id="close-modal" type="button" title="close"></button>
+                <h2 id="username"></h2>
+                <p id="uuid"></p>
+                <div id="player-view">
+                    <div class="skin-inner" id="player-body"></div>
+                    <div class="skin-inner" id="player-arm-right"></div>
+                    <div class="skin-inner" id="player-arm-left"></div>
+                    <div class="skin-inner" id="player-leg-right"></div>
+                    <div class="skin-inner" id="player-leg-left"></div>
+                    <div class="skin-inner" id="player-head"></div>
+                    <div class="skin-outer" id="player-jacket"></div>
+                    <div class="skin-outer" id="player-sleeve-right"></div>
+                    <div class="skin-outer" id="player-sleeve-left"></div>
+                    <div class="skin-outer" id="player-pant-right"></div>
+                    <div class="skin-outer" id="player-pant-left"></div>
+                    <div class="skin-outer" id="player-hat"></div>
+                </div>
+                <button id="view">View in 3D</button>
+                <div id="cape-backing">
+                    <div id="cape-box" class="cape-item">
+                        <div id="cape"></div>
+                    </div>
+                    <h3 id="cape-name" class="cape-item"></h3>
+                    <p id="cape-info" class="cape-item"></p>
+                </div>
+                <button id="refresh">Refresh</button>
+                <button id="remove">Remove</button>
+            </div>
+        </dialog>
+
+        <dialog id="confirm-remove">
+            <div id="cr-content">
+                <p>Are you sure you want to remove <span id="cr-name"></span> from your list?</p>
+                <button id="cr-confirm">Remove</button>
+                <button id="cr-cancel">Cancel</button>
+            </div>
+        </dialog>
+
+        <dialog id="backup-modal">
+            <div id="backup-modal-content">
+                <p>Save this and paste it in later to remake your list:</p>
+                <input type="text" id="backup-text" placeholder="enter backup here">
+                <button id="backup-load">Restore</button>
+                <button id="backup-close">OK</button>
+            </div>
+        </dialog>
+
+        <dialog id="refresh-all-modal">
+            <div id="ra-modal-content">
+                <p>Are you sure you want to force refresh on all player info?</p>
+                <button id="ra-confirm">Refresh</button>
+                <button id="ra-cancel">Cancel</button>
+            </div>
+        </dialog>
+
+        <dialog id="reset-modal">
+            <div id="reset-modal-content">
+                <p>Are you sure you want to reset your list?<br>This action can not be undone without a backup.</p>
+                <button id="reset-confirm">Reset</button>
+                <button id="reset-cancel">Cancel</button>
+            </div>
+        </dialog>
+
+    </div>
+</body>
+
+</html>

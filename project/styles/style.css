@@ -16,14 +16,13 @@
 :root {
     --font-heading: mcfont, system-ui, system;
     --font-body: "Reddit Mono", monospace, monospace;
-
     --sidebar-width: 158px;
-    --footer-height: 57.5px;
-
+    --footer-height: 62.59px;
     --color-body: var(--black-glow);
     --color-main: var(--black-main);
     --color-header: var(--black-glow);
     --color-footer: var(--black-glow);
+    font-family: var(--font-body);
 }
 
 /* core colors */
@@ -89,8 +88,6 @@
         -0.075em 0.000px 0.25px var(--white-edge),
         0.000px 0.075em 0.25px var(--white-edge),
         0.000px -0.075em 0.25px var(--white-edge);
-
-
     --glow-light-gray:
         0.075em 0.075em 0.25px var(--light-gray-edge),
         -0.075em 0.075em 0.25px var(--light-gray-edge),
@@ -100,8 +97,6 @@
         -0.075em 0.000px 0.25px var(--light-gray-edge),
         0.000px 0.075em 0.25px var(--light-gray-edge),
         0.000px -0.075em 0.25px var(--light-gray-edge);
-
-
     --glow-gray:
         0.075em 0.075em 0.25px var(--gray-edge),
         -0.075em 0.075em 0.25px var(--gray-edge),
@@ -111,8 +106,6 @@
         -0.075em 0.000px 0.25px var(--gray-edge),
         0.000px 0.075em 0.25px var(--gray-edge),
         0.000px -0.075em 0.25px var(--gray-edge);
-
-
     --glow-black:
         0.075em 0.075em 0.25px var(--black-edge),
         -0.075em 0.075em 0.25px var(--black-edge),
@@ -122,8 +115,6 @@
         -0.075em 0.000px 0.25px var(--black-edge),
         0.000px 0.075em 0.25px var(--black-edge),
         0.000px -0.075em 0.25px var(--black-edge);
-
-
     --glow-red:
         0.075em 0.075em 0.25px var(--red-edge),
         -0.075em 0.075em 0.25px var(--red-edge),
@@ -133,8 +124,6 @@
         -0.075em 0.000px 0.25px var(--red-edge),
         0.000px 0.075em 0.25px var(--red-edge),
         0.000px -0.075em 0.25px var(--red-edge);
-
-
     --glow-brown:
         0.075em 0.075em 0.25px var(--brown-edge),
         -0.075em 0.075em 0.25px var(--brown-edge),
@@ -144,8 +133,6 @@
         -0.075em 0.000px 0.25px var(--brown-edge),
         0.000px 0.075em 0.25px var(--brown-edge),
         0.000px -0.075em 0.25px var(--brown-edge);
-
-
     --glow-orange:
         0.075em 0.075em 0.25px var(--orange-edge),
         -0.075em 0.075em 0.25px var(--orange-edge),
@@ -155,8 +142,6 @@
         -0.075em 0.000px 0.25px var(--orange-edge),
         0.000px 0.075em 0.25px var(--orange-edge),
         0.000px -0.075em 0.25px var(--orange-edge);
-
-
     --glow-yellow:
         0.075em 0.075em 0.25px var(--yellow-edge),
         -0.075em 0.075em 0.25px var(--yellow-edge),
@@ -166,8 +151,6 @@
         -0.075em 0.000px 0.25px var(--yellow-edge),
         0.000px 0.075em 0.25px var(--yellow-edge),
         0.000px -0.075em 0.25px var(--yellow-edge);
-
-
     --glow-lime:
         0.075em 0.075em 0.25px var(--lime-edge),
         -0.075em 0.075em 0.25px var(--lime-edge),
@@ -177,20 +160,15 @@
         -0.075em 0.000px 0.25px var(--lime-edge),
         0.000px 0.075em 0.25px var(--lime-edge),
         0.000px -0.075em 0.25px var(--lime-edge);
-
-
-
     --glow-green:
-        0.075em 0.075em 0.25px var(--light-green-edge),
-        -0.075em 0.075em 0.25px var(--light-green-edge),
-        0.075em -0.075em 0.25px var(--light-green-edge),
-        -0.075em -0.075em 0.25px var(--light-green-edge),
-        0.075em 0.000px 0.25px var(--light-green-edge),
-        -0.075em 0.000px 0.25px var(--light-green-edge),
-        0.000px 0.075em 0.25px var(--light-green-edge),
-        0.000px -0.075em 0.25px var(--light-green-edge);
-
-
+        0.075em 0.075em 0.25px var(--green-edge),
+        -0.075em 0.075em 0.25px var(--green-edge),
+        0.075em -0.075em 0.25px var(--green-edge),
+        -0.075em -0.075em 0.25px var(--green-edge),
+        0.075em 0.000px 0.25px var(--green-edge),
+        -0.075em 0.000px 0.25px var(--green-edge),
+        0.000px 0.075em 0.25px var(--green-edge),
+        0.000px -0.075em 0.25px var(--green-edge);
     --glow-cyan:
         0.075em 0.075em 0.25px var(--cyan-edge),
         -0.075em 0.075em 0.25px var(--cyan-edge),
@@ -200,8 +178,6 @@
         -0.075em 0.000px 0.25px var(--cyan-edge),
         0.000px 0.075em 0.25px var(--cyan-edge),
         0.000px -0.075em 0.25px var(--cyan-edge);
-
-
     --glow-light-blue:
         0.075em 0.075em 0.25px var(--light-blue-edge),
         -0.075em 0.075em 0.25px var(--light-blue-edge),
@@ -211,8 +187,6 @@
         -0.075em 0.000px 0.25px var(--light-blue-edge),
         0.000px 0.075em 0.25px var(--light-blue-edge),
         0.000px -0.075em 0.25px var(--light-blue-edge);
-
-
     --glow-blue:
         0.075em 0.075em 0.25px var(--blue-edge),
         -0.075em 0.075em 0.25px var(--blue-edge),
@@ -222,8 +196,6 @@
         -0.075em 0.000px 0.25px var(--blue-edge),
         0.000px 0.075em 0.25px var(--blue-edge),
         0.000px -0.075em 0.25px var(--blue-edge);
-
-
     --glow-purple:
         0.075em 0.075em 0.25px var(--purple-edge),
         -0.075em 0.075em 0.25px var(--purple-edge),
@@ -233,8 +205,6 @@
         -0.075em 0.000px 0.25px var(--purple-edge),
         0.000px 0.075em 0.25px var(--purple-edge),
         0.000px -0.075em 0.25px var(--purple-edge);
-
-
     --glow-magenta:
         0.075em 0.075em 0.25px var(--magenta-edge),
         -0.075em 0.075em 0.25px var(--magenta-edge),
@@ -244,8 +214,6 @@
         -0.075em 0.000px 0.25px var(--magenta-edge),
         0.000px 0.075em 0.25px var(--magenta-edge),
         0.000px -0.075em 0.25px var(--magenta-edge);
-
-
     --glow-pink:
         0.075em 0.075em 0.25px var(--pink-edge),
         -0.075em 0.075em 0.25px var(--pink-edge),
@@ -255,13 +223,10 @@
         -0.075em 0.000px 0.25px var(--pink-edge),
         0.000px 0.075em 0.25px var(--pink-edge),
         0.000px -0.075em 0.25px var(--pink-edge);
-
-
 }
 
 body {
     background-color: var(--color-body);
-    font-family: var(--font-body);
     color: var(--white-main);
     font-size: 100%;
     width: 100%;
@@ -269,33 +234,72 @@ body {
 }
 
 #content {
+    background-color: var(--color-main);
+    outline: 2px solid var(--black-edge);
+    position: absolute;
+    top: 0;
+    left: 0;
     max-width: 1920px;
+    min-height: 333px;
+    min-width: 239px;
+    height: auto;
+    width: 100%;
 }
 
-h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); }
-h1 { font-size: 1.75rem; }
-h2 { font-size: 1.5rem; }
-h3 { font-size: 1.25rem; }
-h4 { font-size: 1.125rem; }
-h5 { font-size: 1rem; }
-h6 { font-size: 0.9rem; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+}
 
+h1 {
+    font-size: 1.75rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 0.9rem;
+}
 
 /* HEADER */
 header {
-    background-color: var(--color-header);
-    display: grid;
-    grid-template-columns: 1fr 66.666% 1fr;
-    grid-template-rows: auto;
-    padding: 4px;
     align-items: center;
+    background-color: var(--color-header);
+    border-bottom: 2px solid var(--black-edge);
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    left: 0;
+    padding: 4px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 #logo {
     padding-right: 4px;
     grid-column: 1/2;
-    height: 100%;
-    width: 100%;
+    height: 70px;
+    width: 70px;
     border-radius: 24px;
 }
 
@@ -307,6 +311,7 @@ header {
 }
 
 #menu {
+    background-color: var(--black-glow);
     grid-column: 3/4;
     aspect-ratio: 1;
     z-index: 2;
@@ -314,8 +319,8 @@ header {
     background: none;
     cursor: pointer;
     display: inline;
-    height: 100%;
-    width: 100%;
+    height: 70px;
+    width: 70px;
 }
 
 #menu.open .ham-bars,
@@ -330,45 +335,131 @@ nav {
     width: 100%;
     height: 0;
     left: 0;
-    top: -16.5%;
+    top: -131px;
     transition: top 0.25s ease-out;
+    border-bottom: 2px solid var(--black-edge);
 }
 
 nav.open {
     top: 0;
-    height: 100%;
+    height: 132.75px;
 }
 
 nav a {
     background-color: var(--gray-edge);
-    color: var(--yellow-main);
+    color: var(--yellow-glow);
     padding: 8px;
     font-size: 1.5rem;
 }
 
+nav a:hover, nav a:focus {
+    font-style: italic;
+}
+
 nav a.active {
-    color: var(--yellow-glow);
     text-shadow: var(--glow-yellow);
 }
 
+nav a.active::before {
+    content: '<';
+}
+
+nav a.active::after {
+    content: '>';
+}
 
 /* MAIN */
 main {
+    margin-bottom: var(--footer-height);
+    margin-top: 80px;
     background-color: var(--color-main);
+    height: 100%;
 }
 
 main>* {
     padding: 8px;
 }
 
+dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: none;
+    max-width: unset;
+    max-height: unset;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+dialog[open] {
+    display: flex;
+}
+
+::backdrop {
+    background-color: #0000007f;
+}
+
+dialog>div {
+    background-color: var(--black-main);
+    border: 1px solid var(--red-edge);
+    border-radius: 8px;
+    display: inline-grid;
+    padding: 16px 12px;
+    margin: auto;
+    position: relative;
+    max-width: 800px;
+    min-width: 256px;
+    gap: 7px 5px;
+}
+
+dialog>div>* {
+    background-color: var(--black-glow);
+    border: 1px solid var(--red-edge);
+    color: var(--green-glow);
+}
+
+dialog :where(p, h2, h3, input, button) {
+    padding: 12px;
+}
+
+#close-modal {
+    border-radius: 8px;
+    height: 27px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 27px;
+}
+
+#close-modal::before {
+    content: 'x';
+    display: block;
+    font-size: 1.75rem;
+    line-height: 1rem;
+    position: absolute;
+    top: 7.7%;
+    left: 20%;
+}
+
+dialog :is(#close-modal, button):hover,
+dialog :is(#close-modal, button):focus-visible {
+    border-color: var(--red-glow);
+    color: var(--yellow-glow);
+}
 
 /* FOOTER */
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: var(--color-footer);
     border-top: 1px solid var(--black-edge);
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
     font-size: 0.75rem;
 }
 
@@ -377,25 +468,33 @@ footer a {
 }
 
 .footer-item {
-    height: 100%; 
-    padding: 8px;
+    height: 100%;
+    padding: 8px 16px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #copyright {
-    grid-column: 1/2;
-    justify-content: left;
+    border-bottom: 2px solid var(--black-edge);
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+#disclaimer-button {
+    background: none;
+    border-right: 1px solid var(--black-edge);
+    grid-row: 2/3;
+    justify-content: right;
+    padding-right: 28px;
 }
 
 #disclaimer {
-    border-top: 1px solid var(--black-edge);
-    flex-wrap: wrap;
-    grid-row: 2/3;
-    grid-column: 1/3;
-    text-align: center;
+    display: none;
 }
 
 #attributions {
-    grid-column: 2/3;
-    justify-content: right;
+    border-left: 1px solid var(--black-edge);
+    grid-row: 2/3;
+    justify-content: left;
 }
