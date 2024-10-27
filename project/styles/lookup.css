@@ -13,7 +13,7 @@ main {
     margin: 64px auto;
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 400px;
     max-height: 260px;
     width: 100%;
     padding: 16px;
@@ -21,10 +21,10 @@ main {
 }
 
 h2 {
-    border-bottom: 2px solid var(--yellow-glow);
     color: var(--yellow-glow);
     text-shadow: var(--glow-yellow);
     padding-bottom: 4px;
+    padding-left: 2px;
     margin-bottom: 4px;
 }
 
@@ -45,7 +45,11 @@ legend {
     border: 1px solid var(--red-main);
     padding: 2px;
 }
-#name-label {margin-left: 10px;}
+
+#name-label {
+    margin-left: 10px;
+}
+
 #label-box,
 #submit-button {
     border-radius: 6px;
@@ -75,8 +79,18 @@ label,
     width: 100%;
 }
 
+::placeholder {
+    opacity: 1;
+}
+
 #submit-button {
-    align-self: center;
+    width: 32.5%;
+}
+
+#submit-button:hover,
+#submit-button:focus {
+    border-color: var(--red-glow);
+    color: var(--yellow-glow);
 }
 
 @media screen and (min-width:800px) {
