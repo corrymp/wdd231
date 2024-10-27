@@ -52,7 +52,6 @@ async function main(e) {
 
   else {
     data = await getData(`https://playerdb.co/api/player/minecraft/${query}`);
-    console.log(data)
     if (!data.success) { alert(`Couldn't find anyone with that ${(res == 5) ? 'UUID' : 'username'}.`); return; }
     data = data.data.player
     cache[`${data.id}`] = data;

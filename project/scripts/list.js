@@ -136,7 +136,7 @@ function populateModal() {
 
     refresh.addEventListener('click', async () => {
         let data = null;
-        try { data = await get(`https://playerdb.co/api/player/minecraft/${selectedPlayer.id}`) } catch (e) { console.log(e) }
+        try { data = await get(`https://playerdb.co/api/player/minecraft/${selectedPlayer.id}`) } catch (e) { alert('There was an issue refreshing the player. Please try again or contact the site admin.'); return}
         data = await data.data.player;
         cache[`${data.id}`] = await data;
         localStorage.setItem('cache', JSON.stringify(cache));
@@ -190,7 +190,7 @@ async function firstLoad() {
     ];
     for (let i = 0; i < defaultList.length; i++) {
         let data = null;
-        try { data = await get(`https://playerdb.co/api/player/minecraft/${defaultList[i]}`) } catch (e) { console.log(e) }
+        try { data = await get(`https://playerdb.co/api/player/minecraft/${defaultList[i]}`) } catch (e) { alert('There was an issue loading the page. Please try again or contact the site admin.'); return}
         data = await data.data.player;
         cache[`${data.id}`] = await data;
         localStorage.setItem('cache', JSON.stringify(await cache));
@@ -204,7 +204,7 @@ refreshAll.addEventListener('click', () => {
     refreshAllConfirm.addEventListener('click', async () => {
         for (const [uuid, player] of Object.entries(cache)) {
             let data = null;
-            try { data = await get(`https://playerdb.co/api/player/minecraft/${player.id}`) } catch (e) { console.log(e) }
+            try { data = await get(`https://playerdb.co/api/player/minecraft/${player.id}`) } catch (e) { alert('There was an issue refreshing your list. Please try again or contact the site admin.'); return}
             data = await data.data.player;
             cache[`${data.id}`] = await data;
         }
@@ -246,20 +246,3 @@ backup.addEventListener('click', () => {
 })
 
 if (!JSON.parse(localStorage.getItem('firstLoad'))) { firstLoad(); } else { buildList(); }
-
-/* 
-const footer = document.querySelector('footer');
-let footerHeight = footer.getBoundingClientRect().height;
-let docWidth = document.body.clientWidth;
-const panel = document.getElementById('list-controls');
-let panelOffset = document.body.clientHeight - panel.getBoundingClientRect().bottom;
-window.addEventListener('resize', () => {
-    const fh = footer.getBoundingClientRect().height;
-    const po = document.body.clientHeight - panel.getBoundingClientRect().bottom;
-    if (fh != footerHeight || po != panelOffset) {
-        const dw = document.body.clientWidth;
-        console.log(`${(fh != footerHeight) ? (po!=panelOffset) ?'Footer height and panel offset changed' :'Footer height changed' : (po!=panelOffset) ?'Panel offset changed' :'Neither footer height nor panel offset changed'}\nOld Width: ${docWidth}\nNew Width: ${dw}\nOld fHeight: ${footerHeight}\nNew fHeight: ${fh}\nOld pOffset: ${panelOffset}\nNew pOffset: ${po}`);
-        footerHeight = fh; docWidth = dw; panelOffset = po;
-    }
-})
- */
